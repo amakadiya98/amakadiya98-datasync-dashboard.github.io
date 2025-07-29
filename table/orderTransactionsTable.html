@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/tableStyle.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+</head>
+
+<body>
+    <section>
+        <!-- Product Sales table -->
+        <div class="commonTable orderTransactionsTable">
+            <div class="common-spacing custom-container">
+                <div class="table-contant">
+                    <div class="table-header">
+                        <h3 class="table-title">Sipariş İşlemleri</h3>
+                        <div class="d-flex align-items-center gap-3 searchbar-container justify-content-end">
+                            <button class="excel-btn"><img src="../assets/images/exel.svg"
+                                    alt="exel" /></button>
+                        </div>
+                    </div>
+                    <hr class="header-border" />
+                    <div class="table-scroll-container">
+                        <div class="orderTransactions-container">
+                            <table id="orderTransactions" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="table-head">
+                                               Pazaryeri / Kargo
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                               Sipariş Türü
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                Pazaryeri Sipariş No
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                Müşteri Adı
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                Sipariş Tarihi
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                Pazaryeri Sipariş Durumu
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                Sipariş Durumu
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                Transfer Durumu
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                Kargo Takip Numarası
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                KDV Dahil Top. Tutar
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                Toplam Maliyet
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                Kargo Masrafı
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                Komisyon
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                Kutu Maliyeti
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="orderTransactionsBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/tables/dataTables.min.js"></script>
+    <script src="../assets/js/tables/orderTransactions.js"></script>
+</body>
+
+</html>

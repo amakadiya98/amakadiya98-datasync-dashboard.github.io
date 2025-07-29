@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/tableStyle.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+</head>
+
+<body>
+    <section>
+        <!-- Product Sales table -->
+        <div class="commonTable productProfitAnalysis">
+            <div class="common-spacing custom-container">
+                <div class="table-contant">
+                    <div class="table-scroll-container">
+                        <div class="productProfitAnalysis-container">
+                            <table id="productProfitAnalysis" class="display" style="width:100%">
+                                <div class="table-header">
+                                    <div class="d-flex align-items-center gap-2 top-dropdowns">
+                                        <div class="custom-dropdown-wrapper">
+                                            <div class="custom-dropdown">
+                                                <div class="dropdown-left">
+                                                    <span class="dropdown-label">Ürün Grubu</span>
+                                                </div>
+                                                <div class="dropdown-right">
+                                                    <img src="../assets/images/down.svg" alt="img" />
+                                                </div>
+                                            </div>
+                                            <ul class="dropdown-menu">
+                                                <li data-key="urun-grubu">Ürün Grubu</li>
+                                                <li data-key="urun-adi">Ürün Adı</li>
+                                                <li data-key="marka">Marka</li>
+                                            </ul>
+                                        </div>
+                                        <!-- Dropdown 2 -->
+                                        <div class="custom-dropdown-wrapper">
+                                            <div class="custom-dropdown">
+                                                <div class="dropdown-left">
+                                                    <span class="dropdown-label">Satış</span>
+                                                </div>
+                                                <div class="dropdown-right">
+                                                    <img src="../assets/images/down.svg" alt="img" />
+                                                </div>
+                                            </div>
+                                            <ul class="dropdown-menu">
+                                                <li data-key="satis">Satış</li>
+                                                <li data-key="siparis">Sipariş</li>
+                                                <li data-key="gelir">Gelir</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="table-head">
+                                               
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                <img src="../assets/images/table/brand-btn1.svg" alt="brand"/>                                               
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                <img src="../assets/images/table/brand-btn2.svg" alt="brand"/>                                                
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                <img src="../assets/images/table/brand-btn3.svg" alt="brand"/>                                                
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                <img src="../assets/images/table/brand-btn4.svg" alt="brand"/>                                                
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                <img src="../assets/images/table/brand-btn5.svg" alt="brand"/>                                                
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                <img src="../assets/images/table/brand-btn6.svg" alt="brand"/>                                                
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                <img src="../assets/images/table/brand-btn7.svg" alt="brand"/>                                                
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                <img src="../assets/images/table/brand-btn8.svg" alt="brand"/>                                                
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                <img src="../assets/images/table/brand-btn9.svg" alt="brand"/>                                                
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="table-head">
+                                                <img src="../assets/images/table/brand-btn10.svg" alt="brand"/>                                               
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="productProfitAnalysisBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/tables/dataTables.min.js"></script>
+    <script src="../assets/js/comman.js"></script>
+    <script src="../assets/js/tables/productProfitAnalysis.js"></script>
+</body>
+
+</html>

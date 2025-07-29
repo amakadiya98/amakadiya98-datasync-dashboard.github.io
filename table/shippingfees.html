@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/tableStyle.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+</head>
+
+<body>
+    <section>
+        <!-- Product Sales table -->
+        <div class="commonTable shippingfees">
+            <div class="common-spacing custom-container">
+                <div class="table-contant">
+                    <div class="table-header">
+                        <h3 class="table-title">Kargo Ücret</h3>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="divider"></div>
+                            <button class="add-shipping-btn shipping-btn">
+                                <img src="../assets/images/plus.svg" />
+                                <div>Kargo fiyatı ekle</div>
+                            </button>
+                            <button class="bluk-shipping-btn shipping-btn">
+                                <img src="../assets/images/table/shipping.svg" />
+                                <div>Toplu Kargo ekle</div>
+                            </button>
+                            <button class="excel-shipping-btn shipping-btn">
+                                <img src="../assets/images/exel.svg" />
+                                <div>Excel’e Aktar</div>
+                            </button>
+                        </div>
+                    </div>
+                    <hr class="header-border" />
+                    <div class="table-scroll-container">
+                        <div id="shippingfees-conatiner">
+                            <table id="shippingfees" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Ürün Kodu
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Pazaryeri
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                başlangıç tarihi
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                bitiş tarihi
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                desi
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                barem
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                başlangıç değeri
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                bitiş değeri
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                fiyat
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Durum
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="shippingfeesBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/tables/dataTables.min.js"></script>
+    <script src="../assets/js/tables/shippingfees.js"></script>
+</body>
+
+</html>

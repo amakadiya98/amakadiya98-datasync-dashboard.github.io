@@ -1,0 +1,133 @@
+.add-product-section {
+    padding: 30px;
+}
+
+.add-product-section .square-btn {
+    height: 45px;
+    width: 45px;
+    border: 1px solid #E8EEFF;
+    background-color: #F5F8FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.add-product-section .go-back-text {
+    font-family: 'Gilroy';
+    font-weight: 700;
+    font-size: 30px;
+    color: #A3AED0;
+    margin: 0;
+}
+
+.add-product-section .content-box{
+    border: 1px solid #CCD8E5;
+    border-radius: 20px;
+    margin-top: 42px;
+}
+
+.add-product-section .content-box .content-header {
+    padding: 17px;
+    font-family: 'Gilroy';
+    font-weight: 700;
+    font-size: 30px;
+    color: #A3AED0;
+    border-bottom: 1px solid #CCD8E5;
+    width: 100%;
+}
+
+.add-product-section .content-box .form-content{
+    padding: 40px 20px;
+}
+
+.add-product-section .content-box .form-content .form-row{
+    margin-left: 0;
+    gap: 80px;
+}
+
+.add-product-section .content-box .form-content .form-row .left-part,
+.add-product-section .content-box .form-content .form-row .right-part{
+    flex: 1;
+}
+
+.add-product-section .add-product-inputs{
+    width: 100%;
+    gap: 45px;
+}
+
+.add-product-section .add-product-inputs .input-container {
+    border: 1px solid #E8EEFF;
+    background-color: var(--white);
+    border-radius: 12px;
+    position: relative;
+}
+
+.add-product-section .add-product-inputs .input-container .label-box {
+    background-color: #F5F8FF;
+    padding: 13px;
+    max-width: 160px;
+    border: 1.11px solid #E8EEFF;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.add-product-section .add-product-inputs .input-container .label-box label {
+    font-family: 'Gilroy';
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--Color);
+    text-align: center;
+    width: 100%;
+}
+
+.add-product-section .add-product-inputs .input-container input {
+    padding: 13px 30px;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--Color);
+    border-radius: 12px;
+}
+
+.add-product-section .add-product-inputs .input-container input::placeholder {
+    color: #B7C9FF;
+}
+
+.add-product-section .add-product-inputs select {
+    padding: 14px 30px;
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 20px;
+    color: #023E7D;
+}
+
+.add-product-section .add-product-inputs .square-btn{
+    height: 58px;
+    width: 58px;
+}
+
+.add-product-section .save-btn {
+    padding: 12px 38px;
+    border-radius: 10px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--Color);
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 1280px) {
+    .add-product-section .content-box .form-content .form-row{
+        gap: 20px;
+    }
+}

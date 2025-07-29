@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/chartStyle.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/tableStyle.css" />
+    <link rel="stylesheet" href="../assets/css/staticfilter.css" />
+    <link rel="stylesheet" href="../assets/css/flatpickr.min.css" />
+</head>
+
+<body>
+    <section>
+        <div class="commonTable productGroupTable">
+            <div class="common-spacing custom-container">
+                <div class="table-contant">
+                    <div class="table-header">
+                        <h3 class="table-title">Ürün Grubu</h3>
+                    </div>
+
+                    <!-- Tabs -->
+                    <div class="seller-code">
+                        <div class="d-flex align-items-center gap-3">
+                            <!-- Dropdown 1 -->
+                            <div class="custom-dropdown-wrapper">
+                                <div class="custom-dropdown">
+                                    <div class="dropdown-left">
+                                        <span class="dropdown-label">Ürün Grubu</span>
+                                    </div>
+                                    <div class="dropdown-right">
+                                        <img src="../assets/images/down.svg" alt="img" />
+                                    </div>
+                                </div>
+                                <ul class="dropdown-menu">
+                                    <li data-key="urun-grubu">Ürün Grubu</li>
+                                    <li data-key="urun-adi">Ürün Adı</li>
+                                    <li data-key="marka">Marka</li>
+                                </ul>
+                            </div>
+                            <!-- Dropdown 2 -->
+                            <div class="custom-dropdown-wrapper">
+                                <div class="custom-dropdown" id="metricDropdown">
+                                    <div class="dropdown-left">
+                                        <span class="dropdown-label">Satış</span>
+                                    </div>
+                                    <div class="dropdown-right">
+                                        <img src="../assets/images/down.svg" alt="img" />
+                                    </div>
+                                </div>
+                                <ul class="dropdown-menu">
+                                    <li data-key="satis">Satış</li>
+                                    <li data-key="siparis">Sipariş</li>
+                                    <li data-key="gelir">Gelir</li>
+                                </ul>
+                            </div>
+                            <div class="input-with-icon2">
+                                <img src="../assets/images/calender.svg" alt="icon" class="placeholder-icon" />
+                                <input type="text" class="global-daterange" placeholder="Tarih Seç" />
+                            </div>
+                        </div>
+                        <div class="d-flex gap-4">
+                            <div class="divider"></div>
+                            <button class="fetch-btn">
+                                <img src="../assets/images/filter-arrow.svg" alt="icon" />
+                                Veriyi Getir
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-bar-part">
+                        <div class="custom-tab-container">
+                            <button class="custom-tab-button custom-active" data-tab="tab1">Tablo</button>
+                            <button class="custom-tab-button" data-tab="tab2">Grafik</button>
+                            <button class="custom-tab-button" data-tab="tab3">Pazaryeri</button>
+                        </div>
+                    </div>
+                    <div class="table-options-bar">
+                        <div class="table-options-bar-btn">
+                            <button class="option-btn"><img src="../assets/images/table/sq.svg"
+                                    alt="exel" />Kopyala</button>
+                            <button class="option-btn"><img src="../assets/images/table/csv.svg"
+                                    alt="exel" />CSV</button>
+                            <button class="excel-btn" onclick="downloadExcel()"><img src="../assets/images/exel.svg"
+                                    alt="exel" /></button>
+                            <button class="option-btn"><img src="../assets/images/table/printer.svg"
+                                    alt="exel" />Yazdır</button>
+
+                        </div>
+                        <div class="d-flex align-items-center gap-3 justify-content-end w-100 custom-searchbar">
+                            <div class="searchbar"><input type="search" id="customSearch" placeholder="Arama"
+                                    aria-controls="productGroupTable"></div>
+                            <button class="refresh-btn ms-2" onclick="location.reload()">
+                                <img src="../assets/images/refresh.svg" alt="icon">
+                            </button>
+                        </div>
+                    </div>
+                    <hr class="header-border" />
+
+                    <!-- Tab 1: Table -->
+                    <div id="tab1-panel" class="custom-tab-panel">
+                        <div class="table-scroll-container">
+                            <table id="productGroupTable" class="display nowrap performanceTable" style="width:100%">
+                                <thead class="heads-filter">
+                                    <tr>
+                                        <th>
+                                            <div class="head-cell">Marka <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span></div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Adet <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="1" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="1" />
+                                                </span></div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Adet (%) <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="2" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="2" />
+                                                </span></div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Tutar (%) <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="3" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="3" />
+                                                </span></div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Net Kar <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="4" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="4" />
+                                                </span></div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Net Kar (%) <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="5" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="5" />
+                                                </span></div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Grafik -->
+                    <div id="tab2-panel" class="custom-tab-panel" style="display: none;">
+                        <div class="chart-container">
+                            <div class="header">
+                                <div>
+                                    <div class="title">Toplam Sipariş Durumu <strong>(Satış)</strong></div>
+                                    <div class="total-sales">$855.8K</div>
+                                </div>
+                                <div class="chart-controls">
+                                    <div class="custom-dropdown-wrapper">
+                                        <div class="custom-dropdown" id="groupDropdown">
+                                            <div class="dropdown-left">
+                                                <img src="../assets/images/table/dimond.svg" alt="img" />
+                                                <span class="dropdown-label">Ürün Grubu</span>
+                                            </div>
+                                            <div class="dropdown-right">
+                                                <img src="../assets/images/table/dropdown.svg" alt="img" />
+                                            </div>
+                                        </div>
+                                        <ul class="dropdown-menu" style="display: none;">
+                                            <li data-key="urun-grubu">Ürün Grubu</li>
+                                            <li data-key="urun-adi">Ürün Adı</li>
+                                            <li data-key="marka">Marka</li>
+                                        </ul>
+                                    </div>
+                                    <div class="custom-dropdown-wrapper">
+                                        <div class="custom-dropdown" id="metricDropdown">
+                                            <div class="dropdown-left">
+                                                <img src="../assets/images/table/shoping.svg" alt="img" />
+                                                <span class="dropdown-label">Satış</span>
+                                            </div>
+                                            <div class="dropdown-right">
+                                                <img src="../assets/images/table/dropdown.svg" alt="img" />
+                                            </div>
+                                        </div>
+                                        <ul class="dropdown-menu" style="display: none;">
+                                            <li data-key="satis">Satış</li>
+                                            <li data-key="siparis">Sipariş</li>
+                                            <li data-key="gelir">Gelir</li>
+                                        </ul>
+                                    </div>
+                                    <button class="excel-btn" onclick="downloadExcel()"><img
+                                            src="../assets/images/exel.svg" alt="exel" /></button>
+                                </div>
+                            </div>
+                            <div class="chart-area">
+                                <canvas id="productGroupChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="pagination-part small">
+                            <div class="px-4 d-flex justify-content-between align-items-center gap-2 flex-wrap">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <button class="pagination-btn">
+                                        <img src="../assets/images/double-left-arrow.svg" />
+                                    </button>
+                                    <button class="pagination-btn">
+                                        <img src="../assets/images/left-arrow.svg" />
+                                    </button>
+                                    <button class="pagination-btn active">
+                                        1
+                                    </button>
+                                    <button class="pagination-btn">
+                                        2
+                                    </button>
+                                    <button class="pagination-btn">
+                                        3
+                                    </button>
+                                    <button class="pagination-btn">
+                                        4
+                                    </button>
+                                    <button class="pagination-btn">
+                                        5
+                                    </button>
+                                    <button class="pagination-btn">
+                                        <img src="../assets/images/right-arrow.svg" />
+                                    </button>
+                                    <button class="pagination-btn me-2">
+                                        <img src="../assets/images/double-right-arrow.svg" />
+                                    </button>
+                                    <div class="total-page">
+                                        20
+                                        <img src="../assets/images/down-box.svg" height="45" width="45">
+                                    </div>
+                                    <p class="m-0 pagination-text"> Sayfa başına öğe</p>
+                                </div>
+                                <div class="d-flex gap-2 align-items-center">
+                                    <p class="m-0 pagination-text">1 - 20 4141 ürün arasında</p>
+                                    <button class="pagination-btn">
+                                        <img src="../assets/images/refresh.svg" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Pazaryeri -->
+                    <div id="tab3-panel" class="custom-tab-panel" style="display: none;">
+                        <div class="btn-filter">
+                            <button class="general-all-btn active">Genel Görünüm</button>
+                            <button><img src="../assets/images/table/brand-btn1.svg" alt="img" /></button>
+                            <button><img src="../assets/images/table/brand-btn2.svg" alt="img" /></button>
+                            <button><img src="../assets/images/table/brand-btn3.svg" alt="img" /></button>
+                            <button><img src="../assets/images/table/brand-btn4.svg" alt="img" /></button>
+                            <button><img src="../assets/images/table/brand-btn5.svg" alt="img" /></button>
+                            <button><img src="../assets/images/table/brand-btn6.svg" alt="img" /></button>
+                            <button><img src="../assets/images/table/brand-btn7.svg" alt="img" /></button>
+                            <button><img src="../assets/images/table/brand-btn8.svg" alt="img" /></button>
+                            <button><img src="../assets/images/table/brand-btn9.svg" alt="img" /></button>
+                            <button><img src="../assets/images/table/brand-btn10.svg" alt="img" /></button>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="myStackedChart"></canvas>
+                        </div>
+                        <div class="pagination-part">
+                            <div class="px-4 d-flex justify-content-between align-items-center gap-2 flex-wrap">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <button class="pagination-btn">
+                                        <img src="../assets/images/double-left-arrow.svg" />
+                                    </button>
+                                    <button class="pagination-btn">
+                                        <img src="../assets/images/left-arrow.svg" />
+                                    </button>
+                                    <button class="pagination-btn active">
+                                        1
+                                    </button>
+                                    <button class="pagination-btn">
+                                        2
+                                    </button>
+                                    <button class="pagination-btn">
+                                        3
+                                    </button>
+                                    <button class="pagination-btn">
+                                        4
+                                    </button>
+                                    <button class="pagination-btn">
+                                        5
+                                    </button>
+                                    <button class="pagination-btn">
+                                        <img src="../assets/images/right-arrow.svg" />
+                                    </button>
+                                    <button class="pagination-btn me-2">
+                                        <img src="../assets/images/double-right-arrow.svg" />
+                                    </button>
+                                    <div class="total-page">
+                                        20
+                                        <img src="../assets/images/down-box.svg" height="45" width="45">
+                                    </div>
+                                    <p class="m-0 pagination-text"> Sayfa başına öğe</p>
+                                </div>
+                                <div class="d-flex gap-2 align-items-center">
+                                    <p class="m-0 pagination-text">1 - 20 4141 ürün arasında</p>
+                                    <button class="pagination-btn">
+                                        <img src="../assets/images/refresh.svg" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/charts-js-net/chart.js"></script>
+    <script src="../assets/js/charts-js-net/chartjs-plugin-datalabels.js"></script>
+    <script src="../assets/js/charts-js-net/chartjs-plugin-datalabels@2.2.0.js"></script>
+    <script src="../assets/js/flatpickr.js"></script>
+    <script src="../assets/js/tables/dataTables.min.js"></script>
+    <script src="../assets/js/tables/productGroup.js"></script>
+    <script src="../assets/js/comman.js"></script>
+</body>
+
+</html>

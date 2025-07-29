@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/chartStyle.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/tableStyle.css" />
+    <link rel="stylesheet" href="../assets/css/staticfilter.css" />
+    <link rel="stylesheet" href="../assets/css/flatpickr.min.css" />
+</head>
+
+<body>
+    <section>
+        <div class="commonTable productoverview">
+            <div class="common-spacing custom-container">
+                <div class="table-contant">
+                    <div class="table-options-bar">
+                        <div class="table-options-bar-btn">
+                            <button class="option-btn"><img src="../assets/images/table/sq.svg"
+                                    alt="exel" />Kopyala</button>
+                            <button class="option-btn"><img src="../assets/images/table/csv.svg"
+                                    alt="exel" />CSV</button>
+                            <button class="option-btn"><img src="../assets/images/table/printer.svg"
+                                    alt="exel" />Yazdır</button>
+
+                        </div>
+                        <div class="d-flex align-items-center gap-3 justify-content-end w-100 custom-searchbar">
+                            <div class="searchbar"><input type="search" id="customSearch2" placeholder="Arama"
+                                    aria-controls="productoverviewTable"></div>
+                            <button class="excel-btn" onclick="downloadExcel()"><img src="../assets/images/exel.svg"
+                                    alt="exel" /></button>
+                        </div>
+                    </div>
+                    <hr class="header-border" />
+                    <div class="table-tab-bar nav brand-tabs" role="tablist">
+                        <div class="nav-item">
+                            <a class="nav-link brand-tab active" data-bs-toggle="tab" data-bs-target="#productbrand1"
+                                role="tab">
+                                <img src="../assets/images/table/brand-btn1.svg" alt="hepsiburada" />
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link brand-tab" data-bs-toggle="tab" data-bs-target="#productbrand2"
+                                role="tab">
+                                <img src="../assets/images/table/brand-btn2.svg" alt="hepsiburada" />
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link brand-tab" data-bs-toggle="tab" data-bs-target="#productbrand3"
+                                role="tab">
+                                <img src="../assets/images/table/brand-btn3.svg" alt="hepsiburada" />
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link brand-tab" data-bs-toggle="tab" data-bs-target="#productbrand4"
+                                role="tab">
+                                <img src="../assets/images/table/brand-btn4.svg" alt="hepsiburada" />
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link brand-tab" data-bs-toggle="tab" data-bs-target="#productbrand5"
+                                role="tab">
+                                <img src="../assets/images/table/brand-btn5.svg" alt="hepsiburada" />
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link brand-tab" data-bs-toggle="tab" data-bs-target="#productbrand6"
+                                role="tab">
+                                <img src="../assets/images/table/brand-btn6.svg" alt="hepsiburada" />
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link brand-tab" data-bs-toggle="tab" data-bs-target="#productbrand7"
+                                role="tab">
+                                <img src="../assets/images/table/brand-btn7.svg" alt="hepsiburada" />
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link brand-tab" data-bs-toggle="tab" data-bs-target="#productbrand8"
+                                role="tab">
+                                <img src="../assets/images/table/brand-btn8.svg" alt="hepsiburada" />
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link brand-tab" data-bs-toggle="tab" data-bs-target="#productbrand9"
+                                role="tab">
+                                <img src="../assets/images/table/brand-btn9.svg" alt="hepsiburada" />
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link brand-tab" data-bs-toggle="tab" data-bs-target="#productbrand10"
+                                role="tab">
+                                <img src="../assets/images/table/brand-btn10.svg" alt="hepsiburada" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <hr class="header-border" />
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="productbrand1" role="tabpanel">
+                            <div class="table-scroll-container">
+                                <div id="productoverview-conatiner">
+                                    <table id="productoverview" class="display" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div class="head-cell">Ürün Adı <span class="arrows">
+                                                            <img src="../assets/images/up.svg" class="sort-asc"
+                                                                data-column="0" />
+                                                            <img src="../assets/images/down.svg" class="sort-desc"
+                                                                data-column="0" />
+                                                        </span></div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-cell">Marka <span class="arrows">
+                                                            <img src="../assets/images/up.svg" class="sort-asc"
+                                                                data-column="1" />
+                                                            <img src="../assets/images/down.svg" class="sort-desc"
+                                                                data-column="1" />
+                                                        </span></div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-cell">Kategori <span class="arrows">
+                                                            <img src="../assets/images/up.svg" class="sort-asc"
+                                                                data-column="1" />
+                                                            <img src="../assets/images/down.svg" class="sort-desc"
+                                                                data-column="1" />
+                                                        </span></div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-cell">Satış Fiyatı <span class="arrows">
+                                                            <img src="../assets/images/up.svg" class="sort-asc"
+                                                                data-column="1" />
+                                                            <img src="../assets/images/down.svg" class="sort-desc"
+                                                                data-column="1" />
+                                                        </span></div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-cell">Maliyet <span class="arrows">
+                                                            <img src="../assets/images/up.svg" class="sort-asc"
+                                                                data-column="1" />
+                                                            <img src="../assets/images/down.svg" class="sort-desc"
+                                                                data-column="1" />
+                                                        </span></div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-cell">Komisyon Oranı <span class="arrows">
+                                                            <img src="../assets/images/up.svg" class="sort-asc"
+                                                                data-column="1" />
+                                                            <img src="../assets/images/down.svg" class="sort-desc"
+                                                                data-column="1" />
+                                                        </span></div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-cell">Komisyon tutarı <span class="arrows">
+                                                            <img src="../assets/images/up.svg" class="sort-asc"
+                                                                data-column="1" />
+                                                            <img src="../assets/images/down.svg" class="sort-desc"
+                                                                data-column="1" />
+                                                        </span></div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-cell">pazarlama gideri <span class="arrows">
+                                                            <img src="../assets/images/up.svg" class="sort-asc"
+                                                                data-column="1" />
+                                                            <img src="../assets/images/down.svg" class="sort-desc"
+                                                                data-column="1" />
+                                                        </span></div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-cell">kutu maliyeti <span class="arrows">
+                                                            <img src="../assets/images/up.svg" class="sort-asc"
+                                                                data-column="1" />
+                                                            <img src="../assets/images/down.svg" class="sort-desc"
+                                                                data-column="1" />
+                                                        </span></div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-cell">kargo tutarı <span class="arrows">
+                                                            <img src="../assets/images/up.svg" class="sort-asc"
+                                                                data-column="1" />
+                                                            <img src="../assets/images/down.svg" class="sort-desc"
+                                                                data-column="1" />
+                                                        </span></div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-cell">brüt kar <span class="arrows">
+                                                            <img src="../assets/images/up.svg" class="sort-asc"
+                                                                data-column="1" />
+                                                            <img src="../assets/images/down.svg" class="sort-desc"
+                                                                data-column="1" />
+                                                        </span></div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-cell">net kar<span class="arrows">
+                                                            <img src="../assets/images/up.svg" class="sort-asc"
+                                                                data-column="1" />
+                                                            <img src="../assets/images/down.svg" class="sort-desc"
+                                                                data-column="1" />
+                                                        </span></div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-cell">net kar yüzdesi<span class="arrows">
+                                                            <img src="../assets/images/up.svg" class="sort-asc"
+                                                                data-column="1" />
+                                                            <img src="../assets/images/down.svg" class="sort-desc"
+                                                                data-column="1" />
+                                                        </span></div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="productoverviewBody"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab 2-->
+                        <div class="tab-pane fade" id="productbrand2" role="tabpanel">
+                            <p class="p-3">Trendyol tab content.</p>
+                        </div>
+
+                        <!-- Tab 3-->
+                        <div class="tab-pane fade" id="productbrand3" role="tabpanel">
+                            <p class="p-3">N11 tab content.</p>
+                        </div>
+
+                        <!-- Tab 4 -->
+                        <div class="tab-pane fade" id="productbrand4" role="tabpanel">
+                            <p class="p-3">Pazarama tab content.</p>
+                        </div>
+
+                        <!-- Tab 5 -->
+                        <div class="tab-pane fade" id="productbrand5" role="tabpanel">
+                            <p class="p-3">amazon tab content.</p>
+                        </div>
+
+                        <!-- Tab 6 -->
+                        <div class="tab-pane fade" id="productbrand6" role="tabpanel">
+                            <p class="p-3">b2b tab content.</p>
+                        </div>
+
+                        <!-- Tab 7 -->
+                        <div class="tab-pane fade" id="productbrand7" role="tabpanel">
+                            <p class="p-3">beymen tab content.</p>
+                        </div>
+                        <!-- Tab 8 -->
+                        <div class="tab-pane fade" id="productbrand8" role="tabpanel">
+                            <p class="p-3">ideasoft tab content.</p>
+                        </div>
+
+                        <!-- Tab 9 -->
+                        <div class="tab-pane fade" id="productbrand9" role="tabpanel">
+                            <p class="p-3">woo commerce content.</p>
+                        </div>
+
+                        <!-- Tab 10 -->
+                        <div class="tab-pane fade" id="productbrand2" role="tabpanel">
+                            <p class="p-3">buyer tab content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/tables/dataTables.min.js"></script>
+    <script src="../assets/js/tables/productoverview.js"></script>
+</body>
+
+</html>

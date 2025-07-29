@@ -1,0 +1,250 @@
+.edit-store-tab {
+    padding: 40px 0;
+}
+
+.edit-store-tab .tab-container {
+    max-width: 1580px;
+    width: 90%;
+    margin: 0 auto
+}
+
+.edit-store-tab .tab-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.edit-store-tab .tab-head .go-back-btn {
+    height: 45px;
+    width: 45px;
+    border: 1px solid #E8EEFF;
+    background-color: #F5F8FF;
+    border-radius: 12px;
+}
+
+.edit-store-tab .tab-head h3 {
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--Color);
+    margin: 0;
+}
+
+.edit-store-tab .tab-head h2 {
+    font-family: 'Gilroy';
+    font-weight: 700;
+    font-size: 30px;
+    color: #A3AED0;
+}
+
+.edit-store-tab .tab-part {
+    margin-top: 20px;
+    border: 1px solid #CCD8E5;
+    border-radius: 20px;
+}
+
+.edit-store-tab .tab-part .nav {
+    padding: 0 100px;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.edit-store-tab .tab-part .nav-tabs .nav-link.active {
+    border: 0;
+}
+
+.edit-store-tab .tab-part .nav-tabs .nav-link {
+    padding: 30px 10px;
+    text-align: center;
+    width: 100%;
+    font-family: 'Gilroy';
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--Color);
+    border: 0;
+    position: relative;
+}
+
+.edit-store-tab .tab-part .nav-tabs .nav-link:hover {
+    border: 0;
+}
+
+.edit-store-tab .tab-part .nav-tabs .nav-item {
+    flex: 1;
+    max-width: 318px;
+}
+
+.edit-store-tab .tab-part .nav-tabs .nav-link.active::before {
+    content: '';
+    height: 8px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--Color);
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.edit-store-tab .tab-part .tab-content {
+    padding: 30px 100px;
+}
+
+.edit-store-tab .tab-part .tab-content .tab-inputs {
+    gap: 36px;
+}
+
+.edit-store-tab .tab-part .tab-content .tab-inputs .input-container {
+    border: 1px solid #E8EEFF;
+    background-color: var(--white);
+    border-radius: 12px;
+    position: relative;
+}
+
+.edit-store-tab .tab-part .tab-content .tab-inputs .input-container .label-box {
+    background-color: #F5F8FF;
+    padding: 14px;
+    max-width: 378px;
+    border: 1.11px solid #E8EEFF;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.edit-store-tab .tab-part .tab-content #installation-settings .tab-inputs .input-container .label-box {
+    max-width: 228px;
+}
+
+.edit-store-tab .tab-part .tab-content .tab-inputs .input-container .label-box label {
+    font-family: 'Gilroy';
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--Color);
+    text-align: center;
+    width: 100%;
+}
+
+.edit-store-tab .tab-part .tab-content .tab-inputs .input-container .label-box label span {
+    color: #E31A1A;
+}
+
+.edit-store-tab .tab-part .tab-content .tab-inputs .input-container input {
+    padding: 15px 30px;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--Color);
+    border-radius: 12px;
+}
+
+.edit-store-tab .tab-part .tab-content .tab-inputs .input-container input::placeholder {
+    color: #B7C9FF;
+}
+
+.select2-container {
+    height: 100%;
+    border: 0 !important;
+    padding-left: 28px;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple,
+.select2-container--default .select2-selection--multiple {
+    border: 0;
+    align-items: center;
+}
+
+.select2-selection__rendered li button {
+    display: none;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    padding-left: 4px;
+    background-color: #ffffff;
+    border: 1px solid #01B574;
+    color: #01B574;
+    font-family: 'Gilroy' !important;
+    font-weight: 700;
+    font-size: 15px;
+
+}
+
+.select2-dropdown {
+    border: 1px solid #E8EEFF
+}
+
+.select2-container--default .select2-results__option--selected {
+    background-color: #F5F8FF;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: var(--Color);
+}
+
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+    margin-bottom: 0;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+    padding: 0px 30px;
+}
+
+.edit-store-tab .tab-part .tab-content .save-btn {
+    padding: 12px 38px;
+    border-radius: 10px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--Color);
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.edit-store-tab .tab-part .tab-content .down-arrow-btn {
+    height: 60px;
+    width: 60px;
+    border: 1px solid #E8EEFF;
+    background-color: #F5F8FF;
+    border-radius: 12px;
+}
+
+.edit-store-tab .tab-part .tab-content select {
+    padding: 15px 30px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 20px;
+    color: #023E7D;
+}
+
+.edit-store-tab .tab-part .tab-content .toggle-eye {
+    cursor: pointer;
+}
+
+.edit-store-tab .tab-part .tab-content .number-input {
+    margin-left: 378px;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.edit-store-tab .tab-part .tab-content .arrow-btn {
+    background-color: transparent;
+    border: 0;
+}
+
+@media only screen and (max-width: 1280px) {
+    .edit-store-tab .tab-part .nav {
+        padding: 0 40px;
+    }
+
+    .edit-store-tab .tab-part .tab-content {
+        padding: 30px 40px;
+    }
+}

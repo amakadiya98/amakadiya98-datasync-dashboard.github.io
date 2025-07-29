@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/profile.css" />
+        <link rel="stylesheet" href="../assets/css/common.css" />
+</head>
+
+<body>
+    <div class="profile-page">
+        <div class="container">
+            <div class="d-flex gap-4">
+                <div class="flex-fill">
+                    <div class="inputs d-flex flex-column ">
+                        <div class="d-flex align-items-center input-container">
+                            <div class="label-box">
+                                <label for="name">Adınız<span>*</span></label>
+                            </div>
+                            <input type="text" id="name" class="flex-fill" value="Berk" />
+                        </div>
+                        <div class="d-flex align-items-center input-container">
+                            <div class="label-box">
+                                <label for="surname">Soyadınız<span>*</span></label>
+                            </div>
+                            <input type="text" id="surname" class="flex-fill" placeholder="Soyadınızı Giriniz" />
+                        </div>
+                        <div class="d-flex align-items-center input-container">
+                            <div class="label-box">
+                                <label for="companyName">Şirket İsmi</label>
+                            </div>
+                            <input type="text" id="companyName" class="flex-fill"
+                                placeholder="Şirket İsminizi Giriniz" />
+                        </div>
+                        <div class="d-flex align-items-center input-container">
+                            <div class="label-box">
+                                <label for="position">Ünvan / Pozisyon:</label>
+                            </div>
+                            <input type="text" id="position" class="flex-fill"
+                                placeholder="Şirket Ünvanınız / Pozisyonunuzu Giriniz" />
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="profile-photo">
+                        <div class="label-box">
+                            <label>Profil Resminiz:</label>
+                        </div>
+                        <div class="d-flex flex-column align-items-center justify-content-center browse flex-fill">
+                            <input type="file" id="profileInput" accept="image/*" hidden />
+                            <img id="previewImage" src="" alt="Preview" class="my-2 preview-image"
+                                style="display: none;" />
+                            <button type="button" id="browseBtn">Görsel Seç</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-end mt-4">
+                <button class="save-btn">
+                    <img src="./../assets/images/save.svg" />
+                    Kaydet
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="profile-page">
+        <div class="container password-confirm">
+            <div class="inputs d-flex flex-column ">
+                <div class="d-flex align-items-center input-container">
+                    <div class="label-box d-flex gap-2 align-items-center">
+                        <img src="../assets/images/lock.svg" />
+                        <label for="name">Yeni Şifreniz:</label>
+                    </div>
+                    <input type="password" id="name" class="flex-fill" placeholder="Yeni Şifrenizi Giriniz" />
+                </div>
+                <div class="d-flex align-items-center input-container">
+                    <div class="label-box d-flex gap-2 align-items-center">
+                        <img src="../assets/images/lock.svg" />
+                        <label for="name">Yeni Şifreniz Onaylayın:</label>
+                    </div>
+                    <input type="password" id="name" class="flex-fill" placeholder="Yeni Şifrenizi  Tekrar Giriniz" />
+                </div>
+                <div class="d-flex align-items-center justify-content-end ">
+                    <button class="save-btn">
+                        <img src="./../assets/images/save.svg" />
+                        Kaydet
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/profile/profile.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/tableStyle.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+</head>
+
+<body>
+    <section>
+        <!-- Product Sales table -->
+        <div class="commonTable stockStatus verient2">
+            <div class="common-spacing custom-container">
+                <div class="table-contant">
+                    <div class="table-header">
+                        <h3 class="table-title">Stok Durumu</h3>
+                        <div class="d-flex align-items-center gap-3 searchbar-container justify-content-end">
+                            <button class="excel-btn" onclick="downloadExcel()"><img src="../assets/images/exel.svg"
+                                    alt="exel" /></button>
+                        </div>
+                    </div>
+                    <hr class="header-border" />
+                    <div class="table-scroll-container">
+                        <div id="stockStatus-conatiner">
+                            <table id="stockStatus" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="text-part">
+                                                Ürün Görsel
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Ürün Kodu
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Ürün Adı
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Kategori
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Marka
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Toplam Stok
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="img-part">
+                                                <img src="../assets/images/table/stockStatus1.png" alt="img" />
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="img-part">
+                                                <img src="../assets/images/table/stockStatus2.png" alt="img" />
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="img-part">
+                                                <img src="../assets/images/table/stockStatus3.png" alt="img" />
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="img-part">
+                                                <img src="../assets/images/table/stockStatus4.png" alt="img" />
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="img-part">
+                                                <img src="../assets/images/table/stockStatus5.png" alt="img" />
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="img-part">
+                                                <img src="../assets/images/table/stockStatus6.png" alt="img" />
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="img-part">
+                                                <img src="../assets/images/table/stockStatus7.png" alt="img" />
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="img-part">
+                                                <img src="../assets/images/table/stockStatus8.png" alt="img" />
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                İşlemler
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="stockStatusBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/tables/dataTables.min.js"></script>
+    <script src="../assets/js/tables/stockStatus2.js"></script>
+</body>
+
+</html>

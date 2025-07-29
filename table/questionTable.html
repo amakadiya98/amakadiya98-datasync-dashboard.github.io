@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/tableStyle.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+</head>
+
+<body>
+    <section>
+        <!-- Product Sales table -->
+        <div class="commonTable questionTable">
+            <div class="common-spacing custom-container">
+                <div class="table-contant">
+                    <div class="table-header">
+                        <div class="stock-part">
+                            <div class="stock-box">
+                                <div class="stock-left-part">
+                                    <img src="../assets/images/table/stock.svg" alt="stock img" />
+                                    <span>Tümü</span>
+                                </div>
+                                <span>900</span>
+                            </div>
+                            <div class="stock-box">
+                                <div class="stock-left-part red">
+                                    <img src="../assets/images/table/red-stock.svg" alt="stock img" />
+                                    <span>Açık Soru</span>
+                                </div>
+                                <span>45</span>
+                            </div>
+                            <div class="stock-box">
+                                <div class="stock-left-part green">
+                                    <img src="../assets/images/table/green-stock.svg" alt="stock img" />
+                                    <span>Kapatılan Soru</span>
+                                </div>
+                                <span>855</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 searchbar-container justify-content-end">
+                            <button class="excel-btn" onclick="downloadExcel()"><img src="../assets/images/exel.svg"
+                                    alt="exel" /></button>
+                        </div>
+                    </div>
+                    <hr class="header-border" />
+                    <div class="table-scroll-container">
+                        <div id="questionTable-conatiner">
+                            <table id="questionTable" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="text-part">
+                                                Durum
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Pazaryeri
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Soru Tipi
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Ürün Kodu / Ürün Adı
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Soru
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Tarihi
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Cevaplayan
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="text-part">
+                                                Görüntüleme
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="questionTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/tables/dataTables.min.js"></script>
+    <script src="../assets/js/tables/questionTable.js"></script>
+</body>
+
+</html>

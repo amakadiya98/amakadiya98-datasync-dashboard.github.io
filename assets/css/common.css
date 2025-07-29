@@ -1,0 +1,226 @@
+.custom-container {
+    max-width: 1760px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* refresh-btn */
+.refresh-btn {
+    background-color: #F5F8FF;
+    border: none;
+    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 0.59px solid #E8EEFF;
+    transition: background 0.2s ease;
+}
+
+.refresh-btn:hover {
+    background-color: #e4ecf8;
+}
+
+.refresh-btn.footer-btn {
+    background-color: #FFFFFF;
+    width: 31px;
+    height: 31px;
+    min-width: 31px;
+    min-height: 31px;
+    border: 0.7px solid #E8EEFF;
+    border-radius: 8px;
+}
+
+.refresh-btn.footer-btn img {
+    width: 15px;
+    height: 15px;
+}
+
+/* pagination */
+.pagination-part {
+    background-color: #F5F8FF;
+    box-shadow: 0px 7px 15px 0px #1126920D;
+    border: 1px solid #CCD8E5;
+    padding: 10px;
+    z-index: 1;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.pagination-part .pagination-btn {
+    border: 1px solid #E8EEFF;
+    background-color: #FFFFFF;
+    height: 45px;
+    width: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 20px;
+    color: #023E7D;
+}
+
+.pagination-part.small .pagination-btn {
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.pagination-part.small .pagination-btn img {
+    height: 10px;
+    width: 10px;
+}
+
+.pagination-part .pagination-btn.active {
+    border: 1px solid var(--Color, #023E7D);
+    font-weight: 700;
+}
+
+.pagination-part .show-page {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 15px;
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 20px;
+    color: #023E7D;
+    background-color: #FFFFFF;
+    border: 1px solid #E8EEFF;
+    border-radius: 12px;
+}
+
+.pagination-part.small .show-page {
+    height: 30px;
+    font-size: 14px;
+    gap: 12px;
+    border-radius: 6px;
+}
+
+.pagination-part.small .show-page img {
+    height: 30px;
+    width: 30px;
+}
+
+.pagination-part .pagination-text {
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 15px;
+    color: #747C98;
+}
+
+.pagination-part.small .pagination-text {
+    font-size: 12px
+}
+
+
+/* common custom dropdown */
+.custom-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 0 0 10px;
+    border: 0.6px solid #E8EEFF;
+    border-radius: 14px;
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    user-select: none;
+    width: 235px;
+}
+
+.header-section .dropdown-menu {
+  left: -10px;
+}
+
+.dropdown-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #0A3D91;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.dropdown-left .material-icons {
+    color: #BFDBFE;
+    font-size: 20px;
+}
+
+.dropdown-left .material-symbols-outlined {
+    color: #BFDBFE;
+    font-size: 20px;
+}
+
+.dropdown-label {
+    color: #003367;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+}
+
+.dropdown-placeholder {
+    color: #B7C9FF;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+}
+
+.dropdown-right {
+    background-color: #F8FAFF;
+    border-radius: 10px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    border: 0.59px solid #E8EEFF
+}
+
+.dropdown-right .material-icons {
+    color: #BFDBFE;
+    font-size: 28px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 999;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dropdown-menu li:hover {
+    background: #F1F5F9;
+}
+
+.custom-dropdown-wrapper {
+    position: relative;
+}

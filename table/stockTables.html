@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/tableStyle.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+</head>
+
+<body>
+    <section class="stock-container">
+        <div class="commonTable stockCriticisms">
+            <div class="common-spacing custom-container">
+                <div class="table-contant">
+                    <div class="table-header">
+                        <h3 class="table-title">Top 5 Kritik Stok</h3>
+                        <div class="d-flex align-items-center gap-2 searchbar-container justify-content-end">
+                            <div class="searchbar"><input type="search" id="customSearch" placeholder="Arama"
+                                    aria-controls="currentPriceTable"></div>
+                            <button class="refresh-btn ms-2" onclick="location.reload()">
+                                <img src="../assets/images/refresh.svg" alt="icon">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-options-bar">
+                        <div class="table-options-bar-btn">
+                            <button class="option-btn"><img src="../assets/images/table/sq.svg"
+                                    alt="exel" />Kopyala</button>
+                            <button class="option-btn"><img src="../assets/images/table/csv.svg"
+                                    alt="exel" />CSV</button>
+                            <button class="excel-btn" onclick="downloadExcel()"><img src="../assets/images/exel.svg"
+                                    alt="exel" /></button>
+                            <button class="option-btn"><img src="../assets/images/table/printer.svg"
+                                    alt="exel" />Yazdır</button>
+                        </div>
+                    </div>
+                    <div class="table-scroll-container">
+                        <div id="stockCriticisms-conatiner">
+                            <table id="stockCriticisms" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="head-cell">Ürün Kodu <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span></div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Ürün Adı <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span></div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Satış Adedi <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span></div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Stok Adedi <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span></div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Aylık Stok <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span></div>
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody id="stockCriticismsBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="commonTable stockCriticisms">
+            <div class="common-spacing custom-container">
+                <div class="table-contant">
+                    <div class="table-header">
+                        <h3 class="table-title">Top 5 Fazla Stok</h3>
+                        <div class="d-flex align-items-center gap-2 searchbar-container justify-content-end">
+                            <div class="searchbar"><input type="search" id="customSearch" placeholder="Arama"
+                                    aria-controls="currentPriceTable"></div>
+                            <button class="refresh-btn ms-2" onclick="location.reload()">
+                                <img src="../assets/images/refresh.svg" alt="icon">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-options-bar">
+                        <div class="table-options-bar-btn">
+                            <button class="option-btn"><img src="../assets/images/table/sq.svg"
+                                    alt="exel" />Kopyala</button>
+                            <button class="option-btn"><img src="../assets/images/table/csv.svg"
+                                    alt="exel" />CSV</button>
+                            <button class="excel-btn" onclick="downloadExcel()"><img src="../assets/images/exel.svg"
+                                    alt="exel" /></button>
+                            <button class="option-btn"><img src="../assets/images/table/printer.svg"
+                                    alt="exel" />Yazdır</button>
+                        </div>
+                    </div>
+                    <div class="table-scroll-container">
+                        <div id="stockCriticisms-conatiner">
+                            <table id="stockExcess" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="head-cell">Ürün Kodu <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span></div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Ürün Adı <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span></div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Satış Adedi <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span></div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Stok Adedi <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span></div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Aylık Stok <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span></div>
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody id="stockExcessBodys"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/tables/dataTables.min.js"></script>
+    <script src="../assets/js/tables/stockTables.js"></script>
+</body>
+
+</html>

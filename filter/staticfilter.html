@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync filter</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/staticfilter.css" />
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="../assets/css/flatpickr.min.css">
+
+
+</head>
+
+<body>
+    <!-- filter1 -->
+    <div class="filter mt-5">
+        <div class="TRENDYOL-payment">
+            <div class="payment-content">
+             <div class="d-flex align-items-center gap-2">
+                   <div class="trendyol"><img src="../assets/images/brand2.svg" alt="" height="9.82" width="43"></div>
+                <div class="trendyol-title">Mutabakat - 04-06-2025_192358 - 49448818
+                    TRENDYOL Marketplace Ödeme
+                </div>
+             </div>
+
+      <div class="d-flex align-items-center gap-4">
+                  <button class="button1">
+                    Tutar Farklı:<span>120</span>
+                </button>
+                <button class="button2">
+                    Mükerrer:<span>7</span>
+                </button>
+                <button class="button3">
+                    Başarılı:<span>4386</span>
+                </button>
+      </div>
+      <div class="divider"></div>
+    <div class="d-flex align-items-center gap-4">
+                    <button class="excel-button multiple-product ">
+                    <img src="../assets/images/exel.svg" alt="">
+                    <div class="multiple-content">Excel’e Aktar</div>
+                </button>
+                <button class="excel2-button multiple-product">
+                    <img src="../assets/images/exel.svg" alt="">
+                    <div class="multiple-content">Cari Kodlarıyla Beraber Excel’e Aktar</div>
+                </button>
+    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- filter2 -->
+    <div class="filter mt-5 staticfilter">
+        <div class="seller-code">
+            <input type="text" placeholder="Satıcı Ürün Kodu">
+            <div class="d-flex gap-4">
+                <div class="divider"></div>
+                <button class="fetch-btn">
+                    <img src="../assets/images/filter-arrow.svg" alt="icon" />
+                    Veriyi Getir
+                </button>
+            </div>
+        </div>
+
+        <div class="seller-code">
+            <div class="input-with-icon">
+                <img src="../assets/images/calender.svg" alt="icon" class="placeholder-icon" />
+                <input type="text" class="global-daterange" placeholder="Tarih Seç" />
+            </div>
+
+
+            <div class="d-flex gap-4">
+                <div class="divider"></div>
+                <button class="fetch-btn">
+                    <img src="../assets/images/filter-arrow.svg" alt="icon" />
+                    Veriyi Getir
+                </button>
+            </div>
+        </div>
+
+        <div class="seller-code">
+            <div class="d-flex align-items-center flex-wrap gap-4">
+                <div class="input-with-icon2">
+                    <img src="../assets/images/calender.svg" alt="icon" class="placeholder-icon" />
+                    <input type="text" class="global-daterange" placeholder="Tarih Seç" />
+                </div>
+
+                <!-- Dropdown 1 -->
+                <div class="custom-dropdown-wrapper">
+                    <div class="custom-dropdown">
+                        <div class="dropdown-left">
+                            <span class="dropdown-label">Ürün Grubu</span>
+                        </div>
+                        <div class="dropdown-right">
+                            <img src="../assets/images/down.svg" alt="img" />
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li data-key="urun-grubu">Ürün Grubu</li>
+                        <li data-key="urun-adi">Ürün Adı</li>
+                        <li data-key="marka">Marka</li>
+                    </ul>
+                </div>
+                <!-- Dropdown 2 -->
+                <div class="custom-dropdown-wrapper">
+                    <div class="custom-dropdown">
+                        <div class="dropdown-left">
+                            <span class="dropdown-label">Satış</span>
+                        </div>
+                        <div class="dropdown-right">
+                            <img src="../assets/images/down.svg" alt="img" />
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li data-key="satis">Satış</li>
+                        <li data-key="siparis">Sipariş</li>
+                        <li data-key="gelir">Gelir</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex gap-4">
+                <div class="divider"></div>
+                <button class="fetch-btn">
+                    <img src="../assets/images/filter-arrow.svg" alt="icon" />
+                    Veriyi Getir
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- filter3 -->
+    <div class="filter mt-5 ">
+        <div class="goback-filter">
+            <div class="d-flex gap-2">
+                <div class="goback-img"><img src="../assets/images/left-arrow.svg" alt=""></div>
+                <div class="goback-title">Geri Dön</div>
+            </div>
+            <div class="goback-title">Toplu Komisyon Aktarımı</div>
+        </div>
+        <div class="goback-content">
+            <div class="goback-top">
+                <div class="company-input">
+                    <div class="logo">Kampanya Adı</div>
+                    <input type="text" class="company-text" />
+                </div>
+
+                <div class="divider2"></div>
+                <div class="d-flex gap-3 align-items-center ">
+                    <img src="../assets/images/calender.svg" alt="calendar icon" width="28" height="30.65" />
+                    <div class="company-input2">
+                        <div class="logo2">Başlangıç ve Bitiş Tarihi</div>
+                        <input type="text" class="global-daterange date-text" value="27/04/25 18:25 - 30/04/25 19:30"
+                            readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <div class="company-filter">
+                    <div class="logo3">Aktarılacak dosyayı seçiniz </div>
+                    <div class="select-file">Dosya Seç</div>
+                </div>
+                <div class="excel-button multiple-product">
+                    <img src="../assets/images/exel.svg" alt="">
+                    <div class="multiple-content">Excel’e Aktar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- filter4 -->
+    <div class="filter mt-5">
+        <div class="goback-2 d-flex align-items-center justify-content-between flex-wrap">
+            <div class="d-flex gap-2">
+                <div class="goback-img"><img src="../assets/images/left-arrow.svg" alt=""></div>
+                <div class="goback-title">Geri Dön</div>
+            </div>
+            <div class="right-content">
+                <div class="d-flex gap-3 align-items-center">
+                    <div class="trendyol"><img src="../assets/images/brand2.svg" alt="" height="9.82" width="43"></div>
+                    <div class="right-text">Mayıs Kampanyası_V2</div>
+                </div>
+                <div class="divider"></div>
+                <input type="text" class="global-daterange date-box" value="27/04/25 18:25 - 30/04/25 19:30" readonly />
+
+            </div>
+        </div>
+    </div>
+
+    <!-- filter 5 -->
+    <div class="filter mt-5">
+      <div class="goback-filter">
+            <div class="d-flex gap-2">
+                <div class="goback-img"><img src="../assets/images/left-arrow.svg" alt=""></div>
+                <div class="goback-title">Geri Dön</div>
+            </div>
+            <div class="goback-title">Toplu Komisyon Aktarımı</div>
+        </div>
+
+        <div class="filter5 top1">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <div class="d-flex gap-3 align-items-center calendar-trigger2">
+                    <img src="../assets/images/calender.svg" alt="calendar icon" width="28" height="30.65" />
+                    <div class="company-input2">
+                        <div class="logo2">Başlangıç ve Bitiş Tarihi</div>
+                        <input type="text" class="global-daterange date-text" value="27/04/25 18:25 - 30/04/25 19:30"
+                            readonly />
+                    </div>
+                </div>
+
+                <div class="excel-button multiple-product">
+                    <img src="../assets/images/exel.svg" alt="">
+                    <button class="multiple-content">Excel İndir</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter5 top2">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <div class="company-filter">
+                    <div class="logo3">Aktarılacak dosyayı seçiniz </div>
+                    <div class="select-file">Dosya Seç</div>
+                </div>
+                <div class="excel-button multiple-product">
+                    <img src="../assets/images/exel.svg" alt="">
+                    <button class="multiple-content">Excel Gönder</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- filter6 -->
+    <div class="filter mt-5">
+        <div class="filter6">
+            <div class="input-with-icon3">
+                <img src="../assets/images/calender.svg" alt="icon" class="placeholder-icon" />
+                <input type="text" class="global-daterange" placeholder="Tarih aralığı" />
+            </div>
+
+            <div class="d-flex gap-4 align-items-center justify-content-center">
+                <div class="divider"></div>
+                <div class="img-bg">
+                    <img src="../assets/images/pdf.svg" alt="">
+                </div>
+                <div class="img-bg">
+                    <img src="../assets/images/exel.svg" alt="" width="30.9" height="29.19">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- filter7 -->
+    <div class="filter mt-5">
+        <div class="filter6">
+            <div class="top-product">Top Ürünler</div>
+            <div class="view-button">
+                <div class="right-btn">
+                    <div class="white-round"></div>
+                </div>
+                <div class="button-content">Tablo Görünümü</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- filter8 -->
+    <div class="filter mt-5">
+        <div class="filter6">
+            <div class="top-product">Mağaza Ayarları</div>
+            <div class="d-flex gap-4">
+                <div class="divider"></div>
+                <button class="add2-button gap-2">
+                    <img src="../assets/images/plus.svg" alt="">
+                    <div class="add-content">Mağaza Ayarı Ekle</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- filter9 -->
+    <div class="filter mt-5">
+        <div class="filter6">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-5 brand-group">
+                <div class="brand brand-1">
+                    <img src="../assets/images/brand1.svg" alt="" height="28.27" width="167.14">
+                </div>
+                <div class="brand brand-2">
+                    <img src="../assets/images/brand2.svg" alt="" height="36.3" width="159">
+                </div>
+            </div>
+            <div class="filter-refresh-img" onclick="location.reload();">
+                <img src="../assets/images/refresh.svg" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- filter10 -->
+    <div class="filter mt-5">
+        <div class="filter6">
+
+            <div class="filter10 filter-button1">Ürün detay müşteri deneyimi analiz</div>
+            <div class="divider3"></div>
+            <div class="filter10 filter-button2">Ürün Yorumları Detay</div>
+
+        </div>
+    </div>
+
+    <!-- filter11 -->
+    <div class="filter mt-5 staticfilter2">
+        <div class="filter7">
+            <img class="global-daterange" src="../assets/images/calender.svg" alt="">
+            <div class="divider4"></div>
+            <div class="custom-dropdown-wrapper">
+                <div class="custom-dropdown">
+                    <div class="dropdown-left">
+                        <span class="dropdown-label">Ürün Grubu</span>
+                    </div>
+                    <div class="dropdown-right">
+                        <img src="../assets/images/down.svg" alt="img" />
+                    </div>
+                </div>
+                <ul class="dropdown-menu">
+                    <li data-key="urun-grubu">Ürün Grubu</li>
+                    <li data-key="urun-adi">Ürün Adı</li>
+                    <li data-key="marka">Marka</li>
+                </ul>
+            </div>
+            <button class="delete-button">
+                <img src="../assets/images/delete.svg" alt="">
+                <div>Sil</div>
+            </button>
+            <div class="divider4"></div>
+            <div class="custom-dropdown-wrapper staticfilter3">
+                <div class="custom-dropdown">
+                    <div class="dropdown-left">
+                        <span class="dropdown-label">Özel</span>
+                    </div>
+                    <div class="dropdown-right">
+                        <img src="../assets/images/down.svg" alt="img" />
+                    </div>
+                </div>
+                <ul class="dropdown-menu">
+                    <li data-key="urun-grubu">Özel</li>
+                    <li data-key="urun-adi">Adı</li>
+                    <li data-key="marka">Marka</li>
+                </ul>
+            </div>
+            <input type="text" placeholder="Şablon Adı Giriniz" class="input-sec" />
+            <button class="pdf-btn">
+                <img src="../assets/images/whitepdf.svg" alt="">
+                <div>Kaydet</div>
+            </button>
+            <div class="divider4"></div>
+            <input type="text" placeholder="Dosya Adı Giriniz" class="input-sec" />
+            <bitton class="excel-button2">
+                <img src="../assets/images/exel.svg" alt="">
+                <div class="multiple-content">Excel’e Aktar</div>
+            </bitton>
+            <div class="divider4"></div>
+            <button class=" filter-refresh-btn" onclick="location.reload();">
+                <img src="../assets/images/refresh.svg" alt="">
+                <div>Kaydet</div>
+            </button>
+        </div>
+    </div>
+
+    <!-- filter12 -->
+    <div class="filter mt-5">
+        <div class="main-title">Raporlar</div>
+        <div class="filter8 position-relative">
+            <div class="content-div" id="contentDiv">
+                <div class="report">Rapor Seçiniz</div>
+                <div class="report-text" id="selectedText">Seçiniz</div>
+                <div class="report-arrow"><img src="../assets/images/bluedown-arrow.svg" alt="">
+                </div>
+            </div>
+
+            <div class="marketvalue-dropdown" id="dropdown" style="display: none;">
+                <div class="option">Günlük Satış Karşılaştırma</div>
+                <div class="option">Haftalık Satış Karşılaştırma</div>
+                <div class="option">Aylık Satış Karşılaştırma</div>
+                <div class="option">Yıllık Satış Karşılaştırma</div>
+            </div>
+
+            <div class="slide2-content" id="slideContent">
+                <div class="d-flex align-items-center flex-wrap gap-3">
+
+                    <div class="Marketplace" id="Marketplace1">
+                        <div class="place">Pazaryeri</div>
+                        <div class="report-text2" id="selectedText1">Seçiniz</div>
+                        <div class="report-arrow" id="reportSelector1"><img src="../assets/images/bluedown-arrow.svg"
+                                alt=""></div>
+                        <div class="marketvalue-dropdown1" id="dropdown1" style="display: none;">
+                            <div class="option">Trendyol</div>
+                            <div class="option">n11</div>
+                            <button id="confirmBtn1">Seç</button>
+                        </div>
+                    </div>
+
+                    <div class="Marketplace" id="Marketplace2">
+                        <div class="place">Marka</div>
+                        <div class="report-text2" id="selectedText2">Seçiniz</div>
+                        <div class="report-arrow" id="reportSelector2"><img src="../assets/images/bluedown-arrow.svg"
+                                alt=""></div>
+                        <div class="marketvalue-dropdown1" id="dropdown2" style="display: none;">
+                            <div class="option">Defacto</div>
+                            <div class="option">Koton</div>
+                            <button id="confirmBtn2">Seç</button>
+                        </div>
+                    </div>
+
+                    <div class="Marketplace" id="Marketplace3">
+                        <div class="place">Kategori</div>
+                        <div class="report-text2" id="selectedText3">Seçiniz</div>
+                        <div class="report-arrow" id="reportSelector3"><img src="../assets/images/bluedown-arrow.svg"
+                                alt=""></div>
+                        <div class="marketvalue-dropdown1" id="dropdown3" style="display: none;">
+                            <div class="option">Giyim</div>
+                            <div class="option">Kozmetik</div>
+                            <button id="confirmBtn3">Seç</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="d-flex align-items-center flex-wrap gap-3">
+                    <button class="excel-button2 excel">
+                        <img src="../assets/images/exel.svg" alt="">
+                        <div class="multiple-content">Excel’e Aktar</div>
+                    </button>
+                    <button class="filterdownload-btn">Rapor İndir</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/filter/tableview.js"></script>
+    <script src="../assets/js/filter/marketdropdown.js"></script>
+    <script src="../assets/js/flatpickr.js"></script>
+    <script src="../assets/js/comman.js"></script>
+</body>
+
+</html>

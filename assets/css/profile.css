@@ -1,0 +1,112 @@
+.profile-page {
+    padding: 100px 0;
+
+}
+
+.profile-page .inputs {
+    gap: 36px;
+}
+
+.profile-page .inputs .input-container {
+    border: 1px solid #E8EEFF;
+    background-color: var(--white);
+    border-radius: 12px;
+    position: relative;
+}
+
+.profile-page .inputs .input-container .label-box {
+    background-color: #F5F8FF;
+    padding: 14px;
+    max-width: 243px;
+    border: 1.11px solid #E8EEFF;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.profile-page .inputs .input-container .label-box label {
+    font-family: 'Gilroy';
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--Color);
+    width: 100%;
+}
+
+.profile-page .inputs .input-container .label-box label span {
+    color: #E31A1A;
+}
+
+.profile-page .inputs .input-container input {
+    padding: 15px 30px;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--Color);
+    border-radius: 12px;
+}
+
+.profile-page .inputs .input-container input::placeholder {
+    color: #B7C9FF;
+}
+
+.profile-page .save-btn {
+    padding: 12px 38px;
+    border-radius: 10px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--Color);
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.profile-page .profile-photo {
+    min-width: 234px;
+    border: 1.22px solid #E8EEFF;
+    border-radius: 15px;
+    height: 300px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-page .profile-photo .label-box {
+    padding: 16px;
+    border: 1.11px solid #E8EEFF;
+    border-radius: 14px;
+}
+
+.profile-page .profile-photo .label-box {
+    font-family: 'Gilroy';
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--Color);
+    text-align: center;
+    background-color: #F5F8FF;
+}
+
+.profile-page .profile-photo button {
+    padding: 14px 36px;
+    background-color: #F4F7FE;
+    border-radius: 10px;
+    border: 1.22px solid #E8EEFF;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.preview-image{
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.profile-page .password-confirm .inputs .input-container .label-box{
+    max-width: 314px;
+}

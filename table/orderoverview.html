@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/tableStyle.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+</head>
+
+<body>
+    <section>
+        <div class="commonTable orderoverview">
+            <div class="common-spacing custom-container">
+                <div class="table-contant">
+                    <div class="table-header nav brand-tabs" role="tablist">
+                        <div>
+                            <img src="../assets/images/table/brand-tag1.svg" alt="hepsiburada"
+                                class="nav-link brand-tab active" data-bs-toggle="tab" data-bs-target="#tab1"
+                                role="tab">
+                        </div>
+                        <div>
+                            <img src="../assets/images/table/brand-tag2.svg" alt="trendyol" class="nav-link brand-tab "
+                                data-bs-toggle="tab" data-bs-target="#tab2" role="tab">
+                        </div>
+                        <div>
+                            <img src="../assets/images/table/brand-tag3.svg" alt="n11" class="nav-link brand-tab "
+                                data-bs-toggle="tab" data-bs-target="#tab3" role="tab">
+                        </div>
+                        <div>
+                            <img src="../assets/images/table/brand-tag4.svg" alt="pazarama" class="nav-link brand-tab "
+                                data-bs-toggle="tab" data-bs-target="#tab4" role="tab">
+                        </div>
+                    </div>
+
+                    <hr class="header-border" />
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                            <div class="table-scroll-container">
+                                <div id="orderoverview-conatiner">
+                                    <table id="orderoverview" class="display" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div class="head-text">İşlemler</div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-text">Tarih</div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-text">Başlık</div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-text">Toplam Tutar</div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-text">Durum</div>
+                                                </th>
+                                                <th>
+                                                    <div class="head-text">Özet</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="orderoverviewBody"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 2: Trendyol -->
+                        <div class="tab-pane fade" id="tab2" role="tabpanel">
+                            <p class="p-3">Trendyol tab content.</p>
+                        </div>
+
+                        <!-- Tab 3: N11 -->
+                        <div class="tab-pane fade" id="tab3" role="tabpanel">
+                            <p class="p-3">N11 tab content.</p>
+                        </div>
+
+                        <!-- Tab 4: Pazarama -->
+                        <div class="tab-pane fade" id="tab4" role="tabpanel">
+                            <p class="p-3">Pazarama tab content.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/tables/dataTables.min.js"></script>
+    <script src="../assets/js/tables/orderoverview.js"></script>
+</body>
+
+</html>

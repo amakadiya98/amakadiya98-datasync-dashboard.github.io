@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
+    <link rel="stylesheet" href="../assets/css/chartStyle.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/tableStyle.css" />
+</head>
+
+<body>
+    <section class="main-content">
+        <div class="commonTable compaignTable">
+            <div class="common-spacing custom-container">
+                <div class="table-contant">
+                    <div class="table-header">
+                        <div class="d-flex justify-content-end gap-2 align-items-center w-100">
+                            <button class="add-campaign-btn">
+                                <img src="../assets/images/plus.svg" />
+                                Kampanya Ekle
+                            </button>
+                            <button class="excel-btn">
+                                <img src="../assets/images/exel.svg" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="table-scroll-container">
+                        <table id="compaignTable" class="display nowrap performanceTable" style="width:100%">
+                            <thead class="heads-filter">
+                                <tr>
+                                    <th>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <div class="head-text flex-fill">
+                                                Pazaryeri Adı
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <div class="head-text flex-fill">
+                                                Başlık
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <div class="head-text flex-fill">
+                                                Başlangıç ve Bitiş Tarihi
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <div class="head-text flex-fill">
+                                                İşlemler
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="compaignTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/tables/dataTables.min.js"></script>
+    <script src="../assets/js/tables/campaign.js"></script>
+</body>
+
+</html>

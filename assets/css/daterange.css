@@ -1,0 +1,238 @@
+.filter-section {
+  max-width: 1580px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 4px 20px rgba(112, 144, 176, 0.08);
+  border-radius: 17px;
+  padding: 13px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.custom-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0 0;
+  width: 100%;
+}
+
+.custom-dropdown-menu.show {
+  display: block;
+}
+
+
+.dropdown-item {
+  padding: 8px 16px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 25px;
+}
+
+.field-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+
+.field-group:nth-child(4n):not(.no-divider) .divider {
+  display: none;
+}
+
+.field-group.no-divider {
+  flex: 1 1 calc(25% - 25px);
+  display: flex;
+  justify-content: flex-end;
+}
+.calender-box {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  width: 352px;
+}
+.calender-daterange {
+  width: 100%;
+  height: 45px;
+  border: 1px solid rgba(232, 238, 255, 1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(2, 62, 125, 1);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* Input */
+.custom-input {
+   display: flex;
+  justify-content: space-between;
+  width: 352px;
+  height: 45px;
+  border: 1px solid rgba(232, 238, 255, 1);
+  border-radius: 12px;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: rgba(183, 201, 255, 1);
+  font-weight: 500;
+  position: relative;
+}
+
+.custom-input::placeholder {
+  color: rgba(183, 201, 255, 1);
+  font-weight: 500;
+  font-size: 20px;
+}
+.field-group input:focus{
+outline: none;
+}
+
+/* Vertical divider */
+.divider {
+  width: 0;
+  height: 46.5px;
+  margin-left: 22px;
+  border-left: 1px solid rgba(212, 223, 255, 1);
+}
+
+/* Button */
+.fetch-btn {
+  height: 45px;
+  background-color: #023E7D;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+.select-arrow-box {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(245, 248, 255, 1);
+  background-image: url('../images/bluedown-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px;
+  border-radius: 12px;
+}
+
+
+.calendar-dropdown-wrapper {
+  position: absolute;
+  top: 55px;
+  left: -25px; 
+  transform: translateX(25px); 
+  z-index: 99;
+  
+  border-radius: 16px;
+  display: none; /* hidden by default */
+}
+.calendar-area {
+  max-width: 706px;
+  background: #fff;
+  border: 1px solid #E8EEFF;
+  border-radius: 16px;
+  height: 289px;
+}
+
+.calendar-left {
+  height: 289;
+  width: 350px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 40px);
+  gap: 1px 8px;
+}
+
+.day-item {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  color: #2B3674;
+  z-index: 1;
+}
+
+.day-item.in-full-range {
+  background-color: #F4F7FE;
+  border-radius: 0;
+  z-index: 2;
+}
+
+.day-item.is-start-date,
+.day-item.is-end-date {
+  background-color: #FFC283 !important;
+  border-radius: 50% !important;
+  z-index: 2;
+}
+
+.calendar-controls select {
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 6px 10px;
+  border: 1px solid #E8EEFF;
+  color: #1D2B50;
+  background-color: #F5F9FF;
+  outline: none !important;
+}
+
+.calendar-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-select:focus {
+  border: none !important;
+  outline: none !important;
+}
+
+.time-select {
+  width: 60px;
+  font-size: 16px !important;
+  color: #023E7D !important;
+  font-weight: 500 !important;
+}
+
+.selected-range-box {
+  font-size: 18px;
+  color: #023E7D;
+  background-color: #F1F6FF;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  width: 315px;
+  height: 64px;
+  margin-top: 75px;
+  margin-right: 5px;
+}

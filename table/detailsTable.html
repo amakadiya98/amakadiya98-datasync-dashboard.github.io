@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/tableStyle.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+</head>
+
+<body>
+    <section>
+        <!-- Product Sales table -->
+        <div class="commonTable detailsTable">
+            <div class="common-spacing custom-container">
+                <div class="table-contant">
+                    <div class="table-header">
+                        <button class="excel-btn"><img src="../assets/images/exel.svg" alt="exel" /></button>
+                        <div class="searchbar"><input type="search" id="customSearch" placeholder="Arama"
+                                aria-controls="detailsTable"></div>
+                    </div>
+                    <hr class="header-border" />
+                    <div class="table-scroll-container">
+                        <div class="detailsTable-container">
+                            <table id="detailsTable" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="head-cell">Detay
+                                                <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Tip
+                                                <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Açıklama
+                                                <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Tutar
+                                                <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Pazaryeri Tutarı
+                                                <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="head-cell">Fark
+                                                <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span>
+                                            </div>
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody id="detailsTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/tables/dataTables.min.js"></script>
+    <script src="../assets/js/tables/detailsTable.js"></script>
+</body>
+
+</html>

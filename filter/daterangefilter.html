@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datasync filter</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/fonts.css" />
+  <link rel="stylesheet" href="../assets/css/daterange.css">
+</head>
+
+<body>
+  <div class="filter-section">
+    <div class="filter-row">
+
+      <div class="field-group calendar-group">
+        <div class="calender-box calendar-toggle">
+          <img src="../assets/images/calender.svg" alt="calendar" width="28" height="30.65" />
+          <div class="calender-daterange">27/04/25 18:25 - 30/04/25 19:30</div>
+        </div>
+
+        <div class="calendar-dropdown-wrapper" id="calendarDropdown">
+          <div class="calendar-area d-flex gap-4 p-2">
+            <div id="calendar-container" class="calendar-left "></div>
+
+            <div class="calendar-controls">
+              <div class="d-flex gap-2 mb-5">
+                <select id="monthSelect" class="form-select shadow-none "></select>
+                <select id="yearSelect" class="form-select shadow-none"></select>
+              </div>
+              <div class="d-flex gap-2 align-items-center ">
+                <select id="startHour" class="form-select time-select"></select> :
+                <select id="startMinute" class="form-select time-select"></select>
+                <span class="mx-1">-</span>
+                <select id="endHour" class="form-select time-select"></select> :
+                <select id="endMinute" class="form-select time-select"></select>
+              </div>
+              <div class="selected-range-box">27/04/25 18:25 - 30/04/25 19:30</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+      </div>
+
+
+      <div class="field-group">
+        <input type="text" class="custom-input" placeholder="Sipariş Numarası" />
+        <div class="divider"></div>
+      </div>
+
+      <div class="field-group">
+        <input type="text" class="custom-input" placeholder="Müşteri" />
+        <div class="divider"></div>
+      </div>
+
+      <div class="field-group" style="position: relative;">
+        <div class="custom-input dropdown-trigger" data-target="dropdown1">
+          Pazaryeri
+          <div class="select-arrow-box"></div>
+        </div>
+
+        <ul id="dropdown1" class="custom-dropdown-menu">
+          <li><a class="dropdown-item" href="#">TrendYol</a></li>
+          <li><a class="dropdown-item" href="#">Hepsiburada</a></li>
+          <li><a class="dropdown-item" href="#">Amazon</a></li>
+        </ul>
+      </div>
+
+
+
+      <div class="field-group" style="position: relative;">
+        <div class="custom-input dropdown-trigger" data-target="dropdown2">Pazaryeri Sipariş Durumu
+          <div class="select-arrow-box"></div>
+        </div>
+        <div class="divider"></div>
+        <ul id="dropdown2" class="custom-dropdown-menu">
+          <li><a class="dropdown-item" href="#">TrendYol</a></li>
+          <li><a class="dropdown-item" href="#">Hepsiburada</a></li>
+          <li><a class="dropdown-item" href="#">Amazon</a></li>
+        </ul>
+      </div>
+
+      <div class="field-group" style="position: relative;">
+        <div class="custom-input dropdown-trigger" data-target="dropdown3">Sipariş Durumu
+          <div class="select-arrow-box"></div>
+        </div>
+        <div class="divider"></div>
+        <ul id="dropdown3" class="custom-dropdown-menu">
+          <li><a class="dropdown-item" href="#">TrendYol</a></li>
+          <li><a class="dropdown-item" href="#">Hepsiburada</a></li>
+          <li><a class="dropdown-item" href="#">Amazon</a></li>
+        </ul>
+      </div>
+
+      <div class="field-group" style="position: relative;">
+        <div class="custom-input dropdown-trigger" data-target="dropdown4">Transfer Durumu
+          <div class="select-arrow-box"></div>
+        </div>
+        <div class="divider"></div>
+        <ul id="dropdown4" class="custom-dropdown-menu">
+          <li><a class="dropdown-item" href="#">TrendYol</a></li>
+          <li><a class="dropdown-item" href="#">Hepsiburada</a></li>
+          <li><a class="dropdown-item" href="#">Amazon</a></li>
+        </ul>
+      </div>
+
+      <div class="field-group" style="position: relative;">
+        <div class="custom-input dropdown-trigger" data-target="dropdown5">
+          BNPL
+          <div class="select-arrow-box"></div>
+        </div>
+
+        <ul id="dropdown5" class="custom-dropdown-menu">
+          <li><a class="dropdown-item" href="#">TrendYol</a></li>
+          <li><a class="dropdown-item" href="#">Hepsiburada</a></li>
+          <li><a class="dropdown-item" href="#">Amazon</a></li>
+        </ul>
+      </div>
+
+      <div class="field-group" style="position: relative;">
+        <div class="custom-input dropdown-trigger" data-target="dropdown6">
+          Micro
+          <div class="select-arrow-box"></div>
+        </div>
+
+        <ul id="dropdown6" class="custom-dropdown-menu">
+          <li><a class="dropdown-item" href="#">TrendYol</a></li>
+          <li><a class="dropdown-item" href="#">Hepsiburada</a></li>
+          <li><a class="dropdown-item" href="#">Amazon</a></li>
+        </ul>
+      </div>
+
+      <div class="field-group no-divider">
+        <button class="fetch-btn">
+          <img src="../assets/images/filter-arrow.svg" alt="icon" />
+          Veriyi Getir
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../assets/js/filter/daterange.js"></script>
+
+</body>
+
+</html>

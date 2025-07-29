@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/tableStyle.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+</head>
+
+<body>
+    <section>
+        <!-- Product Sales table -->
+        <div class="commonTable">
+            <div class="common-spacing custom-container">
+                <div class="table-contant">
+                    <div class="table-header">
+                        <h3 class="table-title">Güncel Fiyat & Karlılık Durumu</h3>
+                        <div class="d-flex align-items-center gap-3 searchbar-container justify-content-end">
+                            <div class="searchbar"><input type="search" id="customSearch" placeholder="Arama"
+                                    aria-controls="currentPriceTable"></div>
+                            <button class="excel-btn"><img src="../assets/images/pdf.svg" width="24px" height="24px"
+                                    alt="exel" /></button>
+                            <button class="excel-btn" onclick="downloadExcel()"><img src="../assets/images/exel.svg"
+                                    alt="exel" /></button>
+                        </div>
+                    </div>
+                    <hr class="header-border" />
+                    <div class="table-scroll-container">
+                        <div id="currentPrice-table">
+                            <table id="currentPriceTable" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="header-cell-box">
+                                                <div class="head-cell">
+                                                    Pazaryeri<span class="arrows">
+                                                        <img src="../assets/images/up.svg" class="sort-up"
+                                                            data-column="0" />
+                                                        <img src="../assets/images/down.svg" class="sort-down"
+                                                            data-column="0" />
+                                                    </span>
+                                                </div>
+                                                <button class="filter-icon"><img src="../assets/images/filter.svg"
+                                                        alt="filter" /></button>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="header-cell-box">
+                                                <div class="head-cell">
+                                                    Satış Fiyatı<span class="arrows">
+                                                        <img src="../assets/images/up.svg" class="sort-up"
+                                                            data-column="0" />
+                                                        <img src="../assets/images/down.svg" class="sort-down"
+                                                            data-column="0" />
+                                                    </span>
+                                                </div>
+                                                <button class="filter-icon"><img src="../assets/images/filter.svg"
+                                                        alt="filter" /></button>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="header-cell-box">
+                                                <div class="head-cell">
+                                                    Net Kar <span class="arrows">
+                                                        <img src="../assets/images/up.svg" class="sort-up"
+                                                            data-column="0" />
+                                                        <img src="../assets/images/down.svg" class="sort-down"
+                                                            data-column="0" />
+                                                    </span>
+                                                </div>
+                                                <button class="filter-icon"><img src="../assets/images/filter.svg"
+                                                        alt="filter" /></button>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="header-cell-box">
+                                                <div class="head-cell">
+                                                    Net Kar Oranı <span class="arrows">
+                                                        <img src="../assets/images/up.svg" class="sort-up"
+                                                            data-column="0" />
+                                                        <img src="../assets/images/down.svg" class="sort-down"
+                                                            data-column="0" />
+                                                    </span>
+                                                </div>
+                                                <button class="filter-icon"><img src="../assets/images/filter.svg"
+                                                        alt="filter" /></button>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="currentPriceTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/tables/dataTables.min.js"></script>
+    <script src="../assets/js/tables/currentPriceAndProfitability.js"></script>
+</body>
+
+</html>

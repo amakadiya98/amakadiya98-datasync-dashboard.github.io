@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pivot Table UI</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/tableStyle.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/fieldsTable.css" />
+</head>
+
+<body>
+    <section class="fields-section-wrapper">
+    <div class="fields-section">
+        <div class="fields-sidebar">
+            <h4>Alanlar</h4>
+            <div class="scroll-part-conatiner">
+                <div class="scroll-part">
+                    <div class="task-list">
+                        <h5>Müşteri Grubu</h5>
+                        <button><img src="../assets/images/table/go-arrow.svg" alt="icon" /></button>
+                    </div>
+                    <div class="task-list">
+                        <h5>Müşteri Tipi</h5>
+                        <button><img src="../assets/images/table/go-arrow.svg" alt="icon" /></button>
+                    </div>
+                    <div class="task-list">
+                        <h5>Müşteri İsmi</h5>
+                        <button><img src="../assets/images/table/go-arrow.svg" alt="icon" /></button>
+                    </div>
+                    <div class="task-list">
+                        <h5>Sipariş No</h5>
+                        <button><img src="../assets/images/table/go-arrow.svg" alt="icon" /></button>
+                    </div>
+                    <div class="task-list">
+                        <h5>Market Sipariş No</h5>
+                        <button><img src="../assets/images/table/go-arrow.svg" alt="icon" /></button>
+                    </div>
+                    <div class="task-list">
+                        <h5>Bundle mı?</h5>
+                        <button><img src="../assets/images/table/go-arrow.svg" alt="icon" /></button>
+                    </div>
+                    <div class="task-list">
+                        <h5>ürün kodu</h5>
+                        <button><img src="../assets/images/table/go-arrow.svg" alt="icon" /></button>
+                    </div>
+                    <div class="task-list">
+                        <h5>Market Sipariş No</h5>
+                        <button><img src="../assets/images/table/go-arrow.svg" alt="icon" /></button>
+                    </div>
+                    <div class="task-list">
+                        <h5>Bundle mı?</h5>
+                        <button><img src="../assets/images/table/go-arrow.svg" alt="icon" /></button>
+                    </div>
+                    <div class="task-list">
+                        <h5>ürün kodu</h5>
+                        <button><img src="../assets/images/table/go-arrow.svg" alt="icon" /></button>
+                    </div>
+                </div>
+            </div>
+            <div class="types-of-fields">
+                <h4>Sütunlar</h4>
+                <div class="options-container">
+                    <div class="fields-options">
+                        <div class="dropdown-container">
+                            <span>Sütunlar</span>
+                            <div class="dropdown-btn">
+                                <img src="../assets/images/menu.svg" alt="icon">
+                                <div class="close-btn">
+                                    <img src="../assets/images/table/x.svg" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fields-show">
+                        <div class="fields-menu">
+                            <ul class="menu-list">
+                                <li class="menu-item active" data-target="#content1"><span><img
+                                            src="../assets/images/sidebar/up.svg" alt="icon" />artan şekilde
+                                        sırala</span>
+                                </li>
+                                <li class="menu-item" data-target="#content2"><span><img
+                                            src="../assets/images/sidebar/down.svg" alt="icon" />azalan şekilde
+                                        sırala</span></li>
+                                <li class="menu-item" data-target="#content3"><span><img
+                                            src="../assets/images/sidebar/filter.svg" alt="icon" />Alanları Dahil
+                                        Et</span>
+                                </li>
+                                <li class="menu-item" data-target="#content4"><span><img
+                                            src="../assets/images/sidebar/filter.svg" alt="icon" />Alan Filtresi</span>
+                                </li>
+                            </ul>
+                            <div class="menu-content">
+                                <div id="content1" class="submenu-content active">Artan şekilde sıralama uygulanır.
+                                </div>
+                                <div id="content2" class="submenu-content">Azalan şekilde sıralama uygulanır.</div>
+                                <div id="content3" class="submenu-content">Alanlar dahil edilir.</div>
+                                <div id="content4" class="submenu-content">
+                                    <div>
+                                        <label>Öğelerin Değerini Göster:</label>
+                                        <div class="custom-dropdown-wrapper staticfilter3">
+                                            <div class="custom-dropdown">
+                                                <div class="dropdown-left">
+                                                    <span class="dropdown-label">Özel</span>
+                                                </div>
+                                                <div class="dropdown-right">
+                                                    <img src="../assets/images/down.svg" alt="img" />
+                                                </div>
+                                            </div>
+                                            <ul class="dropdown-menu">
+                                                <li data-key="urun-grubu">Şunları İçerir</li>
+                                                <li data-key="urun-adi">Adı</li>
+                                                <li data-key="marka">Marka</li>
+                                            </ul>
+                                        </div>
+                                        <input type="text" placeholder="Değer giriniz" />
+                                    </div>
+                                    <div class="btn-part">
+                                        <button class="btn-filter"> <img src="../assets/images/sidebar/fliter2.svg"
+                                                alt="img" />Filtrele</button>
+                                        <button class="btn-clear">Temizle</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="types-of-fields">
+                <h4>Satırlar</h4>
+                <div class="options-container">
+                    <div class="fields-options">
+                        <div class="dropdown-container">
+                            <span>Pazaryeri</span>
+                            <div class="dropdown-btn">
+                                <img src="../assets/images/menu.svg" alt="icon">
+                                <div class="close-btn">
+                                    <img src="../assets/images/table/x.svg" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fields-show">
+                        <div class="fields-menu">
+                            <ul class="menu-list">
+                                <li class="menu-item active" data-target="#content1"><span><img
+                                            src="../assets/images/sidebar/up.svg" alt="icon" />artan şekilde
+                                        sırala</span>
+                                </li>
+                                <li class="menu-item" data-target="#content2"><span><img
+                                            src="../assets/images/sidebar/down.svg" alt="icon" />azalan şekilde
+                                        sırala</span></li>
+                                <li class="menu-item" data-target="#content3"><span><img
+                                            src="../assets/images/sidebar/filter.svg" alt="icon" />Alanları Dahil
+                                        Et</span>
+                                </li>
+                                <li class="menu-item" data-target="#content4"><span><img
+                                            src="../assets/images/sidebar/filter.svg" alt="icon" />Alan Filtresi</span>
+                                </li>
+                            </ul>
+                            <div class="menu-content">
+                                <div id="content1" class="submenu-content active">Artan şekilde sıralama uygulanır.
+                                </div>
+                                <div id="content2" class="submenu-content">Azalan şekilde sıralama uygulanır.</div>
+                                <div id="content3" class="submenu-content">Alanlar dahil edilir.</div>
+                                <div id="content4" class="submenu-content">
+                                    <div>
+                                        <label>Öğelerin Değerini Göster:</label>
+                                        <div class="custom-dropdown-wrapper staticfilter3">
+                                            <div class="custom-dropdown">
+                                                <div class="dropdown-left">
+                                                    <span class="dropdown-label">Özel</span>
+                                                </div>
+                                                <div class="dropdown-right">
+                                                    <img src="../assets/images/down.svg" alt="img" />
+                                                </div>
+                                            </div>
+                                            <ul class="dropdown-menu">
+                                                <li data-key="urun-grubu">Şunları İçerir</li>
+                                                <li data-key="urun-adi">Adı</li>
+                                                <li data-key="marka">Marka</li>
+                                            </ul>
+                                        </div>
+                                        <input type="text" placeholder="Değer giriniz" />
+                                    </div>
+                                    <div class="btn-part">
+                                        <button class="btn-filter"> <img src="../assets/images/sidebar/fliter2.svg"
+                                                alt="img" />Filtrele</button>
+                                        <button class="btn-clear">Temizle</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="types-of-fields mb-0">
+                <h4>Önlemler</h4>
+                <div class="options-container">
+                    <div class="fields-options border-bottom">
+                        <div class="dropdown-container">
+                            <span>ToplamTutar</span>
+                            <div class="dropdown-btn">
+                                <img src="../assets/images/menu.svg" alt="icon">
+                                <div class="close-btn">
+                                    <img src="../assets/images/table/x.svg" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fields-show">
+                        <div class="fields-menu">
+                            <ul class="menu-list">
+                                <li class="menu-item active" data-target="#content1"><span><img
+                                            src="../assets/images/sidebar/up.svg" alt="icon" />artan şekilde
+                                        sırala</span>
+                                </li>
+                                <li class="menu-item" data-target="#content2"><span><img
+                                            src="../assets/images/sidebar/down.svg" alt="icon" />azalan şekilde
+                                        sırala</span></li>
+                                <li class="menu-item" data-target="#content3"><span><img
+                                            src="../assets/images/sidebar/filter.svg" alt="icon" />Alanları Dahil
+                                        Et</span>
+                                </li>
+                                <li class="menu-item" data-target="#content4"><span><img
+                                            src="../assets/images/sidebar/filter.svg" alt="icon" />Alan Filtresi</span>
+                                </li>
+                            </ul>
+                            <div class="menu-content">
+                                <div id="content1" class="submenu-content active">Artan şekilde sıralama uygulanır.
+                                </div>
+                                <div id="content2" class="submenu-content">Azalan şekilde sıralama uygulanır.</div>
+                                <div id="content3" class="submenu-content">Alanlar dahil edilir.</div>
+                                <div id="content4" class="submenu-content">
+                                    <div>
+                                        <label>Öğelerin Değerini Göster:</label>
+                                        <div class="custom-dropdown-wrapper staticfilter3">
+                                            <div class="custom-dropdown">
+                                                <div class="dropdown-left">
+                                                    <span class="dropdown-label">Özel</span>
+                                                </div>
+                                                <div class="dropdown-right">
+                                                    <img src="../assets/images/down.svg" alt="img" />
+                                                </div>
+                                            </div>
+                                            <ul class="dropdown-menu">
+                                                <li data-key="urun-grubu">Şunları İçerir</li>
+                                                <li data-key="urun-adi">Adı</li>
+                                                <li data-key="marka">Marka</li>
+                                            </ul>
+                                        </div>
+                                        <input type="text" placeholder="Değer giriniz" />
+                                    </div>
+                                    <div class="btn-part">
+                                        <button class="btn-filter"> <img src="../assets/images/sidebar/fliter2.svg"
+                                                alt="img" />Filtrele</button>
+                                        <button class="btn-clear">Temizle</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="options-container">
+                    <div class="fields-options border-top">
+                        <div class="dropdown-container">
+                            <span>Adet</span>
+                            <div class="dropdown-btn">
+                                <img src="../assets/images/menu.svg" alt="icon">
+                                <div class="close-btn">
+                                    <img src="../assets/images/table/x.svg" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fields-show">
+                        <div class="fields-menu">
+                            <ul class="menu-list">
+                                <li class="menu-item active" data-target="#content1"><span><img
+                                            src="../assets/images/sidebar/up.svg" alt="icon" />artan şekilde
+                                        sırala</span>
+                                </li>
+                                <li class="menu-item" data-target="#content2"><span><img
+                                            src="../assets/images/sidebar/down.svg" alt="icon" />azalan şekilde
+                                        sırala</span></li>
+                                <li class="menu-item" data-target="#content3"><span><img
+                                            src="../assets/images/sidebar/filter.svg" alt="icon" />Alanları Dahil
+                                        Et</span>
+                                </li>
+                                <li class="menu-item" data-target="#content4"><span><img
+                                            src="../assets/images/sidebar/filter.svg" alt="icon" />Alan Filtresi</span>
+                                </li>
+                            </ul>
+                            <div class="menu-content">
+                                <div id="content1" class="submenu-content active">Artan şekilde sıralama uygulanır.
+                                </div>
+                                <div id="content2" class="submenu-content">Azalan şekilde sıralama uygulanır.</div>
+                                <div id="content3" class="submenu-content">Alanlar dahil edilir.</div>
+                                <div id="content4" class="submenu-content">
+                                    <div>
+                                        <label>Öğelerin Değerini Göster:</label>
+                                        <div class="custom-dropdown-wrapper staticfilter3">
+                                            <div class="custom-dropdown">
+                                                <div class="dropdown-left">
+                                                    <span class="dropdown-label">Özel</span>
+                                                </div>
+                                                <div class="dropdown-right">
+                                                    <img src="../assets/images/down.svg" alt="img" />
+                                                </div>
+                                            </div>
+                                            <ul class="dropdown-menu">
+                                                <li data-key="urun-grubu">Şunları İçerir</li>
+                                                <li data-key="urun-adi">Adı</li>
+                                                <li data-key="marka">Marka</li>
+                                            </ul>
+                                        </div>
+                                        <input type="text" placeholder="Değer giriniz" />
+                                    </div>
+                                    <div class="btn-part">
+                                        <button class="btn-filter"> <img src="../assets/images/sidebar/fliter2.svg"
+                                                alt="img" />Filtrele</button>
+                                        <button class="btn-clear">Temizle</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="left-field-sidebar">
+            <div class="table-upper-part">
+                <div class="table-fiels-options">
+                    <div class="options-container">
+                        <div class="fields-options remove-border">
+                            <div class="dropdown-container">
+                                <span>ToplamTutar</span>
+                                <div class="dropdown-btn">
+                                    <img src="../assets/images/menu.svg" alt="icon">
+                                    <div class="close-btn">
+                                        <img src="../assets/images/table/x.svg" alt="icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fields-show">
+                            <div class="fields-menu">
+                                <ul class="menu-list">
+                                    <li class="menu-item active" data-target="#content1"><span><img
+                                                src="../assets/images/sidebar/up.svg" alt="icon" />artan şekilde
+                                            sırala</span>
+                                    </li>
+                                    <li class="menu-item" data-target="#content2"><span><img
+                                                src="../assets/images/sidebar/down.svg" alt="icon" />azalan şekilde
+                                            sırala</span></li>
+                                    <li class="menu-item" data-target="#content3"><span><img
+                                                src="../assets/images/sidebar/filter.svg" alt="icon" />Alanları Dahil
+                                            Et</span>
+                                    </li>
+                                    <li class="menu-item" data-target="#content4"><span><img
+                                                src="../assets/images/sidebar/filter.svg" alt="icon" />Alan
+                                            Filtresi</span>
+                                    </li>
+                                </ul>
+                                <div class="menu-content">
+                                    <div id="content1" class="submenu-content active">Artan şekilde sıralama uygulanır.
+                                    </div>
+                                    <div id="content2" class="submenu-content">Azalan şekilde sıralama uygulanır.</div>
+                                    <div id="content3" class="submenu-content">Alanlar dahil edilir.</div>
+                                    <div id="content4" class="submenu-content">
+                                        <div>
+                                            <label>Öğelerin Değerini Göster:</label>
+                                            <div class="custom-dropdown-wrapper staticfilter3">
+                                                <div class="custom-dropdown">
+                                                    <div class="dropdown-left">
+                                                        <span class="dropdown-label">Özel</span>
+                                                    </div>
+                                                    <div class="dropdown-right">
+                                                        <img src="../assets/images/down.svg" alt="img" />
+                                                    </div>
+                                                </div>
+                                                <ul class="dropdown-menu">
+                                                    <li data-key="urun-grubu">Şunları İçerir</li>
+                                                    <li data-key="urun-adi">Adı</li>
+                                                    <li data-key="marka">Marka</li>
+                                                </ul>
+                                            </div>
+                                            <input type="text" placeholder="Değer giriniz" />
+                                        </div>
+                                        <div class="btn-part">
+                                            <button class="btn-filter"> <img src="../assets/images/sidebar/fliter2.svg"
+                                                    alt="img" />Filtrele</button>
+                                            <button class="btn-clear">Temizle</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="options-container">
+                        <div class="fields-options remove-border">
+                            <div class="dropdown-container">
+                                <span>Adet</span>
+                                <div class="dropdown-btn">
+                                    <img src="../assets/images/menu.svg" alt="icon">
+                                    <div class="close-btn">
+                                        <img src="../assets/images/table/x.svg" alt="icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fields-show">
+                            <div class="fields-menu">
+                                <ul class="menu-list">
+                                    <li class="menu-item active" data-target="#content1"><span><img
+                                                src="../assets/images/sidebar/up.svg" alt="icon" />artan şekilde
+                                            sırala</span>
+                                    </li>
+                                    <li class="menu-item" data-target="#content2"><span><img
+                                                src="../assets/images/sidebar/down.svg" alt="icon" />azalan şekilde
+                                            sırala</span></li>
+                                    <li class="menu-item" data-target="#content3"><span><img
+                                                src="../assets/images/sidebar/filter.svg" alt="icon" />Alanları Dahil
+                                            Et</span>
+                                    </li>
+                                    <li class="menu-item" data-target="#content4"><span><img
+                                                src="../assets/images/sidebar/filter.svg" alt="icon" />Alan
+                                            Filtresi</span>
+                                    </li>
+                                </ul>
+                                <div class="menu-content">
+                                    <div id="content1" class="submenu-content active">Artan şekilde sıralama uygulanır.
+                                    </div>
+                                    <div id="content2" class="submenu-content">Azalan şekilde sıralama uygulanır.</div>
+                                    <div id="content3" class="submenu-content">Alanlar dahil edilir.</div>
+                                    <div id="content4" class="submenu-content">
+                                        <div>
+                                            <label>Öğelerin Değerini Göster:</label>
+                                            <div class="custom-dropdown-wrapper staticfilter3">
+                                                <div class="custom-dropdown">
+                                                    <div class="dropdown-left">
+                                                        <span class="dropdown-label">Özel</span>
+                                                    </div>
+                                                    <div class="dropdown-right">
+                                                        <img src="../assets/images/down.svg" alt="img" />
+                                                    </div>
+                                                </div>
+                                                <ul class="dropdown-menu">
+                                                    <li data-key="urun-grubu">Şunları İçerir</li>
+                                                    <li data-key="urun-adi">Adı</li>
+                                                    <li data-key="marka">Marka</li>
+                                                </ul>
+                                            </div>
+                                            <input type="text" placeholder="Değer giriniz" />
+                                        </div>
+                                        <div class="btn-part">
+                                            <button class="btn-filter"> <img src="../assets/images/sidebar/fliter2.svg"
+                                                    alt="img" />Filtrele</button>
+                                            <button class="btn-clear">Temizle</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="options-container">
+                        <div class="fields-options remove-border">
+                            <div class="dropdown-container">
+                                <span>Pazaryeri</span>
+                                <div class="dropdown-btn">
+                                    <img src="../assets/images/menu.svg" alt="icon">
+                                    <div class="close-btn">
+                                        <img src="../assets/images/table/x.svg" alt="icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fields-show">
+                            <div class="fields-menu">
+                                <ul class="menu-list">
+                                    <li class="menu-item active" data-target="#content1"><span><img
+                                                src="../assets/images/sidebar/up.svg" alt="icon" />artan şekilde
+                                            sırala</span>
+                                    </li>
+                                    <li class="menu-item" data-target="#content2"><span><img
+                                                src="../assets/images/sidebar/down.svg" alt="icon" />azalan şekilde
+                                            sırala</span></li>
+                                    <li class="menu-item" data-target="#content3"><span><img
+                                                src="../assets/images/sidebar/filter.svg" alt="icon" />Alanları Dahil
+                                            Et</span>
+                                    </li>
+                                    <li class="menu-item" data-target="#content4"><span><img
+                                                src="../assets/images/sidebar/filter.svg" alt="icon" />Alan
+                                            Filtresi</span>
+                                    </li>
+                                </ul>
+                                <div class="menu-content">
+                                    <div id="content1" class="submenu-content active">Artan şekilde sıralama uygulanır.
+                                    </div>
+                                    <div id="content2" class="submenu-content">Azalan şekilde sıralama uygulanır.</div>
+                                    <div id="content3" class="submenu-content">Alanlar dahil edilir.</div>
+                                    <div id="content4" class="submenu-content">
+                                        <div>
+                                            <label>Öğelerin Değerini Göster:</label>
+                                            <div class="custom-dropdown-wrapper staticfilter3">
+                                                <div class="custom-dropdown">
+                                                    <div class="dropdown-left">
+                                                        <span class="dropdown-label">Özel</span>
+                                                    </div>
+                                                    <div class="dropdown-right">
+                                                        <img src="../assets/images/down.svg" alt="img" />
+                                                    </div>
+                                                </div>
+                                                <ul class="dropdown-menu">
+                                                    <li data-key="urun-grubu">Şunları İçerir</li>
+                                                    <li data-key="urun-adi">Adı</li>
+                                                    <li data-key="marka">Marka</li>
+                                                </ul>
+                                            </div>
+                                            <input type="text" placeholder="Değer giriniz" />
+                                        </div>
+                                        <div class="btn-part">
+                                            <button class="btn-filter"> <img src="../assets/images/sidebar/fliter2.svg"
+                                                    alt="img" />Filtrele</button>
+                                            <button class="btn-clear">Temizle</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="bottom-part">
+                    <div class="custom-dropdown-wrapper staticfilter3">
+                        <div class="custom-dropdown">
+                            <div class="dropdown-left">
+                                <span class="dropdown-label">Pazaryeri</span>
+                            </div>
+                            <div class="dropdown-right">
+                                <img src="../assets/images/down.svg" alt="img" />
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li data-key="urun-grubu">Özel</li>
+                            <li data-key="urun-adi">Adı</li>
+                            <li data-key="marka">Marka</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="table-lower-part">
+                <div class="brand-part">
+                    <img src="../assets/images/table/table-brand1.svg" alt="img" />
+                </div>
+                <div class="brand-part">
+                    <img src="../assets/images/table/table-brand2.svg" alt="img" />
+                </div>
+                <div class="brand-part">
+                    <img src="../assets/images/table/table-brand3.svg" alt="img" />
+                </div>
+            </div>
+        </div>
+
+        <div class="right-field-sidebar">
+            <div class="right-field-upper-part">
+                <div class="options-container">
+                    <div class="fields-options remove-border">
+                        <div class="dropdown-container">
+                            <span>Sütunlar</span>
+                            <div class="dropdown-btn">
+                                <img src="../assets/images/menu.svg" alt="icon">
+                                <div class="close-btn">
+                                    <img src="../assets/images/table/x.svg" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fields-show">
+                        <div class="fields-menu">
+                            <ul class="menu-list">
+                                <li class="menu-item active" data-target="#content1"><span><img
+                                            src="../assets/images/sidebar/up.svg" alt="icon" />artan şekilde
+                                        sırala</span>
+                                </li>
+                                <li class="menu-item" data-target="#content2"><span><img
+                                            src="../assets/images/sidebar/down.svg" alt="icon" />azalan şekilde
+                                        sırala</span></li>
+                                <li class="menu-item" data-target="#content3"><span><img
+                                            src="../assets/images/sidebar/filter.svg" alt="icon" />Alanları Dahil
+                                        Et</span>
+                                </li>
+                                <li class="menu-item" data-target="#content4"><span><img
+                                            src="../assets/images/sidebar/filter.svg" alt="icon" />Alan Filtresi</span>
+                                </li>
+                            </ul>
+                            <div class="menu-content">
+                                <div id="content1" class="submenu-content active">Artan şekilde sıralama uygulanır.
+                                </div>
+                                <div id="content2" class="submenu-content">Azalan şekilde sıralama uygulanır.</div>
+                                <div id="content3" class="submenu-content">Alanlar dahil edilir.</div>
+                                <div id="content4" class="submenu-content">
+                                    <div>
+                                        <label>Öğelerin Değerini Göster:</label>
+                                        <div class="custom-dropdown-wrapper staticfilter3">
+                                            <div class="custom-dropdown">
+                                                <div class="dropdown-left">
+                                                    <span class="dropdown-label">Özel</span>
+                                                </div>
+                                                <div class="dropdown-right">
+                                                    <img src="../assets/images/down.svg" alt="img" />
+                                                </div>
+                                            </div>
+                                            <ul class="dropdown-menu">
+                                                <li data-key="urun-grubu">Şunları İçerir</li>
+                                                <li data-key="urun-adi">Adı</li>
+                                                <li data-key="marka">Marka</li>
+                                            </ul>
+                                        </div>
+                                        <input type="text" placeholder="Değer giriniz" />
+                                    </div>
+                                    <div class="btn-part">
+                                        <button class="btn-filter"> <img src="../assets/images/sidebar/fliter2.svg"
+                                                alt="img" />Filtrele</button>
+                                        <button class="btn-clear">Temizle</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field-staticfilter-container">
+                    <div class="field-staticfilter">
+                        <div class="custom-dropdown-wrapper staticfilter3">
+                            <div class="custom-dropdown">
+                                <div class="dropdown-left">
+                                    <img src="../assets/images/table/table-down.svg" alt="icon" />
+                                    <span class="dropdown-label">
+                                        SiparişAyYıl
+                                    </span>
+                                </div>
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li data-key="urun-grubu">Özel</li>
+                                <li data-key="urun-adi">Adı</li>
+                                <li data-key="marka">Marka</li>
+                            </ul>
+                        </div>
+                        <div class="border-line"></div>
+                        <div class="table-tag">
+                            Haziran 2025
+                        </div>
+                    </div>
+                    <div class="field-staticfilter">
+                        <div class="custom-dropdown-wrapper staticfilter3">
+                            <div class="custom-dropdown">
+                                <div class="dropdown-left">
+                                    <img src="../assets/images/table/table-down.svg" alt="icon" />
+                                    <span class="dropdown-label">
+                                        SiparişAyYıl
+                                    </span>
+                                </div>
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li data-key="urun-grubu">Özel</li>
+                                <li data-key="urun-adi">Adı</li>
+                                <li data-key="marka">Marka</li>
+                            </ul>
+                        </div>
+                        <div class="border-line"></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="commonTable">
+                <div class="common-spacing custom-container">
+                    <div class="table-contant">
+                        <div class="table-scroll-container">
+                            <div id="currentPrice">
+                                <table id="currentPriceTable" class="display" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="text-part">Toplam Tutar</div>
+                                            </th>
+                                            <th>
+                                                <div class="text-part">
+                                                    Adet
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="text-part">
+                                                    Toplam Tutar
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="text-part">
+                                                    Adet
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="currentPriceTableBody"></tbody>
+                                </table>
+                                <div class="table-footer">
+                                    <div>216K</div>
+                                    <div>3816</div>
+                                    <div>216K</div>
+                                    <div>3816</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</body>
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/js/tables/dataTables.min.js"></script>
+<script src="../assets/js/comman.js"></script>
+<script src="../assets/js/tables/fieldsTable.js"></script>
+
+
+</html>

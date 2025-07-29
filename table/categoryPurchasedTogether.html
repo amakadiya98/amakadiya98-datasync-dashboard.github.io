@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datasync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
+    <link rel="stylesheet" href="../assets/css/chartStyle.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/tableStyle.css" />
+</head>
+
+<body>
+    <section class="main-content">
+        <div class="commonTable categoryPurchasedTogetherTable">
+            <div class="common-spacing custom-container">
+                <div class="table-contant">
+                    <div class="table-header">
+                        <h3 class="table-title">Beraber Alınan Kategoriler</h3>
+                    </div>
+                    <div class="d-flex justify-content-between w-full py-2 px-3 align-items-center gap-3 action-bar">
+                        <div class="d-flex gap-3">
+                            <button class="excel-btn">
+                                <img src="../assets/images/pdf.svg" />
+                            </button>
+                            <button class="excel-btn">
+                                <img src="../assets/images/exel.svg" />
+                            </button>
+
+                        </div>
+                        <div class="searchbar"><input type="search" id="customSearch" placeholder="Arama"
+                                aria-controls="categoryPurchasedTogether"></div>
+                    </div>
+
+                    <div class="table-scroll-container">
+                        <table id="categoryPurchasedTogether" class="display nowrap performanceTable"
+                            style="width:100%">
+                            <thead class="heads-filter">
+                                <tr>
+                                    <th>
+                                        <div class="d-flex gap-2 align-items-center ">
+                                            <div class="head-text flex-fill">
+                                                Kategori 1
+                                            </div>
+                                            <button class="square-btn">
+                                                <img src="../assets/images/menu.svg" />
+                                            </button>
+                                        </div>
+                                        <div class="d-flex gap-2 align-items-center mt-2">
+                                            <div class="head-cell flex-fill">
+                                                <input type="number" class="flex-fill" /> <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span>
+                                            </div>
+                                            <button class="square-btn">
+                                                <img src="../assets/images/filter.svg" />
+                                            </button>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="d-flex gap-2 align-items-center ">
+                                            <div class="head-text flex-fill">
+                                                Kategori 2
+                                            </div>
+                                            <button class="square-btn">
+                                                <img src="../assets/images/menu.svg" />
+                                            </button>
+                                        </div>
+                                        <div class="d-flex gap-2 align-items-center mt-2">
+                                            <div class="head-cell flex-fill">
+                                                <input type="number" class="flex-fill" /> <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span>
+                                            </div>
+                                            <button class="square-btn">
+                                                <img src="../assets/images/filter.svg" />
+                                            </button>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="d-flex gap-2 align-items-center ">
+                                            <div class="head-text flex-fill">
+                                                Beraber Alınma Sayısı
+                                            </div>
+                                            <button class="square-btn">
+                                                <img src="../assets/images/menu.svg" />
+                                            </button>
+                                        </div>
+                                        <div class="d-flex gap-2 align-items-center mt-2">
+                                            <div class="head-cell flex-fill">
+                                                <input type="number" class="flex-fill" /> <span class="arrows">
+                                                    <img src="../assets/images/up.svg" class="sort-asc"
+                                                        data-column="0" />
+                                                    <img src="../assets/images/down.svg" class="sort-desc"
+                                                        data-column="0" />
+                                                </span>
+                                            </div>
+                                            <button class="square-btn">
+                                                <img src="../assets/images/filter.svg" />
+                                            </button>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="categoryPurchasedTogetherBody"></tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/tables/dataTables.min.js"></script>
+    <script src="../assets/js/tables/categoryPurchasedTogether.js"></script>
+</body>
+
+</html>

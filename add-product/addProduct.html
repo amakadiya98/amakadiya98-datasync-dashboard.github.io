@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data sync</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/addProduct.css" />
+</head>
+
+<body>
+    <section class="add-product-section">
+        <div class="d-flex gap-3 align-items-center">
+            <button class="square-btn">
+                <img src="../assets/images/left-arrow.svg" />
+            </button>
+            <p class="go-back-text">Geri Dön</p>
+        </div>
+        <div class="content-box">
+            <div class="content-header">
+                Ürün Ekle
+            </div>
+            <div class="form-content">
+                <div class="form-row d-flex w-100 flex-nowrap">
+                    <div class="left-part">
+                        <div class="add-product-inputs d-flex flex-column">
+                            <div class="d-flex align-items-center input-container">
+                                <div class="label-box">
+                                    <label>Marka</label>
+                                </div>
+                                <select class="form-select border-0 flex-grow-1 fw-semibold shadow-none"
+                                    id="customerGrouping">
+                                    <option selected>Seçiniz</option>
+                                    <option>Pasif</option>
+                                    <option>Beklemede</option>
+                                </select>
+                                <button
+                                    class="square-btn d-flex justify-content-center align-items-center position-absolute end-0">
+                                    <img src="./../assets/images/bluedown-arrow.svg" alt="arrow" height="16"
+                                        width="16" />
+                                </button>
+                            </div>
+                            <div class="d-flex align-items-center input-container">
+                                <div class="label-box">
+                                    <label>Ürün Kodu</label>
+                                </div>
+                                <input type="text" class="flex-fill" />
+                            </div>
+                            <div class="d-flex align-items-center input-container">
+                                <div class="label-box">
+                                    <label>Ürün Adı</label>
+                                </div>
+                                <input type="text" class="flex-fill" />
+                            </div>
+                            <div class="d-flex align-items-center input-container">
+                                <div class="label-box">
+                                    <label>Ana Ürün mü?</label>
+                                </div>
+                                <select class="form-select border-0 flex-grow-1 fw-semibold shadow-none"
+                                    id="customerGrouping">
+                                    <option selected>Seçiniz</option>
+                                    <option>Pasif</option>
+                                    <option>Beklemede</option>
+                                </select>
+                                <button
+                                    class="square-btn d-flex justify-content-center align-items-center position-absolute end-0">
+                                    <img src="./../assets/images/bluedown-arrow.svg" alt="arrow" height="16"
+                                        width="16" />
+                                </button>
+                            </div>
+                            <div class="d-flex align-items-center input-container">
+                                <div class="label-box">
+                                    <label>Desi</label>
+                                </div>
+                                <input type="text" class="flex-fill" />
+                            </div>
+                            <div class="d-flex align-items-center input-container">
+                                <div class="label-box">
+                                    <label>GTIN</label>
+                                </div>
+                                <input type="text" class="flex-fill" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-part">
+                        <div class="add-product-inputs d-flex flex-column">
+                            <div class="d-flex align-items-center input-container">
+                                <div class="label-box">
+                                    <label>barkod</label>
+                                </div>
+                                <input type="text" class="flex-fill" />
+                            </div>
+                            <div class="d-flex align-items-center input-container">
+                                <div class="label-box">
+                                    <label>Model</label>
+                                </div>
+                                <input type="text" class="flex-fill" />
+                            </div>
+                            <div class="d-flex align-items-center input-container">
+                                <div class="label-box">
+                                    <label>KDV Oranı</label>
+                                </div>
+                                <input type="text" class="flex-fill" />
+                            </div>
+                            <div class="d-flex align-items-center input-container">
+                                <div class="label-box">
+                                    <label>ERP Kodu</label>
+                                </div>
+                                <input type="text" class="flex-fill" />
+                            </div>
+                            <div class="d-flex align-items-center input-container">
+                                <div class="label-box">
+                                    <label>Kritik Stok</label>
+                                </div>
+                                <input type="text" class="flex-fill" />
+                            </div>
+                            <div class="d-flex align-items-center input-container">
+                                <div class="label-box">
+                                    <label>Güvenli Stok</label>
+                                </div>
+                                <input type="text" class="flex-fill" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-end">
+                    <button class="save-btn">
+                        <img src="./../assets/images/save.svg" />
+                        Kaydet
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
