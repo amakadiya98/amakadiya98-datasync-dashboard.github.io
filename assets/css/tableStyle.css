@@ -126,7 +126,15 @@ table.dataTable.no-footer {
   display: table;
   width: 100%;
   table-layout: fixed;
+  vertical-align: middle;
 }
+
+.commonTable thead,
+.commonTable tbody t {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 
 #performanceTable tbody,
 #categoryPerformanceTable tbody {
@@ -1112,52 +1120,6 @@ tbody {
 
 .productGroupTable #tab3-panel .chart-container {
   height: 500px;
-}
-
-.productGroupTable .btn-filter {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 12px;
-  box-shadow: 0px 6px 20px 0px #023E7D26;
-  border-bottom: 1px solid #CCD8E5;
-  white-space: nowrap;
-}
-
-.productGroupTable .btn-filter .general-all-btn {
-  border: 1px solid #E8EEFF;
-  font-family: 'Gilroy';
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  padding: 12px 10px;
-  border-radius: 12px;
-  position: relative;
-}
-
-.productGroupTable .btn-filter .general-all-btn.active::before {
-  content: '';
-  position: absolute;
-  bottom: -18px;
-  right: 0;
-  border: 1px solid #CCD8E5;
-  background-color: #023E7D;
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
-  width: 100%;
-  height: 9px;
-}
-
-.productGroupTable .btn-filter button {
-  border: 1px solid #CCD8E5;
-  border-radius: 12px;
-  padding: 0;
-  background-color: transparent;
-}
-
-.productGroupTable .btn-filter button img {
-  width: 100%;
 }
 
 .productGroupTable .seller-code {
@@ -2365,8 +2327,9 @@ tbody {
 
   .searchbar-container {
     width: 100%;
-    justify-content:space-between !important;
+    justify-content: space-between !important;
   }
+
   .commonTable .searchbar {
     max-width: 100%;
   }

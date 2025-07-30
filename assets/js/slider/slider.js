@@ -40,18 +40,27 @@ $(document).ready(function () {
   });
 
   function arrangeControls() {
-    const $wrapper = $(".market-carousel-wrapper");
-    const $nav = $wrapper.find(".owl-nav");
-    const $dots = $wrapper.find(".owl-dots");
+    setTimeout(() => {
+      const $wrapper = $(".market-carousel-wrapper");
+      const $controls = $wrapper.find(".market-controls");
 
-    const $controls = $wrapper.find(".market-controls");
-    $controls.empty(); 
+      const $nav = $wrapper.find(".owl-nav");
+      const $dots = $wrapper.find(".owl-dots");
 
-    $controls
-      .append($nav.find('.owl-prev'))
-      .append($dots)
-      .append($nav.find('.owl-next'));
+      if ($nav.length && $dots.length && !$controls.find('.owl-prev').length) {
+        $controls.empty(); // Clear only if we're confident elements exist
+
+        // Append only if content exists
+        const $prev = $nav.find('.owl-prev');
+        const $next = $nav.find('.owl-next');
+
+        if ($prev.length && $next.length) {
+          $controls.append($prev).append($dots).append($next);
+        }
+      }
+    }, 100); // You can increase delay if still inconsistent
   }
+
 });
 
 
@@ -88,10 +97,15 @@ $(document).ready(function () {
     });
 
     $carousel.on("changed.owl.carousel", function (event) {
-      const currentIndex = event.item.index;
+      const total = event.item.count; // total items (excluding clones)
+      const index = event.item.index - event.relatedTarget._clones.length / 2;
+
+      const normalizedIndex = (index + total) % total; // ensure non-negative wrap-around
+
       $dotsContainer.find("span").removeClass("active");
-      $dotsContainer.find(`span[data-slide="${currentIndex}"]`).addClass("active");
+      $dotsContainer.find(`span[data-slide="${normalizedIndex}"]`).addClass("active");
     });
+
   });
 });
 
@@ -143,7 +157,7 @@ $(document).ready(function () {
     const $dots = $wrapper.find(".owl-dots");
 
     const $controls = $wrapper.find(".market-controls");
-    $controls.empty(); 
+    $controls.empty();
 
     $controls
       .append($nav.find('.owl-prev'))

@@ -61,23 +61,60 @@ $(document).ready(function () {
             plugins: {
                 legend: { display: false },
                 tooltip: {
+                    mode: 'index',
+                    intersect: true,
+                    backgroundColor: '#FFFFFF',
+                    borderColor: 'rgba(50, 50, 71, 0.06)',
+                    borderWidth: 1,
+                    cornerRadius: 12,
+                    padding: 8,
+                    displayColors: true,
+
+                    titleColor: '#A3AED0',
+                    titleFont: {
+                        family: 'Gilroy',
+                        weight: '600',
+                        size: 12
+                    },
+                    bodyColor: '#023E7D',
+                    bodyFont: {
+                        family: 'Gilroy',
+                        weight: '700',
+                        size: 20
+                    },
                     callbacks: {
                         label: (ctx) => formatTooltip(datasetsMap[initialKey].format, ctx.raw)
                     }
                 },
                 datalabels: {
                     anchor: 'end',
-                    align: 'right',
+                    align: 'end',
+                    backgroundColor: 'transparent',
+                    borderColor: '#023E7D',
+                    borderWidth: 1,
+                    borderRadius: 3,
                     color: '#023E7D',
-                    font: { weight: 'bold', size: 12 },
+                    font: {
+                        family: 'Gilroy',
+                        weight: '700',
+                        size: 12
+                    },
+                    padding: {
+                        top: 4,
+                        bottom: 4,
+                        left: 8,
+                        right: 8
+                    },
                     formatter: (value, ctx) => {
-                        const dataset = datasetsMap[initialKey];
+                        const activeKey = $('.filter-tab.active').data('type');
+                        const dataset = datasetsMap[activeKey];
                         const total = dataset.data.reduce((sum, val) => sum + val, 0);
                         const percent = (value / total) * 100;
                         return `%${percent.toFixed(1)}`;
-
                     }
                 }
+
+
             },
             scales: {
                 x: {

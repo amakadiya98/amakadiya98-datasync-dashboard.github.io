@@ -51,6 +51,27 @@ $(document).ready(function () {
             plugins: {
                 legend: { display: false },
                 tooltip: {
+                    mode: 'nearest',
+                    intersect: true,
+                    backgroundColor: '#FFFFFF',
+                    borderColor: 'rgba(50, 50, 71, 0.06)',
+                    borderWidth: 1,
+                    cornerRadius: 12,
+                    padding: 8,
+                    displayColors: true,
+
+                    titleColor: '#A3AED0',
+                    titleFont: {
+                        family: 'Gilroy',
+                        weight: '600',
+                        size: 12
+                    },
+                    bodyColor: '#023E7D',
+                    bodyFont: {
+                        family: 'Gilroy',
+                        weight: '700',
+                        size: 20
+                    },
                     callbacks: {
                         label: function (context) {
                             const value = countries[context.dataIndex].value;

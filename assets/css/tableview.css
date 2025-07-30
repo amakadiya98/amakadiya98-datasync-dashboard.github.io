@@ -126,6 +126,7 @@
   transition: all 0.2s ease-in-out;
   overflow: hidden;
   margin-top: 5px;
+  cursor: pointer;
 }
 
 .custom-dropdown3 .left {

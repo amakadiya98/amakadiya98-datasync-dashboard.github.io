@@ -1,20 +1,26 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 
-.container {
+.chart-container {
   background: #fff;
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 20px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
   max-width: 1200px;
   margin: auto;
+}
+
+
+.chart-container .header-container {
+  box-shadow: 0px 7px 15px 0px #1126920D;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .underline_div {
   width: 100%;
   height: 1px;
   background-color: #CCD8E5;
-  margin: 30px 0;
+  margin: 0px 0 30px;
   padding: 0;
 }
 
@@ -22,18 +28,47 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.header .title {
+  padding: 0;
 }
 
 .title {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   color: #A3AED0;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
+
 
 .order-tabs-container {
   display: flex;
   justify-content: end;
+}
+
+.inventory-cost-container-brand,
+.inventory-cost-container-category {
+  padding: 0 20px 30px 20px;
+}
+
+.inventory-cost-container-brand .tabs,
+.inventory-cost-container-category .tabs {
+  width: 100%;
+}
+
+.stock-tabs-container {
+  border-top: 1px solid #CCD8E5;
+  border-bottom: 1px solid #CCD8E5;
+  padding: 10px 20px;
+}
+
+.stock-tabs-container .tabs {
+  min-width: 653px;
 }
 
 .tabs {
@@ -98,9 +133,9 @@
 }
 
 .chart-area {
-  margin-top: 20px;
   height: 400px;
   position: relative;
+  padding: 20px;
 }
 
 canvas {
@@ -307,6 +342,7 @@ input:checked+.slider:before {
 }
 
 .filter-tab {
+  font-size: 20px;
   padding: 6px 12px;
   margin-right: 6px;
   border: none;
@@ -557,10 +593,6 @@ input:checked+.slider:before {
   margin-bottom: 10px;
 }
 
-.chart-container {
-  background: #fff;
-  padding: 14px;
-}
 
 .filters-div {
   display: flex;
@@ -1203,4 +1235,21 @@ input:checked+.slider:before {
   color: rgba(2, 62, 125, 1);
   font-weight: 700;
   font-size: 15.92px;
+}
+
+.d3-funnel-tooltip {
+  background: #fff !important;
+  border: 1px solid rgba(50, 50, 71, 0.06) !important;
+  border-radius: 12px !important;
+  padding: 8px 12px !important;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+
+  font-family: 'Gilroy', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 20px !important;
+  color: #023E7D !important;
+
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 9999;
 }

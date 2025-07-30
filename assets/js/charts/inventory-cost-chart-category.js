@@ -1,14 +1,17 @@
 $(document).ready(function () {
     const ctx = $('#inventoryCostChartCategory')[0].getContext('2d');
 
-    const labels = ['Badem Süt', 'Badem Süt', 'Badem Süt', 'Badem Süt', 'Badem Süt', 'Badem Süt', 'Badem Süt', 'Badem Süt', 'Badem Süt', 'Badem Süt' ];
+    const labels = ['Badem Süt', 'Badem Süt', 'Badem Süt', 'Badem Süt', 'Badem Süt', 'Badem Süt', 'Badem Süt', 'Badem Süt', 'Badem Süt', 'Badem Süt'];
+
+    const costData = [18000000, 17900000, 17850000, 18100000, 18200000, 18000000, 19850000, 21100000, 22200000, 21000000];
+    const stockData = [6000000, 5800000, 5700000, 5900000, 6100000, 6000000, 6700000, 6900000, 7100000, 5000000];
 
     const data = {
         labels: labels,
         datasets: [
             {
                 label: 'Maliyet',
-                data: [18000000, 17900000, 17850000, 18100000, 18200000, 18000000, 19850000, 21100000, 22200000, 21000000],
+                data: costData,
                 backgroundColor: '#FFC283',
                 barThickness: 20,
                 borderRadius: 8,
@@ -16,7 +19,7 @@ $(document).ready(function () {
             },
             {
                 label: 'Stok',
-                data: [6000000, 5800000, 5700000, 5900000, 6100000, 6000000, 6700000, 6900000, 7100000, 5000000],
+                data: stockData,
                 backgroundColor: '#1B69C7',
                 barThickness: 20,
                 borderRadius: 8,
@@ -43,6 +46,26 @@ $(document).ready(function () {
                 }
             },
             tooltip: {
+                mode: 'index',
+                intersect: false,
+                backgroundColor: '#FFFFFF',
+                borderColor: 'rgba(50, 50, 71, 0.06)',
+                borderWidth: 1,
+                cornerRadius: 12,
+                padding: 8,
+                displayColors: true,
+                titleColor: '#A3AED0',
+                titleFont: {
+                    family: 'Gilroy',
+                    weight: '600',
+                    size: 12
+                },
+                bodyColor: '#023E7D',
+                bodyFont: {
+                    family: 'Gilroy',
+                    weight: '700',
+                    size: 20
+                },
                 callbacks: {
                     label: ctx => {
                         const value = ctx.raw.toLocaleString('tr-TR');
@@ -98,6 +121,19 @@ $(document).ready(function () {
         data: data,
         options: options
     });
+
+    // Populate table
+    const $rows = $('#inventoryDataRows');
+    for (let i = 0; i < labels.length; i++) {
+        const row = `
+          <tr>
+            <td>${labels[i]}</td>
+            <td>${costData[i].toLocaleString('tr-TR')}</td>
+            <td>${stockData[i].toLocaleString('tr-TR')}</td>
+          </tr>
+        `;
+        $rows.append(row);
+    }
 
     $('.inventory-cost-container-category .tab').click(function () {
         $('.inventory-cost-container-category .tab').removeClass('active');

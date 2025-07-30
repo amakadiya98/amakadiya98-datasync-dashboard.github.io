@@ -61,6 +61,27 @@ $(document).ready(function () {
                     }
                 },
                 tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                    backgroundColor: '#FFFFFF',
+                    borderColor: 'rgba(50, 50, 71, 0.06)',
+                    borderWidth: 1,
+                    cornerRadius: 12,
+                    padding: 8,
+                    displayColors: true,
+
+                    titleColor: '#A3AED0',
+                    titleFont: {
+                        family: 'Gilroy',
+                        weight: '600',
+                        size: 12
+                    },
+                    bodyColor: '#023E7D',
+                    bodyFont: {
+                        family: 'Gilroy',
+                        weight: '700',
+                        size: 20
+                    },
                     callbacks: {
                         label: ctx => `${ctx.dataset.label}: ${Math.round(ctx.raw / 1000)}K`
                     }
@@ -86,7 +107,7 @@ $(document).ready(function () {
         e.stopPropagation();
         const wrapper = $(this).closest('.custom-dropdown-wrapper');
         const menu = wrapper.find('.dropdown-menu');
-        $('.dropdown-menu').not(menu).hide(); 
+        $('.dropdown-menu').not(menu).hide();
         menu.toggle();
     });
 

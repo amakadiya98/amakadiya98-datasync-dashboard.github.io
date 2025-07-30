@@ -926,7 +926,7 @@
     width: 211px;
     margin-top: 22px;
     padding: 12px;
-    background: rgba(227, 26, 26, 1);
+    background: rgba(227, 26, 26, 1) !important;
     color: white !important;
     font-weight: bold;
     border-radius: 8px;

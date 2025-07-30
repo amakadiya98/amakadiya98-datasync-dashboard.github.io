@@ -10,6 +10,7 @@ $(document).ready(function () {
     const table = $('#performanceTable').DataTable({
         data: tableData,
         paging: false,
+        deferRender: true,
         info: false,
         searching: false,
         ordering: true,
@@ -98,6 +99,27 @@ function drawChart() {
             plugins: {
                 legend: { display: false },
                 tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                    backgroundColor: '#FFFFFF',
+                    borderColor: 'rgba(50, 50, 71, 0.06)',
+                    borderWidth: 1,
+                    cornerRadius: 12,
+                    padding: 8,
+                    displayColors: true,
+
+                    titleColor: '#A3AED0',
+                    titleFont: {
+                        family: 'Gilroy',
+                        weight: '600',
+                        size: 12
+                    },
+                    bodyColor: '#023E7D',
+                    bodyFont: {
+                        family: 'Gilroy',
+                        weight: '700',
+                        size: 20
+                    },
                     callbacks: {
                         label: context => `₺ ${context.raw}`
                     }
@@ -211,6 +233,27 @@ function drawCategoryChart() {
             plugins: {
                 legend: { display: false },
                 tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                    backgroundColor: '#FFFFFF',
+                    borderColor: 'rgba(50, 50, 71, 0.06)',
+                    borderWidth: 1,
+                    cornerRadius: 12,
+                    padding: 8,
+                    displayColors: true,
+
+                    titleColor: '#A3AED0',
+                    titleFont: {
+                        family: 'Gilroy',
+                        weight: '600',
+                        size: 12
+                    },
+                    bodyColor: '#023E7D',
+                    bodyFont: {
+                        family: 'Gilroy',
+                        weight: '700',
+                        size: 20
+                    },
                     callbacks: {
                         label: context => `₺ ${context.raw}`
                     }

@@ -153,14 +153,15 @@
   border-radius: 50% !important;
   z-index: 2;
 }
-
+#monthSelect {
+  background-color: #F4F7FE;
+}
 .calendar-controls select {
   border-radius: 8px;
   font-size: 14px;
   padding: 6px 10px;
   border: 1px solid #E8EEFF;
   color: #1D2B50;
-  background-color: #F5F9FF;
   outline: none !important;
 }
 

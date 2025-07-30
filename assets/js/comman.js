@@ -66,3 +66,20 @@ $(document).ready(function () {
 
 
 
+
+
+
+document.querySelectorAll('.btn-filter-tab').forEach(tabGroup => {
+  tabGroup.addEventListener('click', function (e) {
+    const clickedBtn = e.target.closest('button');
+    if (!clickedBtn) return;
+
+    // Remove active from all buttons inside the same group
+    tabGroup.querySelectorAll('button').forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    // Add active to the clicked one
+    clickedBtn.classList.add('active');
+  });
+});
