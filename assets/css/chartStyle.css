@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
-
 .chart-container {
   background: #fff;
   border-radius: 20px;
@@ -14,6 +11,11 @@
   box-shadow: 0px 7px 15px 0px #1126920D;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+.mark-chart .header {
+  box-shadow: 0px 7px 15px 0px #1126920D;
+  gap: 30px;
 }
 
 .underline_div {
@@ -43,8 +45,11 @@
   display: flex;
   align-items: center;
   gap: 25px;
+  white-space: nowrap;
 }
-
+.mark-chart .filters{
+  flex-wrap: wrap;
+}
 
 .order-tabs-container {
   display: flex;
@@ -194,6 +199,7 @@ canvas {
 .graphView {
   height: 100%;
   display: block;
+  padding: 20px;
 }
 
 .tableView {
@@ -445,6 +451,7 @@ input:checked+.slider:before {
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 0 20px;
   gap: 40px;
 }
 
@@ -498,79 +505,10 @@ input:checked+.slider:before {
   background-color: #e4ecf8;
 }
 
-.dropdown-left {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #0A3D91;
-  font-weight: 600;
-  font-size: 16px;
-}
 
-.dropdown-left .material-icons {
-  color: #BFDBFE;
-  font-size: 20px;
-}
-
-.dropdown-left .material-symbols-outlined {
-  color: #BFDBFE;
-  font-size: 20px;
-}
-
-.dropdown-label {
-  color: #003367;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 14px;
-}
-
-.dropdown-placeholder {
-  color: #B7C9FF;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 16px;
-}
-
-.dropdown-right {
-  background-color: #F8FAFF;
-  border-radius: 10px;
-  padding: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  border: 0.59px solid #E8EEFF
-}
-
-.dropdown-right .material-icons {
-  color: #BFDBFE;
-  font-size: 28px;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 110%;
-  left: 0;
-  right: 0;
-  background: #fff;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  z-index: 999;
-}
-
-.dropdown-menu li {
-  padding: 8px 12px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.dropdown-menu li:hover {
-  background: #F1F5F9;
+.shopping-chart .dropdown-right {
+  width: 50px;
+  height: 50px;
 }
 
 

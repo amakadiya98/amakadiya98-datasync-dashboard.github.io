@@ -508,10 +508,11 @@ input::placeholder {
   align-items: center;
   padding: 15px;
   border-radius: 12px;
-  gap:20px
+  gap:20px;
+  white-space: nowrap;
 }
 
-.right-btn {
+.view-button .right-btn {
   width: 48px;
   height: 24px;
   background-color: rgba(232, 238, 255, 1);
@@ -520,7 +521,7 @@ input::placeholder {
   cursor: pointer;
 }
 
-.white-round {
+.view-button .right-btn .white-round {
   width: 18px;
   height: 18px;
   background-color: white;
@@ -529,6 +530,7 @@ input::placeholder {
   top: 3px;
   left: 3px;
   transition: all 0.3s ease;
+  margin: 0;
 }
 
 .right-btn.active {
@@ -835,7 +837,6 @@ input::placeholder{
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
-    text-align: center;
     z-index: 100;
     color: rgba(183, 201, 255, 1);
     font-weight: 500;
@@ -843,6 +844,7 @@ input::placeholder{
     margin-top: 5px;
     right: 0;
     left: 240px;
+    padding: 20px;
 }
 
 .marketvalue-dropdown .option {
@@ -923,7 +925,6 @@ input::placeholder{
     border: 1px solid #ccc;
     border-radius: 8px;
     max-width: 343px;
-    text-align: center;
     width: 100%;
     z-index: 100;
     color: rgba(183, 201, 255, 1);
@@ -932,6 +933,11 @@ input::placeholder{
     left: 0;
     top: 100%;
     margin-top: 10px;
+    padding: 16px;
+}
+.marketvalue-dropdown1 .option{
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .report-text2 {

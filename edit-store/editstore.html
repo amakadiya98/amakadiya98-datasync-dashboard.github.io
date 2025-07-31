@@ -143,49 +143,63 @@
                                 <div class="label-box">
                                     <label for="storename">Mağaza Adi</label>
                                 </div>
-                                <select class="form-select border-0 flex-grow-1 fw-semibold shadow-none"
-                                    id="customerGrouping">
-                                    <option selected>Aktif</option>
-                                    <option>Pasif</option>
-                                    <option>Beklemede</option>
-                                </select>
-                                <button
-                                    class="down-arrow-btn d-flex justify-content-center align-items-center position-absolute end-0">
-                                    <img src="./../assets/images/bluedown-arrow.svg" alt="arrow" height="16"
-                                        width="16" />
-                                </button>
+
+                                <div class="custom-dropdown-wrapper extra-large">
+                                    <div class="custom-dropdown">
+                                        <div class="dropdown-left">
+                                            <span class="dropdown-label">Aktif</span>
+                                        </div>
+                                        <div class="dropdown-right">
+                                            <img src="../assets/images/down.svg" alt="img" />
+                                        </div>
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li data-key="urun-grubu">Aktif</li>
+                                        <li data-key="urun-adi">Ürün Adı</li>
+                                        <li data-key="marka">Marka</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="d-flex align-items-center input-container">
                                 <div class="label-box">
                                     <label for="storename">Müşteri Gruplama Kriteri</label>
                                 </div>
-                                <select class="form-select border-0 flex-grow-1 fw-semibold shadow-none"
-                                    id="customerGroupingCriteria">
-                                    <option selected>Kod</option>
-                                    <option>Pasif</option>
-                                    <option>Beklemede</option>
-                                </select>
-                                <button
-                                    class="down-arrow-btn d-flex justify-content-center align-items-center position-absolute end-0">
-                                    <img src="./../assets/images/bluedown-arrow.svg" alt="arrow" height="16"
-                                        width="16" />
-                                </button>
+                                <div class="custom-dropdown-wrapper extra-large">
+                                    <div class="custom-dropdown">
+                                        <div class="dropdown-left">
+                                            <span class="dropdown-label">Kod</span>
+                                        </div>
+                                        <div class="dropdown-right">
+                                            <img src="../assets/images/down.svg" alt="img" />
+                                        </div>
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li data-key="urun-grubu">Kod</li>
+                                        <li data-key="urun-adi">Ürün Adı</li>
+                                        <li data-key="marka">Marka</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="d-flex align-items-center input-container">
                                 <div class="label-box">
                                     <label for="storename">Günlük Sipariş Çekme</label>
                                 </div>
-                                <select class="form-select border-0 flex-grow-1 fw-semibold shadow-none"
-                                    id="DailyOrderWithdrawal">
-                                    <option selected>Bugün</option>
-                                    <option>Pasif</option>
-                                    <option>Beklemede</option>
-                                </select>
-                                <button
-                                    class="down-arrow-btn d-flex justify-content-center align-items-center position-absolute end-0">
-                                    <img src="./../assets/images/bluedown-arrow.svg" alt="arrow" height="16"
-                                        width="16" />
-                                </button>
+                                <div class="custom-dropdown-wrapper extra-large">
+                                    <div class="custom-dropdown">
+                                        <div class="dropdown-left">
+                                            <span class="dropdown-label">Bugün</span>
+                                        </div>
+                                        <div class="dropdown-right">
+                                            <img src="../assets/images/down.svg" alt="img" />
+                                        </div>
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li data-key="urun-grubu">Bugün</li>
+                                        <li data-key="urun-adi">Ürün Adı</li>
+                                        <li data-key="marka">Marka</li>
+                                    </ul>
+                                </div>
+
                             </div>
                             <div class="d-flex align-items-center input-container number-input">
                                 <input type="number" class="flex-fill" />
@@ -223,16 +237,21 @@
                                 <div class="label-box">
                                     <label for="storename">Sevkiyat Kim tarafından yapılacak?</label>
                                 </div>
-                                <select class="form-select border-0 flex-grow-1 fw-semibold shadow-none" id="shipment">
-                                    <option selected>Firma tarafından</option>
-                                    <option>Firma tarafından</option>
-                                    <option>Firma tarafından</option>
-                                </select>
-                                <button
-                                    class="down-arrow-btn d-flex justify-content-center align-items-center position-absolute end-0">
-                                    <img src="./../assets/images/bluedown-arrow.svg" alt="arrow" height="16"
-                                        width="16" />
-                                </button>
+                                <div class="custom-dropdown-wrapper extra-large">
+                                    <div class="custom-dropdown">
+                                        <div class="dropdown-left">
+                                            <span class="dropdown-label">Firma tarafından</span>
+                                        </div>
+                                        <div class="dropdown-right">
+                                            <img src="../assets/images/down.svg" alt="img" />
+                                        </div>
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li data-key="urun-grubu">Firma tarafından</li>
+                                        <li data-key="urun-adi">Ürün Adı</li>
+                                        <li data-key="marka">Marka</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-end">
                                 <button class="save-btn">
@@ -249,16 +268,21 @@
                                 <div class="label-box">
                                     <label for="storename">Mağaza Adı*</label>
                                 </div>
-                                <select class="form-select border-0 flex-grow-1 fw-semibold shadow-none" id="shipment">
-                                    <option selected>Bütçemegöre</option>
-                                    <option>Bütçemegöre</option>
-                                    <option>Bütçemegöre</option>
-                                </select>
-                                <button
-                                    class="down-arrow-btn d-flex justify-content-center align-items-center position-absolute end-0">
-                                    <img src="./../assets/images/bluedown-arrow.svg" alt="arrow" height="16"
-                                        width="16" />
-                                </button>
+                                <div class="custom-dropdown-wrapper extra-large">
+                                    <div class="custom-dropdown">
+                                        <div class="dropdown-left">
+                                            <span class="dropdown-label">Bütçemegöre</span>
+                                        </div>
+                                        <div class="dropdown-right">
+                                            <img src="../assets/images/down.svg" alt="img" />
+                                        </div>
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li data-key="urun-grubu">Bütçemegöre</li>
+                                        <li data-key="urun-adi">Ürün Adı</li>
+                                        <li data-key="marka">Marka</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="d-flex align-items-center input-container">
                                 <div class="label-box">
@@ -322,6 +346,7 @@
     <script src="../assets/js/jquery-3.6.0.min.js"></script>
     <script src="../assets/js/select2.min.js"></script>
     <script src="../assets/js/edit-store/editstore.js"></script>
+    <script src="../assets/js/comman.js"></script>
 
 </body>
 

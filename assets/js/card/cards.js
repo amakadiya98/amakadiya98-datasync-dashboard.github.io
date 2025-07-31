@@ -4,10 +4,15 @@ function toggleCard(el) {
   card.setAttribute("data-active", !isActive);
 }
 
-// Initialize all Bootstrap tooltips
 document.addEventListener("DOMContentLoaded", function () {
-  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
   tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-    new bootstrap.Tooltip(tooltipTriggerEl)
-  })
+    new bootstrap.Tooltip(tooltipTriggerEl, {
+      delay: { show: 0, hide: 100 },  
+      animation: false,               
+      trigger: 'hover focus'    
+    });
+  });
 });
+
+

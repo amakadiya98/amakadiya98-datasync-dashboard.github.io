@@ -7,18 +7,23 @@ $(document).ready(function () {
         datasets: [
             {
                 label: 'Stok Adet',
-                data: [100, 0],  // only show bar for 'Stok Adet'
+                data: [100, 0],
                 backgroundColor: '#2962FF',
                 borderRadius: 20,
-                barThickness: 20,
+                barThickness: 36,
+                categoryPercentage: 0.8, 
+                barPercentage: 0.8
             },
             {
                 label: 'Toplam Maliyet',
-                data: [0, 250],  // only show bar for 'Toplam Maliyet'
+                data: [0, 250],
                 backgroundColor: '#FDBA74',
                 borderRadius: 20,
-                barThickness: 20,
+                barThickness: 36,
+                categoryPercentage: 0.8,
+                barPercentage: 0.8
             }
+
         ]
     };
 
@@ -79,10 +84,15 @@ $(document).ready(function () {
             y: {
                 grid: { color: '#E2E8F0' },
                 ticks: {
-                    color: '#A3AED0',
-                    font: { size: 14, weight: 600 }
+                    color: '#747C98',
+                    font: {
+                        family: 'Gilroy',
+                        size: 20,
+                        weight: 500
+                    }
                 }
             }
+
         }
     };
 

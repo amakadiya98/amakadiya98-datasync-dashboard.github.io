@@ -1,6 +1,11 @@
 // Fake data arrays
 const stockStatus2Data = [
     { ÜrünGörsel: "NKYSKRSZHDN12X1", ÜrünKodu: 'Ürün Linki Ekle', ÜrünAdı: 'Nilky Şekersiz Hindistan Cevizi Sütü Glütensiz Bitkisel Bazlı Laktosuz Vegan 12X1 lt', Kategori: 'HindistanCevizi', Marka: 'Nilky', ToplamStok: -4, stockstatus: -3 },
+    { ÜrünGörsel: "NKYSKRSZHDN12X1", ÜrünKodu: 'Ürün Linki Ekle', ÜrünAdı: 'Nilky Şekersiz Hindistan Cevizi Sütü Glütensiz Bitkisel Bazlı Laktosuz Vegan 12X1 lt', Kategori: 'HindistanCevizi', Marka: 'Nilky', ToplamStok: -4, stockstatus: -3 },
+    { ÜrünGörsel: "NKYSKRSZHDN12X1", ÜrünKodu: 'Ürün Linki Ekle', ÜrünAdı: 'Nilky Şekersiz Hindistan Cevizi Sütü Glütensiz Bitkisel Bazlı Laktosuz Vegan 12X1 lt', Kategori: 'HindistanCevizi', Marka: 'Nilky', ToplamStok: -4, stockstatus: -3 },
+    { ÜrünGörsel: "NKYSKRSZHDN12X1", ÜrünKodu: 'Ürün Linki Ekle', ÜrünAdı: 'Nilky Şekersiz Hindistan Cevizi Sütü Glütensiz Bitkisel Bazlı Laktosuz Vegan 12X1 lt', Kategori: 'HindistanCevizi', Marka: 'Nilky', ToplamStok: -4, stockstatus: -3 },
+    { ÜrünGörsel: "NKYSKRSZHDN12X1", ÜrünKodu: 'Ürün Linki Ekle', ÜrünAdı: 'Nilky Şekersiz Hindistan Cevizi Sütü Glütensiz Bitkisel Bazlı Laktosuz Vegan 12X1 lt', Kategori: 'HindistanCevizi', Marka: 'Nilky', ToplamStok: -4, stockstatus: -3 },
+    { ÜrünGörsel: "NKYSKRSZHDN12X1", ÜrünKodu: 'Ürün Linki Ekle', ÜrünAdı: 'Nilky Şekersiz Hindistan Cevizi Sütü Glütensiz Bitkisel Bazlı Laktosuz Vegan 12X1 lt', Kategori: 'HindistanCevizi', Marka: 'Nilky', ToplamStok: -4, stockstatus: -3 },
     // ...add more rows
 ];
 

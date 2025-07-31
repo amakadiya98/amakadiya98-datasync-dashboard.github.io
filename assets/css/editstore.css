@@ -109,6 +109,7 @@
     border: 1.11px solid #E8EEFF;
     border-radius: 12px;
     width: 100%;
+    max-height: 57px;
 }
 
 .edit-store-tab .tab-part .tab-content #installation-settings .tab-inputs .input-container .label-box {
@@ -212,6 +213,17 @@
     border: 1px solid #E8EEFF;
     background-color: #F5F8FF;
     border-radius: 12px;
+    z-index: -1;
+    cursor: pointer;
+}
+
+.edit-store-tab .tab-part .tab-content .number-input .down-arrow-btn {
+    z-index: 1;
+}
+
+.edit-store-tab .tab-part .tab-content .down-arrow-btn img {
+    width: 13px;
+    height: 7px;
 }
 
 .edit-store-tab .tab-part .tab-content select {
@@ -237,6 +249,11 @@
 .edit-store-tab .tab-part .tab-content .arrow-btn {
     background-color: transparent;
     border: 0;
+}
+
+.select2-container--default .select2-selection--multiple {
+    background-color: transparent !important;
+    cursor: pointer !important;
 }
 
 @media only screen and (max-width: 1280px) {

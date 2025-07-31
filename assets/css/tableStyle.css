@@ -103,7 +103,7 @@ table.dataTable.no-footer {
 
 .performance-table .heads-filter th {
   border: none !important;
-  padding: 25px 10px 15px 10px;
+  padding-right: 10px !important;
 }
 
 .performance-table tbody {
@@ -128,13 +128,6 @@ table.dataTable.no-footer {
   table-layout: fixed;
   vertical-align: middle;
 }
-
-.commonTable thead,
-.commonTable tbody t {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 
 #performanceTable tbody,
 #categoryPerformanceTable tbody {
@@ -1386,7 +1379,9 @@ tbody {
   padding: 6px 16px;
   width: fit-content;
 }
-
+.stockStatus.verient2 thead tr th{
+  padding: 16px 10px !important;
+}
 .stockStatus.verient2 .red-text-box {
   border: 1px solid #E31A1A;
   border-radius: 5px;

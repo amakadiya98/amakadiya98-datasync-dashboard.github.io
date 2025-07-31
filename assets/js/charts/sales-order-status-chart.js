@@ -102,37 +102,6 @@ $(document).ready(function () {
         }
     });
 
-
-    $('.custom-dropdown').on('click', function (e) {
-        e.stopPropagation();
-        const wrapper = $(this).closest('.custom-dropdown-wrapper');
-        const menu = wrapper.find('.dropdown-menu');
-        $('.dropdown-menu').not(menu).hide();
-        menu.toggle();
-    });
-
-    $('.dropdown-menu li').on('click', function () {
-        const key = $(this).data('key');
-        const label = $(this).text();
-        const wrapper = $(this).closest('.custom-dropdown-wrapper');
-
-        wrapper.find('.dropdown-label').text(label);
-
-        if (key in datasetMap) {
-            chart.data.datasets[1].label = label;
-            chart.data.datasets[1].data = datasetMap[key];
-            chart.update();
-        }
-
-        wrapper.find('.dropdown-menu').hide();
-    });
-
-    $(document).on('click', function (e) {
-        if (!$(e.target).closest('.custom-dropdown-wrapper').length) {
-            $('.dropdown-menu').hide();
-        }
-    });
-
     $('#exportExcel').click(function () {
         alert("Export to Notes/PDF coming soon.");
     });

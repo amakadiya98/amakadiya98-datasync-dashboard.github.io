@@ -5,43 +5,46 @@ const tableData = [
     { marka: 'BBOX', adet: 1917, gelir: 3200, netKar: 3000, netKarYuzde: 9.95, degisim: -8.67 },
 ];
 
+function performanceTableRows(tableBodyId, data) {
+    const tbody = document.getElementById(tableBodyId);
+    data.forEach(item => {
+        const changeClass = item.degisim < 0 ? 'red-down' : 'green-up';
+        const row = `
+      <tr>
+        <td><div class="categories-tag">${item.marka}</div></td>
+        <td>
+          <div class="bold-blue">${item.adet}</div>
+          <div class="${changeClass}">${item.degisim.toFixed(2)}%</div>
+        </td>
+        <td>
+          <div class="bold-blue">₺ ${item.gelir.toLocaleString()}</div>
+          <div class="${changeClass}">${item.degisim.toFixed(2)}%</div>
+        </td>
+        <td>
+          <div class="bold-blue">₺ ${item.netKar.toLocaleString()}</div>
+          <div class="${changeClass}">${item.degisim.toFixed(2)}%</div>
+        </td>
+        <td>
+          <div class="bold-blue">%${item.netKarYuzde}</div>
+          <div class="${changeClass}">${item.degisim.toFixed(2)}%</div>
+        </td>
+      </tr>
+    `;
+        tbody.insertAdjacentHTML('beforeend', row);
+    });
+}
 
 $(document).ready(function () {
+    // Inject rows manually (like orderDetailsTable)
+    performanceTableRows('performanceTableBody', tableData);
+
+    // Apply DataTable (only for sorting)
     const table = $('#performanceTable').DataTable({
-        data: tableData,
         paging: false,
-        deferRender: true,
         info: false,
         searching: false,
         ordering: true,
         stripeClasses: [],
-        columns: [
-            { data: 'marka', render: data => `<div class="categories-tag">${data}</div>` },
-            {
-                data: 'adet', render: (data, type, row) => `
-                <div class="bold-blue">${data}</div>
-                <div class="${row.degisim < 0 ? 'red-down' : 'green-up'}">
-                    ${row.degisim.toFixed(2)}%
-                </div>` },
-            {
-                data: 'gelir', render: (data, type, row) => `
-                <div class="bold-blue">₺ ${data.toLocaleString()}</div>
-                <div class="${row.degisim < 0 ? 'red-down' : 'green-up'}">
-                    ${row.degisim.toFixed(2)}%
-                </div>` },
-            {
-                data: 'netKar', render: (data, type, row) => `
-                <div class="bold-blue">₺ ${data.toLocaleString()}</div>
-                <div class="${row.degisim < 0 ? 'red-down' : 'green-up'}">
-                    ${row.degisim.toFixed(2)}%
-                </div>` },
-            {
-                data: 'netKarYuzde', render: (data, type, row) => `
-                <div class="bold-blue">%${data}</div>
-                <div class="${row.degisim < 0 ? 'red-down' : 'green-up'}">
-                    ${row.degisim.toFixed(2)}%
-                </div>` }
-        ]
     });
 
     // Click on ascending arrow
@@ -59,7 +62,7 @@ $(document).ready(function () {
     });
 });
 
-
+// Tabs + Chart remain same
 function switchTab(tab) {
     const container = document.querySelector('.performance-table');
     const buttons = container.querySelectorAll('.tab-button');
@@ -78,12 +81,11 @@ function switchTab(tab) {
     }
 }
 
-
 let chartInstance;
 function drawChart() {
     if (chartInstance) return;
 
-    const ctx = document.getElementById('myChart').getContext('2d');
+    const ctx = document.getElementById('performanceTableChart').getContext('2d');
     chartInstance = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -107,19 +109,10 @@ function drawChart() {
                     cornerRadius: 12,
                     padding: 8,
                     displayColors: true,
-
                     titleColor: '#A3AED0',
-                    titleFont: {
-                        family: 'Gilroy',
-                        weight: '600',
-                        size: 12
-                    },
+                    titleFont: { family: 'Gilroy', weight: '600', size: 12 },
                     bodyColor: '#023E7D',
-                    bodyFont: {
-                        family: 'Gilroy',
-                        weight: '700',
-                        size: 20
-                    },
+                    bodyFont: { family: 'Gilroy', weight: '700', size: 20 },
                     callbacks: {
                         label: context => `₺ ${context.raw}`
                     }
@@ -135,8 +128,8 @@ function downloadExcel() {
 }
 
 
-// category table data
 
+// category table data
 const categoryData = [
     { marka: 'ALBARDAK', adet: 1914, gelir: 3623, netKar: 3623, netKarYuzde: 10.15, degisim: -26.84 },
     { marka: 'CKB_SETI', adet: 1915, gelir: 4000, netKar: 3900, netKarYuzde: 9.85, degisim: -15.12 },
@@ -152,47 +145,49 @@ const categoryData = [
     { marka: 'MAM', adet: 2000, gelir: 5400, netKar: 5000, netKarYuzde: 10.25, degisim: -2.15 },
 ];
 
+function populateCategoryTableRows(tableBodyId, data) {
+    const tbody = document.getElementById(tableBodyId);
+    data.forEach(item => {
+        const changeClass = item.degisim < 0 ? 'red-down' : 'green-up';
+        const row = `
+      <tr>
+        <td><div class="categories-tag">${item.marka}</div></td>
+        <td>
+          <div class="bold-blue">${item.adet}</div>
+          <div class="${changeClass}">${item.degisim.toFixed(2)}%</div>
+        </td>
+        <td>
+          <div class="bold-blue">₺ ${item.gelir.toLocaleString()}</div>
+          <div class="${changeClass}">${item.degisim.toFixed(2)}%</div>
+        </td>
+        <td>
+          <div class="bold-blue">₺ ${item.netKar.toLocaleString()}</div>
+          <div class="${changeClass}">${item.degisim.toFixed(2)}%</div>
+        </td>
+        <td>
+          <div class="bold-blue">%${item.netKarYuzde}</div>
+          <div class="${changeClass}">${item.degisim.toFixed(2)}%</div>
+        </td>
+      </tr>
+    `;
+        tbody.insertAdjacentHTML('beforeend', row);
+    });
+}
+
 $(document).ready(function () {
+    // Inject rows into table manually
+    populateCategoryTableRows('categoryPerformanceTableBody', categoryData);
+
+    // Initialize DataTable for sorting (no auto rendering)
     $('#categoryPerformanceTable').DataTable({
-        data: categoryData,
         paging: false,
         info: false,
         searching: false,
         ordering: true,
         stripeClasses: [],
-        columns: [
-            { data: 'marka', render: data => `<div class="categories-tag">${data}</div>` },
-            {
-                data: 'adet', render: (data, type, row) => `
-                <div class="bold-blue">${data}</div>
-                <div class="${row.degisim < 0 ? 'red-down' : 'green-up'}">
-                    ${row.degisim.toFixed(2)}%
-                </div>`
-            },
-            {
-                data: 'gelir', render: (data, type, row) => `
-                <div class="bold-blue">₺ ${data.toLocaleString()}</div>
-                <div class="${row.degisim < 0 ? 'red-down' : 'green-up'}">
-                    ${row.degisim.toFixed(2)}%
-                </div>`
-            },
-            {
-                data: 'netKar', render: (data, type, row) => `
-                <div class="bold-blue">₺ ${data.toLocaleString()}</div>
-                <div class="${row.degisim < 0 ? 'red-down' : 'green-up'}">
-                    ${row.degisim.toFixed(2)}%
-                </div>`
-            },
-            {
-                data: 'netKarYuzde', render: (data, type, row) => `
-                <div class="bold-blue">%${data}</div>
-                <div class="${row.degisim < 0 ? 'red-down' : 'green-up'}">
-                    ${row.degisim.toFixed(2)}%
-                </div>`
-            }
-        ]
     });
 });
+
 
 function switchCategoryTab(tab) {
     const container = document.querySelector('.category.performance-table');

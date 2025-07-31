@@ -39,6 +39,7 @@ $(document).ready(function () {
             format: 'float'
         }
     };
+    
 
     const initialKey = 'maliyet';
 
@@ -47,6 +48,7 @@ $(document).ready(function () {
         data: {
             labels: labels,
             datasets: [{
+                clip: false,
                 label: datasetsMap[initialKey].label,
                 data: datasetsMap[initialKey].data,
                 backgroundColor: '#023E7D',
@@ -56,6 +58,7 @@ $(document).ready(function () {
         },
         options: {
             indexAxis: 'y',
+            z: 10,
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
@@ -87,17 +90,19 @@ $(document).ready(function () {
                     }
                 },
                 datalabels: {
+                    z: 10,
                     anchor: 'end',
-                    align: 'end',
-                    backgroundColor: 'transparent',
-                    borderColor: '#023E7D',
-                    borderWidth: 1,
+                    align: 'right',
+                    offset: -35,
+                    backgroundColor: '#F5F8FF',
+                    borderColor: '#FFC283',
+                    borderWidth: 0.5,
                     borderRadius: 3,
                     color: '#023E7D',
                     font: {
                         family: 'Gilroy',
                         weight: '700',
-                        size: 12
+                        size: 11
                     },
                     padding: {
                         top: 4,
@@ -115,6 +120,7 @@ $(document).ready(function () {
                 }
 
 
+
             },
             scales: {
                 x: {
@@ -127,8 +133,14 @@ $(document).ready(function () {
                 },
                 y: {
                     ticks: {
-                        color: '#475569',
-                        font: { weight: 500 }
+                        color: '#747C98',
+                        backgroundColor: '#F5F8FF',
+                        font: {
+                            family: 'Gilroy',
+                            size: 18,
+                            weight: '500',
+                        },
+                        padding: 10
                     },
                     grid: { color: '#E2E8F0' }
                 }

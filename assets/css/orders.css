@@ -1,5 +1,10 @@
 .orders-section {
-    background-color: #FFFFFF;
+    background-color: #F5F8FF;
+    box-shadow: 0px 7px 15px 0px #1126920D;
+    border: 1px solid #CCD8E5;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100vh;
 }
 
 .orders-section .sidebar-head {
@@ -20,6 +25,8 @@
     background-color: #FFFFFF;
     position: relative;
     z-index: 10;
+    overflow: auto;
+    min-width: 380px;
 }
 
 .orders-section .order-sidebar .sidebar-chip {
@@ -34,8 +41,42 @@
     color: var(--Color);
 }
 
-.orders-section .right-part {
-    /* padding: 18px 0; */
+.commonTable.orderTable {
+    width: calc(100vw - 380px);
+}
+
+.commonTable.orderTable tbody {
+    max-height: calc(100vh - 298px) !important;
+}
+
+.commonTable.orderTable #orderTable {
+    height: calc(100vh - 187px);
+}
+
+.commonTable.orderTable .table-contant {
+    border: none !important;
+}
+
+.orders-section .right-part,
+.right-top-part {
+    border-top-right-radius: 20px;
+}
+
+.orders-section .right-top-part {
+    white-space: nowrap;
+}
+
+.commonTable.orderTable .bottom-bar {
+    background: #F5F8FF;
+    padding: 8px 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid #CCD8E5;
+    border-left: none;
+    box-shadow: 0px 7px 15px 0px #1126920D;
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
 .orders-section .right-part .save-btn {
@@ -56,37 +97,13 @@
     background-color: #E31A1A;
 }
 
-.orders-section .right-part .search-container {
-    border-radius: 10px;
-    background-color: #F5F8FF;
-    border: 0.59px solid #E8EEFF;
-    max-width: 370px;
-    width: 100%;
-    display: flex;
-}
-
-.orders-section .right-part .search-container input {
-    width: 100%;
-    background-color: transparent;
-    border: 0;
-    padding: 10px;
-    font-family: 'Gilroy';
-    font-weight: 700;
-    font-size: 15px;
-    color: var(--Color);
-}
-
-.orders-section .right-part .search-container input:focus {
-    border: 0;
-    outline: 0;
-}
 
 .orders-section .right-part .des-text {
     font-family: 'Gilroy';
     font-weight: 400;
     font-size: 20px;
     color: #000000;
-    padding: 10px 0;
+    padding: 10px 17px;
     border-top: 1px solid #CCD8E5;
     border-bottom: 1px solid #CCD8E5
 }
@@ -122,16 +139,9 @@
 }
 
 .orders-section .right-part .right-top-part {
-    box-shadow: 0px 6px 20px 0px #023E7D26;
-    border-bottom: 1px solid #CCD8E5;
     background-color: #FFFFFF;
-    padding: 18px 0 10px 0;
-    position: fixed;
-    top: 0;
-    right: 0;
+    padding: 18px 0 0px;
     width: 100%;
-    padding-left: 380px;
-    z-index: 1;
 }
 
 .orders-section .right-part .order-box {
@@ -154,72 +164,88 @@
     overflow: auto;
 }
 
-.orders-section .right-part .pagination-part {
-    background-color: #F5F8FF;
-    box-shadow: 0px 7px 15px 0px #1126920D;
-    border: 1px solid #CCD8E5;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding: 10px;
-    padding-left: 380px;
-    z-index: 1;
+.order-table-head {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 100%;
 }
 
-.orders-section .right-part .pagination-part .pagination-btn {
-    border: 1px solid #E8EEFF;
-    background-color: #FFFFFF;
-    height: 45px;
-    width: 45px;
-    border-radius: 12px;
+.order-table-head .menu-part {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-family: 'Gilroy';
-    font-weight: 400;
-    font-size: 20px;
-    color: var(--Color);
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
 }
 
-.orders-section .right-part .pagination-part .pagination-btn.active {
-    border: 1px solid var(--Color, #023E7D);
-    font-weight: 700;
-
-}
-
-.orders-section .right-part .pagination-part .total-page {
-    height: 45px;
+.order-table-head .filter-part {
     display: flex;
     align-items: center;
-    gap: 30px;
-    padding-left: 15px;
-    font-family: 'Gilroy';
-    font-weight: 400;
-    font-size: 20px;
-    color: var(--Color);
-    background-color: #FFFFFF;
-    border: 1px solid #E8EEFF;
-    border-radius: 12px;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
 }
 
-.orders-section .right-part .pagination-part .pagination-text {
+.order-table-head .filter-part input {
+    width: 100%;
+    border: 1px solid #E8EEFF;
+    border-radius: 12px;
+    height: 40px;
+    padding: 14px;
     font-family: 'Gilroy';
     font-weight: 500;
     font-size: 15px;
-    color: #747C98;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #023E7D;
 }
 
-@media screen and (max-width: 1280px) {
-    .orders-section .right-part .right-order-content {
-        margin-top: 302px;
-        height: calc(100vh - 422px);
+.order-table-head .filter-part input:focus {
+    outline: none;
+}
+
+.order-table-head .menu-part h3 {
+    font-family: 'Gilroy';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #023E7D;
+}
+
+#orderTable thead tr th {
+    width: calc(100vw - 430px) !important;
+    padding: 10px 17px !important;
+}
+
+#orderTable .amount-data {
+    text-align: start;
+    align-items: start;
+    margin-left: 10px;
+}
+
+.orders-section .button-container {
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+@media (max-width: 1200px) {
+    .orders-section .right-part .des-text {
+        font-size: 16px;
     }
-}
 
-@media screen and (max-width: 1100px) {
-     .orders-section .right-part .right-order-content {
-        margin-top: 332px;
-        height: calc(100vh - 442px);
+    .orders-section .button-container .save-btn,
+    .orders-section .button-container .save-btn.delete-btn {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .commonTable.orderTable #orderTable {
+        height: calc(100vh - 174px);
+    }
+
+    .commonTable.orderTable tbody {
+        max-height: calc(100vh - 288px) !important;
     }
 }

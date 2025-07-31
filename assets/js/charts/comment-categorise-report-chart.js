@@ -1,32 +1,55 @@
 $(document).ready(function () {
     const ctx = $('#commentCategoriseReportChart')[0].getContext('2d');
 
-    const labels = ['1. Hafta'];
-
     const data = {
-        labels: labels,
+        labels: ['1. Hafta'],
         datasets: [
+            {
+                label: 'hb-label',
+                data: [0],
+                stack: 'hb',
+                backgroundColor: 'transparent',
+                datalabels: {
+                    align: 'end',
+                    anchor: 'end',
+                    offset: 10,
+                    backgroundColor: '#F28B02',
+                    borderRadius: 4,
+                    color: '#fff',
+                    font: { weight: 'bold', size: 16 },
+                    formatter: () => 'hb',
+                    clip: false,
+                    display: true
+                },
+                barThickness: 40
+            },
+            {
+                label: 'ty-label',
+                data: [0],
+                stack: 'ty',
+                backgroundColor: 'transparent',
+                datalabels: {
+                    align: 'end',
+                    anchor: 'end',
+                    offset: 10,
+                    backgroundColor: '#FF6621',
+                    borderRadius: 4,
+                    color: '#fff',
+                    font: { weight: 'bold', size: 16 },
+                    formatter: () => 'ty',
+                    clip: false,
+                    display: true
+                },
+                barThickness: 40
+            },
             {
                 label: 'Negatif Yorum Sayısı (hb)',
                 data: [12000],
                 stack: 'hb',
                 backgroundColor: '#023E7D',
                 borderRadius: 15,
-                barThickness: 40,
-                datalabels: {
-                    align: 'bottom',
-                    anchor: 'start',
-                    offset: -30,
-                    backgroundColor: '#F28B02',
-                    borderRadius: 4,
-                    color: '#fff',
-                    font: {
-                        weight: 'bold',
-                        size: 16
-                    },
-                    formatter: () => 'hb',
-                    clip: false
-                }
+                datalabels: { display: false },
+                barThickness: 40
             },
             {
                 label: 'Pozitif Yorum Sayısı (hb)',
@@ -34,9 +57,7 @@ $(document).ready(function () {
                 stack: 'hb',
                 backgroundColor: '#1B69C7',
                 borderRadius: 15,
-                datalabels: {
-                    display: false
-                },
+                datalabels: { display: false },
                 barThickness: 40
             },
             {
@@ -45,21 +66,8 @@ $(document).ready(function () {
                 stack: 'ty',
                 backgroundColor: '#023E7D',
                 borderRadius: 15,
-                barThickness: 40,
-                datalabels: {
-                    align: 'bottom',
-                    anchor: 'start',
-                    offset: -30,
-                    backgroundColor: '#FF6621',
-                    borderRadius: 4,
-                    color: '#fff',
-                    font: {
-                        weight: 'bold',
-                        size: 16
-                    },
-                    formatter: () => 'ty',
-                    clip: false
-                }
+                datalabels: { display: false },
+                barThickness: 40
             },
             {
                 label: 'Pozitif Yorum Sayısı (ty)',
@@ -67,85 +75,79 @@ $(document).ready(function () {
                 stack: 'ty',
                 backgroundColor: '#1B69C7',
                 borderRadius: 15,
-                datalabels: {
-                    display: false
-                },
+                datalabels: { display: false },
                 barThickness: 40
             }
         ]
     };
 
-    new Chart(ctx, {
+    const chart = new Chart(ctx, {
         type: 'bar',
         data: data,
         options: {
             responsive: true,
             plugins: {
                 legend: {
-                    position: 'top',
                     labels: {
+                        generateLabels: function (chart) {
+                            return [
+                                {
+                                    text: 'Toplam Pozitif Yorum Sayısı',
+                                    fillStyle: '#1B69C7',
+                                    strokeStyle: '#1B69C7',
+                                    lineWidth: 1,
+                                    hidden: !chart.isDatasetVisible(3),
+                                    datasetIndex: 3,
+                                    pointStyle: 'rectRounded',
+                                },
+                                {
+                                    text: 'Toplam Negatif Yorum Sayısı',
+                                    fillStyle: '#023E7D',
+                                    strokeStyle: '#023E7D',
+                                    lineWidth: 1,
+                                    hidden: !chart.isDatasetVisible(2),
+                                    datasetIndex: 2,
+                                    pointStyle: 'rectRounded',
+                                }
+                            ];
+                        },
                         usePointStyle: true,
                         pointStyle: 'rectRounded',
-                        color: '#003367',
+                        boxWidth: 20,
+                        boxHeight: 10,
+                        padding: 20,
                         font: {
                             size: 14,
-                            weight: '500'
-                        }
-                    }
-                },
-                datalabels: {
-                    display: true
-                },
-                tooltip: {
-                    mode: 'index',
-                    intersect: false,
-                    backgroundColor: '#FFFFFF',
-                    borderColor: 'rgba(50, 50, 71, 0.06)',
-                    borderWidth: 1,
-                    cornerRadius: 12,
-                    padding: 8,
-                    displayColors: true,
+                            weight: '500',
+                            family: 'Gilroy'
+                        },
+                        color: '#003367'
+                    },
 
-                    titleColor: '#A3AED0',
-                    titleFont: {
-                        family: 'Gilroy',
-                        weight: '600',
-                        size: 12
-                    },
-                    bodyColor: '#023E7D',
-                    bodyFont: {
-                        family: 'Gilroy',
-                        weight: '700',
-                        size: 20
-                    },
-                    callbacks: {
-                        label: function (context) {
-                            return `${context.dataset.label}: ${context.formattedValue.toLocaleString()}`;
+                    onClick: function (e, legendItem, legend) {
+                        const chart = legend.chart;
+                        const idx = legendItem.datasetIndex;
+
+                        const isPozitifVisible = chart.isDatasetVisible(3);
+                        const isNegatifVisible = chart.isDatasetVisible(2);
+
+                        if (idx === 3 && !isNegatifVisible) return;
+                        if (idx === 2 && !isPozitifVisible) return;
+
+                        if (idx === 3) {
+                            const visible = chart.isDatasetVisible(3);
+                            chart.setDatasetVisibility(3, !visible);
+                            chart.setDatasetVisibility(5, !visible);
+                        } else if (idx === 2) {
+                            const visible = chart.isDatasetVisible(2);
+                            chart.setDatasetVisibility(2, !visible);
+                            chart.setDatasetVisibility(4, !visible);
                         }
+
+                        chart.update();
                     }
                 }
             },
-            scales: {
-                x: {
-                    stacked: true,
-                    grid: {
-                        display: false
-                    }
-                },
-                y: {
-                    stacked: true,
-                    beginAtZero: true,
-                    ticks: {
-                        stepSize: 5000,
-                        callback: function (value) {
-                            return value.toLocaleString();
-                        }
-                    },
-                    grid: {
-                        color: '#e0e7ff'
-                    }
-                }
-            }
         },
         plugins: [ChartDataLabels]
     });

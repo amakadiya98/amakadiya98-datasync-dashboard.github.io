@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../assets/css/chartStyle.css" />
     <link rel="stylesheet" href="../assets/css/common.css" />
     <link rel="stylesheet" href="../assets/css/tableStyle.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -121,7 +120,7 @@
                 <div class="right-side">
                     <div class="price-quantity-tabs">
                         <div class="date-filter" onclick="document.getElementById('priceDatePicker').showPicker()">
-                            <i class="material-icons" id="calendarIcon" style="cursor: pointer;">calendar_today</i>
+                            <img src="../assets/images/calender.svg" alt="icon" />
                             <input type="date" id="priceDatePicker" class="calendar-input" />
                         </div>
 
@@ -238,7 +237,7 @@
 
 
 
-    <div class="chart-container" style="margin-top: 40px;">
+    <div class="chart-container mark-chart" style="margin-top: 40px; max-width: 1580px;">
         <div class="header">
             <div class="title">
                 Kanal Bazlı Performans
@@ -590,7 +589,7 @@
         </div>
     </div>
 
-    <div class="chart-container" style="margin-top: 40px;">
+    <div class="chart-container shopping-chart" style="margin-top: 40px;">
         <div class="header">
             <div>
                 <div class="title">Toplam Sipariş Durumu <strong>(Satış)</strong></div>
@@ -598,13 +597,13 @@
             </div>
             <div class="chart-controls">
                 <div class="custom-dropdown-wrapper">
-                    <div class="custom-dropdown" id="metricDropdown">
+                    <div class="custom-dropdown">
                         <div class="dropdown-left">
-                            <span class="material-icons">shopping_cart</span>
+                            <img src="../assets/images/shopping.svg" alt="exel" />
                             <span class="dropdown-label">Satış</span>
                         </div>
                         <div class="dropdown-right">
-                            <span class="material-icons">expand_more</span>
+                            <img src="../assets/images/down.svg" alt="img" />
                         </div>
                     </div>
                     <ul class="dropdown-menu" style="display: none;">
@@ -614,9 +613,8 @@
                     </ul>
                 </div>
 
-                <button class="export-btn" id="exportExcel" title="Export as PDF or Notes">
-                    <span class="material-icons">description</span>
-                </button>
+                <button class="excel-btn" onclick="downloadExcel()"><img src="../assets/images/exel.svg"
+                        alt="exel" /></button>
             </div>
 
         </div>

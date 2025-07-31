@@ -57,7 +57,7 @@ $(document).ready(function () {
     var ShippingfeesTable = $('#shippingfees').DataTable({
         pageLength: 20,
         lengthMenu: [10, 20, 30, 50],
-       dom: 't<"bottom-bar mt-3"<"custom-controls"lpi>>',
+       dom: 't<"bottom-bar"<"custom-controls"lpi>>',
         language: {
             lengthMenu: "_MENU_",
             info: "_START_ - _END_ of _TOTAL_ entries",
