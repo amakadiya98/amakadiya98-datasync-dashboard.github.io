@@ -1,55 +1,52 @@
-.filter-section {
-  max-width: 1580px;
+.daterange-filter-section {
+  max-width: 1600px;
   width: 100%;
   background-color: #fff;
   box-shadow: 0px 4px 20px rgba(112, 144, 176, 0.08);
   border-radius: 17px;
   padding: 13px;
-  cursor: pointer;
   margin: 0 auto;
-}
-
-.custom-dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 99;
-  background: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  list-style: none;
-  padding: 0;
-  margin: 4px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
   width: 100%;
 }
 
-.custom-dropdown-menu.show {
-  display: block;
+.daterange-filter-section .dropdown-right {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
 }
 
-
-.dropdown-item {
-  padding: 8px 16px;
-  display: block;
-  color: #333;
-  text-decoration: none;
+.custom-dropdown-wrapper {
+  max-width: 356px;
+  width: 100%;
 }
 
-.dropdown-item:hover {
-  background-color: #f1f1f1;
+.daterange-filter-section .custom-dropdown {
+  height: 45px;
+  max-width: 356px;
+  width: 100%;
+}
+
+.daterange-filter-section .custom-dropdown .dropdown-label {
+  font-size: 20px;
+  color: #B7C9FF;
+  font-weight: 500;
+  font-family: 'Gilroy';
+  white-space: nowrap;
 }
 
 .filter-row {
   display: flex;
-  flex-wrap: wrap;
   gap: 15px 25px;
 }
 
 .field-group {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
 .field-group:nth-child(4n):not(.no-divider) .divider {
@@ -66,7 +63,8 @@
   display: flex;
   align-items: center;
   gap: 22px;
-  width: 352px;
+  max-width: 356px;
+  width: 100%;
 }
 
 .calender-daterange {
@@ -80,17 +78,21 @@
   color: rgba(2, 62, 125, 1);
   font-weight: 700;
   font-size: 18px;
+  white-space: nowrap;
+  min-width: 300px;
+
 }
 
 /* Input */
 .custom-input {
   display: flex;
   justify-content: space-between;
-  width: 352px;
+  max-width: 356px;
+  width: 100%;
   height: 45px;
   border: 1px solid rgba(232, 238, 255, 1);
   border-radius: 12px;
-  padding-left: 16px;
+  padding: 16px;
   display: flex;
   align-items: center;
   font-size: 20px;
@@ -131,17 +133,6 @@
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
-}
-
-.select-arrow-box {
-  width: 45px;
-  height: 45px;
-  background-color: rgba(245, 248, 255, 1);
-  background-image: url('../images/bluedown-arrow.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 11px;
-  border-radius: 12px;
 }
 
 

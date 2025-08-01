@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../assets/css/fonts.css" />
   <link rel="stylesheet" href="../assets/css/daterange.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
 </head>
 
 <body>
-  <div class="filter-section">
+  <div class="daterange-filter-section">
     <div class="filter-row">
 
       <div class="field-group calendar-group">
@@ -55,81 +56,120 @@
         <div class="divider"></div>
       </div>
 
-      <div class="field-group" style="position: relative;">
-        <div class="custom-input dropdown-trigger" data-target="dropdown1">
-          Pazaryeri
-          <div class="select-arrow-box"></div>
-        </div>
-
-        <ul id="dropdown1" class="custom-dropdown-menu">
-          <li><a class="dropdown-item" href="#">TrendYol</a></li>
-          <li><a class="dropdown-item" href="#">Hepsiburada</a></li>
-          <li><a class="dropdown-item" href="#">Amazon</a></li>
-        </ul>
-      </div>
-
-
-
-      <div class="field-group" style="position: relative;">
-        <div class="custom-input dropdown-trigger" data-target="dropdown2">Pazaryeri Sipariş Durumu
-          <div class="select-arrow-box"></div>
+      <div class="field-group">
+        <div class="custom-dropdown-wrapper">
+          <div class="custom-dropdown">
+            <div class="dropdown-left">
+              <span class="dropdown-label">Pazaryeri</span>
+            </div>
+            <div class="dropdown-right">
+              <img src="../assets/images/down.svg" alt="img" />
+            </div>
+          </div>
+          <ul class="dropdown-menu">
+            <li data-key="urun-grubu">Aktif</li>
+            <li data-key="urun-adi">Ürün Adı</li>
+            <li data-key="marka">Marka</li>
+          </ul>
         </div>
         <div class="divider"></div>
-        <ul id="dropdown2" class="custom-dropdown-menu">
-          <li><a class="dropdown-item" href="#">TrendYol</a></li>
-          <li><a class="dropdown-item" href="#">Hepsiburada</a></li>
-          <li><a class="dropdown-item" href="#">Amazon</a></li>
-        </ul>
       </div>
-
-      <div class="field-group" style="position: relative;">
-        <div class="custom-input dropdown-trigger" data-target="dropdown3">Sipariş Durumu
-          <div class="select-arrow-box"></div>
+    </div>
+    <div class="filter-row">
+      <div class="field-group">
+        <div class="custom-dropdown-wrapper">
+          <div class="custom-dropdown">
+            <div class="dropdown-left">
+              <span class="dropdown-label">Pazaryeri Sipariş Durumu</span>
+            </div>
+            <div class="dropdown-right">
+              <img src="../assets/images/down.svg" alt="img" />
+            </div>
+          </div>
+          <ul class="dropdown-menu">
+            <li data-key="urun-grubu">Aktif</li>
+            <li data-key="urun-adi">Ürün Adı</li>
+            <li data-key="marka">Marka</li>
+          </ul>
         </div>
         <div class="divider"></div>
-        <ul id="dropdown3" class="custom-dropdown-menu">
-          <li><a class="dropdown-item" href="#">TrendYol</a></li>
-          <li><a class="dropdown-item" href="#">Hepsiburada</a></li>
-          <li><a class="dropdown-item" href="#">Amazon</a></li>
-        </ul>
       </div>
 
-      <div class="field-group" style="position: relative;">
-        <div class="custom-input dropdown-trigger" data-target="dropdown4">Transfer Durumu
-          <div class="select-arrow-box"></div>
+
+      <div class="field-group">
+        <div class="custom-dropdown-wrapper">
+          <div class="custom-dropdown">
+            <div class="dropdown-left">
+              <span class="dropdown-label">Sipariş Durumu</span>
+            </div>
+            <div class="dropdown-right">
+              <img src="../assets/images/down.svg" alt="img" />
+            </div>
+          </div>
+          <ul class="dropdown-menu">
+            <li data-key="urun-grubu">Aktif</li>
+            <li data-key="urun-adi">Ürün Adı</li>
+            <li data-key="marka">Marka</li>
+          </ul>
         </div>
         <div class="divider"></div>
-        <ul id="dropdown4" class="custom-dropdown-menu">
-          <li><a class="dropdown-item" href="#">TrendYol</a></li>
-          <li><a class="dropdown-item" href="#">Hepsiburada</a></li>
-          <li><a class="dropdown-item" href="#">Amazon</a></li>
-        </ul>
+      </div>
+      <div class="field-group">
+        <div class="custom-dropdown-wrapper">
+          <div class="custom-dropdown">
+            <div class="dropdown-left">
+              <span class="dropdown-label">Transfer Durumu</span>
+            </div>
+            <div class="dropdown-right">
+              <img src="../assets/images/down.svg" alt="img" />
+            </div>
+          </div>
+          <ul class="dropdown-menu">
+            <li data-key="urun-grubu">Aktif</li>
+            <li data-key="urun-adi">Ürün Adı</li>
+            <li data-key="marka">Marka</li>
+          </ul>
+        </div>
+        <div class="divider"></div>
       </div>
 
-      <div class="field-group" style="position: relative;">
-        <div class="custom-input dropdown-trigger" data-target="dropdown5">
-          BNPL
-          <div class="select-arrow-box"></div>
+      <div class="field-group">
+        <div class="custom-dropdown-wrapper">
+          <div class="custom-dropdown">
+            <div class="dropdown-left">
+              <span class="dropdown-label">BNPL</span>
+            </div>
+            <div class="dropdown-right">
+              <img src="../assets/images/down.svg" alt="img" />
+            </div>
+          </div>
+          <ul class="dropdown-menu">
+            <li data-key="urun-grubu">Aktif</li>
+            <li data-key="urun-adi">Ürün Adı</li>
+            <li data-key="marka">Marka</li>
+          </ul>
         </div>
-
-        <ul id="dropdown5" class="custom-dropdown-menu">
-          <li><a class="dropdown-item" href="#">TrendYol</a></li>
-          <li><a class="dropdown-item" href="#">Hepsiburada</a></li>
-          <li><a class="dropdown-item" href="#">Amazon</a></li>
-        </ul>
+        <div class="divider"></div>
       </div>
-
-      <div class="field-group" style="position: relative;">
-        <div class="custom-input dropdown-trigger" data-target="dropdown6">
-          Micro
-          <div class="select-arrow-box"></div>
+    </div>
+    <div class="filter-row">
+      <div class="field-group">
+        <div class="custom-dropdown-wrapper">
+          <div class="custom-dropdown">
+            <div class="dropdown-left">
+              <span class="dropdown-label">Micro</span>
+            </div>
+            <div class="dropdown-right">
+              <img src="../assets/images/down.svg" alt="img" />
+            </div>
+          </div>
+          <ul class="dropdown-menu">
+            <li data-key="urun-grubu">Aktif</li>
+            <li data-key="urun-adi">Ürün Adı</li>
+            <li data-key="marka">Marka</li>
+          </ul>
         </div>
-
-        <ul id="dropdown6" class="custom-dropdown-menu">
-          <li><a class="dropdown-item" href="#">TrendYol</a></li>
-          <li><a class="dropdown-item" href="#">Hepsiburada</a></li>
-          <li><a class="dropdown-item" href="#">Amazon</a></li>
-        </ul>
+        <div class="divider"></div>
       </div>
 
       <div class="field-group no-divider">
@@ -141,8 +181,10 @@
 
     </div>
   </div>
-
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
   <script src="../assets/js/filter/daterange.js"></script>
+  <script src="../assets/js/comman.js"></script>
 
 </body>
 

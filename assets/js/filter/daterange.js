@@ -1,15 +1,15 @@
-    const toggle = document.querySelector('.calendar-toggle');
-  const dropdown = document.getElementById('calendarDropdown');
-  const calendarContainer = document.getElementById('calendar-container');
+const toggle = document.querySelector('.calendar-toggle');
+const dropdown = document.getElementById('calendarDropdown');
+const calendarContainer = document.getElementById('calendar-container');
 const monthSelect = document.getElementById('monthSelect');
 const yearSelect = document.getElementById('yearSelect');
 const selectedRangeBox = document.querySelector('.selected-range-box');
 
 
-  toggle.addEventListener('click', function (e) {
-    e.stopPropagation();
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-  });
+toggle.addEventListener('click', function (e) {
+  e.stopPropagation();
+  dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+});
 document.addEventListener('mousedown', function (e) {
   const isCalendarClicked = e.target.closest('.calendar-group') || e.target.closest('.calendar-dropdown-wrapper');
 
@@ -76,7 +76,7 @@ function generateCalendar(month, year) {
     if (isEnd) day.classList.add('is-end-date');
 
     day.onclick = () => {
-      
+
       if (!startDate || (startDate && endDate)) {
         startDate = date;
         endDate = null;
@@ -126,10 +126,10 @@ function updateSelectedRange() {
   const e = `${pad(endDate.getDate())}/${pad(endDate.getMonth() + 1)}/${String(endDate.getFullYear()).slice(-2)}`;
   const st = `${startHour.value}:${startMinute.value}`;
   const et = `${endHour.value}:${endMinute.value}`;
-    const finalText = `${s} ${st} - ${e} ${et}`;
-  selectedRangeBox.innerText =finalText;
+  const finalText = `${s} ${st} - ${e} ${et}`;
+  selectedRangeBox.innerText = finalText;
 
-    const calendarRangeText = document.querySelector('.calender-daterange');
+  const calendarRangeText = document.querySelector('.calender-daterange');
   if (calendarRangeText) {
     calendarRangeText.innerText = finalText;
   }
@@ -153,41 +153,3 @@ fillTimeSelect(endMinute, ['00', '05', '10', '15', '20', '25', '30', '35', '40',
 
 populateDropdowns();
 generateCalendar(currentMonth, currentYear);
-
-
-// dropdown
-document.addEventListener('DOMContentLoaded', () => {
-  const triggers = document.querySelectorAll('.dropdown-trigger');
-
-  triggers.forEach(trigger => {
-    const menuId = trigger.getAttribute('data-target');
-    const dropdownMenu = document.getElementById(menuId);
-
-    trigger.addEventListener('click', function (e) {
-      e.stopPropagation();
-      closeAllDropdowns();
-      dropdownMenu.classList.toggle('show');
-    });
-
-    dropdownMenu.querySelectorAll('.dropdown-item').forEach(item => {
-      item.addEventListener('click', function (e) {
-        e.preventDefault();
-        trigger.childNodes[0].nodeValue = item.textContent + ' ';
-        dropdownMenu.classList.remove('show');
-      });
-    });
-  });
-
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.field-group')) {
-      closeAllDropdowns();
-    }
-  });
-
-  function closeAllDropdowns() {
-    document.querySelectorAll('.custom-dropdown-menu').forEach(menu => {
-      menu.classList.remove('show');
-    });
-  }
-});
-

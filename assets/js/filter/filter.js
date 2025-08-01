@@ -55,7 +55,7 @@ document.addEventListener('click', function (event) {
 
 const dropdownWrapper = document.querySelector('.custom-dropdown-wrapper2');
 dropdownWrapper.addEventListener('click', function (e) {
-  e.stopPropagation(); 
+  e.stopPropagation();
 });
 
 function generateCalendar(month, year) {
@@ -80,12 +80,15 @@ function generateCalendar(month, year) {
   const grid = document.createElement('div');
   grid.className = 'calendar-grid';
 
-  for (let i = 0; i < adjustedFirstDay; i++) {
-    const empty = document.createElement('div');
-    empty.style.width = '40px';
-    empty.style.height = '40px';
-    grid.appendChild(empty);
+  const prevMonthDays = new Date(year, month, 0).getDate();
+  for (let i = adjustedFirstDay - 1; i >= 0; i--) {
+    const prevDay = document.createElement('div');
+    prevDay.className = 'day-item text-muted';
+    prevDay.innerText = prevMonthDays - i;
+    prevDay.style.opacity = '0.4';
+    grid.appendChild(prevDay);
   }
+
 
   for (let d = 1; d <= daysInMonth; d++) {
     const date = new Date(year, month, d);

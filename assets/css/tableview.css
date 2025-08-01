@@ -8,6 +8,34 @@
   margin: 0 auto;
 }
 
+.custom-dropdown-wrapper.tableview-filter .custom-dropdown {
+  height: 45px;
+  width: fit-content;
+  min-width: 160px;
+}
+
+.custom-dropdown-wrapper.tableview-filter .custom-dropdown .dropdown-right {
+  height: 45px;
+  width: 45px;
+  border: 1px solid #E8EEFF;
+  background-color: white;
+}
+
+.custom-dropdown-wrapper.tableview-filter .dropdown-label {
+  font-family: 'Gilroy';
+  font-weight: 500;
+  font-size: 20px;
+  color: #023E7D;
+  white-space: nowrap;
+}
+
+.custom-dropdown-wrapper.tableview-large {
+  min-width: 286px;
+  margin-top: 20px;
+}
+.custom-dropdown-wrapper.tableview-large .custom-dropdown{
+  width: 100%;
+}
 .table-button {
   display: flex;
   justify-content: space-between;
@@ -203,7 +231,7 @@
   padding-right: 56px;
 }
 
-.filter-dropdown-box{
+.filter-dropdown-box {
   max-height: 46px;
 }
 

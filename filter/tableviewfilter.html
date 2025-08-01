@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../assets/css/fonts.css" />
     <link rel="stylesheet" href="../assets/css/tableview.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
 </head>
 
 <body>
@@ -55,37 +56,42 @@
                     <input class="filter-chip" placeholder="Ürün Grubu" />
                     <input class="filter-chip" placeholder="Özellik" />
 
-                    <div class="dropdown filter-dropdown-box">
-                        <div class="filter-dropdown dropdown-toggle dropdown-wrapper" data-bs-toggle="dropdown"
-                            aria-expanded="false" role="button">
-                            Ana Ürün mü?
-                            <div class="arrow-box  ms-2">
-                                <img src="../assets/images/bluedown-arrow.svg" alt="arrow" />
+                    <div class="custom-dropdown-wrapper tableview-filter">
+                        <div class="custom-dropdown">
+                            <div class="dropdown-left">
+                                <span class="dropdown-label">Ana Ürün mü?</span>
+                            </div>
+                            <div class="dropdown-right">
+                                <img src="../assets/images/down.svg" alt="img" />
                             </div>
                         </div>
-
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Evet</a></li>
-                            <li><a class="dropdown-item" href="#">Hayır</a></li>
+                            <li data-key="urun-grubu">Ana Ürün mü?</li>
+                            <li data-key="urun-adi">Ürün Adı</li>
+                            <li data-key="marka">Marka</li>
                         </ul>
                     </div>
+
 
                     <input class="filter-chip" placeholder="Marka" />
-                    <div class="dropdown filter-dropdown-box">
-                        <div class="filter-dropdown dropdown-toggle dropdown-wrapper" data-bs-toggle="dropdown"
-                            aria-expanded="false" role="button">
-                            Stokta mı?
-                            <div class="arrow-box  ms-2">
-                                <img src="../assets/images/bluedown-arrow.svg" alt="arrow" />
+
+                    <div class="custom-dropdown-wrapper tableview-filter">
+                        <div class="custom-dropdown">
+                            <div class="dropdown-left">
+                                <span class="dropdown-label">Stokta mı?</span>
+                            </div>
+                            <div class="dropdown-right">
+                                <img src="../assets/images/down.svg" alt="img" />
                             </div>
                         </div>
-
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Evet</a></li>
-                            <li><a class="dropdown-item" href="#">Hayır</a></li>
-                            <li><a class="dropdown-item" href="#">Aroma</a></li>
+                            <li data-key="urun-grubu">Stokta mı?</li>
+                            <li data-key="urun-adi">Ürün Adı</li>
+                            <li data-key="marka">Marka</li>
                         </ul>
                     </div>
+
+
                     <input class="filter-chip" placeholder="Aroma" />
                     <input class="filter-chip" placeholder="Renk" />
                     <input class="filter-chip" placeholder="Yaş" />
@@ -109,22 +115,21 @@
                 </div>
             </div>
             <div class="d-flex justify-content-end right-dropdown">
-                <div class="dropdown filter-dropdown-box">
-                    <div class="filter-dropdown dropdown-toggle dropdown-wrapper" data-bs-toggle="dropdown"
-                        aria-expanded="false" role="button">
-                        Varsayılan sıralama
-                        <div class="arrow-box  ms-2">
-                            <img src="../assets/images/bluedown-arrow.svg" alt="arrow" />
+                <div class="custom-dropdown-wrapper tableview-filter tableview-large">
+                    <div class="custom-dropdown">
+                        <div class="dropdown-left">
+                            <span class="dropdown-label">Varsayılan sıralama</span>
+                        </div>
+                        <div class="dropdown-right">
+                            <img src="../assets/images/down.svg" alt="img" />
                         </div>
                     </div>
-
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Evet</a></li>
-                        <li><a class="dropdown-item" href="#">Hayır</a></li>
-                        <li><a class="dropdown-item" href="#">Aroma</a></li>
+                        <li data-key="urun-grubu">Varsayılan sıralama</li>
+                        <li data-key="urun-adi">Ürün Adı</li>
+                        <li data-key="marka">Marka</li>
                     </ul>
                 </div>
-
             </div>
             <div class="bottom-range">
                 <img src="../assets/images/whitefilter.svg" alt="">
@@ -134,7 +139,9 @@
 
     </div>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
     <script src="../assets/js/filter/tableview.js"></script>
+    <script src="../assets/js/comman.js"></script>
 </body>
 
 </html>
