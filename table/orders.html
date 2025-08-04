@@ -23,7 +23,7 @@
                         <h4 class="sidebar-head">
                             Tüm Alanlar
                         </h4>
-                        <div class="mt-3 d-flex flex-column gap-2">
+                        <div class="mt-3 d-flex flex-column gap-2 connected-list" id="availableFields">
                             <div class="sidebar-chip">
                                 Müşteri Grubu
                             </div>
@@ -39,7 +39,10 @@
                         <h4 class="sidebar-head">
                             Eklenenler
                         </h4>
-                        <div class="mt-3 d-flex flex-column gap-2">
+                        <div class="mt-3 d-flex flex-column gap-2 connected-list" id="selectedFields" >
+                            <div class="sidebar-chip">
+                                Sipariş No (çıkar)
+                            </div>
                             <div class="sidebar-chip">
                                 Sipariş No (çıkar)
                             </div>
@@ -107,7 +110,19 @@
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/jquery-3.6.0.min.js"></script>
     <script src="../assets/js/tables/dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
     <script src="../assets/js/tables/orderTable.js"></script>
+    <script>
+    new Sortable(availableFields, {
+        group: 'chips',
+        animation: 150
+    });
+
+    new Sortable(selectedFields, {
+        group: 'chips',
+        animation: 150
+    });
+</script>
 </body>
 
 </html>

@@ -72,9 +72,9 @@ body {
   font-weight: 600;
 }
 
-.market-icon {
-  width: 59px;
-  height: 59px;
+.market-carousel .owl-item .market-icon {
+  width: 60px !important;
+  height: 60px;
   object-fit: contain;
 }
 
