@@ -48,18 +48,18 @@ $(document).ready(function () {
     });
 
     // Click on ascending arrow
-    $(document).on('click', '.sort-asc', function (e) {
-        e.stopPropagation();
-        const colIndex = $(this).data('column');
-        table.order([colIndex, 'asc']).draw();
-    });
+    // $(document).on('click', '.sort-asc', function (e) {
+    //     e.stopPropagation();
+    //     const colIndex = $(this).data('column');
+    //     table.order([colIndex, 'asc']).draw();
+    // });
 
-    // Click on descending arrow
-    $(document).on('click', '.sort-desc', function (e) {
-        e.stopPropagation();
-        const colIndex = $(this).data('column');
-        table.order([colIndex, 'desc']).draw();
-    });
+    // // Click on descending arrow
+    // $(document).on('click', '.sort-desc', function (e) {
+    //     e.stopPropagation();
+    //     const colIndex = $(this).data('column');
+    //     table.order([colIndex, 'desc']).draw();
+    // });
 });
 
 // Tabs + Chart remain same

@@ -996,20 +996,272 @@
                                 <thead>
                                     <tr>
                                         <th></th>
-                                        <th>
+                                        <th style="position: relative;">
                                             <div class="header-cell-box">
-                                                <div class="head-cell">
-                                                    <h3>Ürün Kodu</h3><span class="arrows">
+                                                <div class="head-cell filter-toggle">
+                                                    <h3>Ürün Kodu</h3>
+                                                    <span class="arrows">
                                                         <img src="../assets/images/up.svg" class="sort-up"
                                                             data-column="0" />
                                                         <img src="../assets/images/down.svg" class="sort-down"
                                                             data-column="0" />
                                                     </span>
                                                 </div>
-                                                <button class="filter-icon"><img src="../assets/images/filter.svg"
-                                                        alt="filter" /></button>
+                                                <button class="filter-icon">
+                                                    <img src="../assets/images/filter.svg" alt="filter" />
+                                                </button>
+
+                                                <div class="types-of-fields">
+                                                    <div class="options-container">
+                                                        <div class="fields-show">
+                                                            <div class="fields-menu">
+                                                                <ul class="menu-list">
+                                                                    <li class="menu-item active"
+                                                                        data-target="#content1">
+                                                                        <div class="d-flex gap-3">
+                                                                            <img src="../assets/images/sidebar/up.svg"
+                                                                                alt="">
+                                                                            <span>artan şekilde sırala</span>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="menu-item" data-target="#content2">
+                                                                        <div class="d-flex gap-3">
+                                                                            <img src="../assets/images/sidebar/down.svg"
+                                                                                alt="icon" />azalan şekilde
+                                                                            sırala</span>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="menu-item" data-target="#content3">
+                                                                        <div
+                                                                            class="d-flex gap-3 justify-content-between">
+                                                                            <div
+                                                                                class="d-flex gap-3 align-items-center">
+                                                                                <img src="../assets/images/filter-line.svg"
+                                                                                    alt="icon" /><span>Sütunlar
+                                                                                    sırala</span>
+                                                                            </div>
+                                                                            <div
+                                                                                class="d-flex justify-content-center align-items-center arrow-img">
+                                                                                <img src="../assets/images/right-arrow.svg"
+                                                                                    alt="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="menu-item" data-target="#content4">
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <div class="d-flex gap-3">
+                                                                                <img src="../assets/images/filter.svg"
+                                                                                    alt="icon" width="16" height="16"
+                                                                                    class="mt-1" />Filtreleme</span>
+                                                                            </div>
+
+                                                                            <div
+                                                                                class="d-flex justify-content-center align-items-center arrow-img">
+                                                                                <img src="../assets/images/right-arrow.svg"
+                                                                                    alt="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="menu-item" data-target="#content5">
+                                                                        <div class="d-flex gap-3">
+                                                                            <img src="../assets/images/filter-4.svg"
+                                                                                alt="icon" width="16" height="16"
+                                                                                class="mt-1" />grup sütunu</span>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="menu-item" data-target="#content6">
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <div class="d-flex gap-3">
+                                                                                <img src="../assets/images/filter-5.svg"
+                                                                                    alt="icon" width="16" height="16"
+                                                                                    class="mt-1" />sütun konum</span>
+                                                                            </div>
+                                                                            <div
+                                                                                class="d-flex justify-content-center align-items-center arrow-img">
+                                                                                <img src="../assets/images/right-arrow.svg"
+                                                                                    alt="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="menu-content">
+                                                                <div id="content1" class="submenu-content">Artan
+                                                                    şekilde sıralama uygulanır.</div>
+                                                                <div id="content2" class="submenu-content">Azalan
+                                                                    şekilde sıralama uygulanır.</div>
+
+                                                                <div id="content3" class="submenu-content relative">
+                                                                    <div
+                                                                        class="justify-content-between d-flex align-items-center">
+                                                                        <label for="field1"
+                                                                            class="checkbox-label">Key</label>
+                                                                        <input type="checkbox" id="field1" />
+                                                                    </div>
+                                                                    <div
+                                                                        class="justify-content-between d-flex align-items-center">
+                                                                        <label for="field2"
+                                                                            class="checkbox-label">Görsel</label>
+                                                                        <input type="checkbox" id="field2" />
+                                                                    </div>
+                                                                    <div
+                                                                        class="justify-content-between d-flex align-items-center">
+                                                                        <label for="field3" class="checkbox-label">Ürün
+                                                                            Kodu</label>
+                                                                        <input type="checkbox" id="field3" />
+                                                                    </div>
+                                                                    <div
+                                                                        class="justify-content-between d-flex align-items-center">
+                                                                        <label for="field4" class="checkbox-label">Ürün
+                                                                            adı</label>
+                                                                        <input type="checkbox" id="field4" />
+                                                                    </div>
+                                                                    <div
+                                                                        class="justify-content-between d-flex align-items-center">
+                                                                        <label for="field5"
+                                                                            class="checkbox-label">Kategori</label>
+                                                                        <input type="checkbox" id="field5" />
+                                                                    </div>
+                                                                    <div
+                                                                        class="justify-content-between d-flex align-items-center">
+                                                                        <label for="field6" class="checkbox-label">oplam
+                                                                            Tutar</label>
+                                                                        <input type="checkbox" id="field6" />
+                                                                    </div>
+                                                                    <div
+                                                                        class="justify-content-between d-flex align-items-center">
+                                                                        <label for="field7"
+                                                                            class="checkbox-label">Beraber Alınma
+                                                                            Sayısı</label>
+                                                                        <input type="checkbox" id="field7" />
+                                                                    </div>
+                                                                </div>
+
+                                                                <div id="content4" class="submenu-content">
+                                                                    <label class="label-sub">Öğelerin Değerini
+                                                                        Göster:</label>
+                                                                    <div class="custom-dropdown-wrapper">
+                                                                        <div class="custom-dropdown">
+                                                                            <div class="dropdown-left"><span
+                                                                                    class="dropdown-label">Özel</span>
+                                                                            </div>
+                                                                            <div class="dropdown-right"><img
+                                                                                    src="../assets/images/down.svg"
+                                                                                    alt="img" /></div>
+                                                                        </div>
+                                                                        <ul class="dropdown-menu">
+                                                                            <li data-key="urun-grubu">Şunları İçerir
+                                                                            </li>
+                                                                            <li data-key="urun-adi">Adı</li>
+                                                                            <li data-key="marka">Marka</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="filter-plus">
+                                                                        <div class="count-box">0.00</div>
+                                                                        <div
+                                                                            class="d-flex flex-column gap-1 h-100 justify-content-center align-items-center arrow-img">
+                                                                            <img src="../assets/images/up.svg" alt="up"
+                                                                                class="up-btn"
+                                                                                style="cursor:pointer;" />
+                                                                            <img src="../assets/images/down.svg"
+                                                                                alt="down" class="down-btn"
+                                                                                style="cursor:pointer;" />
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="custom-dropdown-wrapper">
+                                                                        <div class="custom-dropdown drop-1">
+                                                                            <div class="dropdown-left"><span
+                                                                                    class="dropdown-label">Özel</span>
+                                                                            </div>
+                                                                            <div class="dropdown-right"><img
+                                                                                    src="../assets/images/down.svg"
+                                                                                    alt="img" /></div>
+                                                                        </div>
+                                                                        <ul class="dropdown-menu">
+                                                                            <li data-key="urun-grubu">Key
+                                                                            </li>
+                                                                            <li data-key="urun-adi">Adı</li>
+                                                                            <li data-key="marka">Marka</li>
+                                                                        </ul>
+                                                                    </div>
+
+                                                                    <div class="custom-dropdown-wrapper">
+                                                                        <div class="custom-dropdown">
+                                                                            <div class="dropdown-left"><span
+                                                                                    class="dropdown-label">Özel</span>
+                                                                            </div>
+                                                                            <div class="dropdown-right"><img
+                                                                                    src="../assets/images/down.svg"
+                                                                                    alt="img" /></div>
+                                                                        </div>
+                                                                        <ul class="dropdown-menu">
+                                                                            <li data-key="urun-grubu">Şunları İçerir
+                                                                            </li>
+                                                                            <li data-key="urun-adi">Adı</li>
+                                                                            <li data-key="marka">Marka</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="filter-plus">
+                                                                        <div class="count-box">0.00</div>
+                                                                        <div
+                                                                            class="d-flex flex-column gap-1 h-100 justify-content-center align-items-center arrow-img">
+                                                                            <img src="../assets/images/up.svg" alt="up"
+                                                                                class="up-btn"
+                                                                                style="cursor:pointer;" />
+                                                                            <img src="../assets/images/down.svg"
+                                                                                alt="down" class="down-btn"
+                                                                                style="cursor:pointer;" />
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="btn-part">
+                                                                        <button class="btn-filter">
+                                                                            <img src="../assets/images/sidebar/filter.svg"
+                                                                                alt="img" /> Filtrele</button>
+                                                                        <button class="btn-clear">Temizle</button>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="content5" class="submenu-content active">Artan
+                                                                    şekilde sıralama uygulanır.</div>
+                                                                <div id="content6" class="submenu-content">
+                                                                    <div class="d-flex align-items-center gap-3 mb-2">
+                                                                        <div
+                                                                            class="d-flex align-items-center justify-content-center ms-2 arrow-img">
+                                                                            <img src="../assets/images/left-arrow.svg"
+                                                                                alt="">
+                                                                        </div>
+                                                                        <span class="filter-span"> Öncekine
+                                                                            İlerle</span>
+                                                                    </div>
+                                                                    <div class="d-flex align-items-center gap-3">
+                                                                        <div
+                                                                            class="d-flex align-items-center justify-content-center ms-2 arrow-img">
+                                                                            <img src="../assets/images/right-arrow.svg"
+                                                                                alt="">
+                                                                        </div>
+                                                                        <span class="filter-span">Sonrakine
+                                                                            İlerle</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="custom-dropdownn" style="display: none;">
+                                                <span>eşittir</span>
+                                                <span>eşit değildir</span>
+                                                <span>ile başlar</span>
+                                                <span>İçindekiler</span>
+                                                <span class="active">İçermez</span>
+                                                <span>İle biter</span>
+                                                <span>Boş</span>
                                             </div>
                                         </th>
+
+
                                         <th>
                                             <div class="header-cell-box">
                                                 <div class="head-cell">
@@ -1131,7 +1383,7 @@
                     <div class="table-scroll-container">
                         <div id="table2-container" style="display:none;">
                             <table id="table2" class="display" style="width:100%">
-                              <thead>
+                                <thead>
                                     <tr>
                                         <th></th>
                                         <th>
@@ -1413,7 +1665,6 @@
     <script src="../assets/js/tables/dataTables.min.js"></script>
     <script src="../assets/js/tables/productSalesTable.js"></script>
     <script src="../assets/js/comman.js"></script>
-
     <!-- charts -->
     <script src="../assets/js/charts/stock-health.js"></script>
     <script src="../assets/js/charts/sales-order.js"></script>

@@ -13,7 +13,6 @@
   box-shadow: 0px 7px 15px 0px #1126920D;
 
 }
-
 .performance-table .table-heading h3 {
   font-family: 'Gilroy';
   font-weight: 700;
@@ -2305,6 +2304,286 @@ tbody {
   /* Firefox */
 }
 
+/* productsalestable filter nd dropdown */
+.custom-dropdownn {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #FFFFFF;
+  z-index: 10;
+  width: 100%;
+  max-height: 253px;
+  overflow-y: auto;
+  border-radius: 10px;
+  border: 1px solid #023E7D;
+  box-shadow: 0px 7px 15px 0px #1126920D;
+}
+
+/* Dropdown Items */
+.custom-dropdownn span {
+  display: block;
+  padding: 7px 16px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 20px;
+  color: #023E7D;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.custom-dropdownn span:hover {
+  background-color: #023E7D;
+  color: #fff;
+}
+
+.custom-dropdownn span.active {
+  background-color: #023E7D;
+  color: #fff;
+}
+
+.head-cell.active-dropdown {
+  border: 1px solid #023E7D;
+}
+.submenu-content{
+  color: #023E7D;
+  font-weight: 700;
+  font-size: 15px;
+}
+.productSalesTable thead .menu-content .custom-dropdown{
+  max-height: 32px;
+  border-radius: 7px;
+}
+.productSalesTable thead .menu-content .dropdown-right{
+  height: 100%;
+  border-radius: 7px;
+}
+.productSalesTable thead .menu-content .drop-1{
+  max-width: 75px;
+  width: 100%;
+  border-radius: 7px;
+}
+.filter-span{
+  font-family: Gilroy;
+font-weight: 500;
+font-style: Medium;
+font-size: 15px;
+line-height: 35px;
+text-transform: capitalize;
+color: #023E7D;
+}
+
+.header-cell-box {
+  position: relative;
+  display: inline-block;
+}
+
+.arrow-img {
+  background-color: #F5F8FF;
+  border-radius: 5px;
+  border: 1px solid #E8EEFF;
+  width: 25px;
+  height: 25px;
+}
+
+.types-of-fields {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 999;
+}
+
+.options-container {
+  max-width: 500px;
+  width: 100%;
+  background: white;
+  border: 1px solid #023E7D;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: none;
+  overflow: hidden;
+}
+
+.fields-show {
+  display: flex;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  background-color: #F5F8FF;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  width: 4px;
+  height: 8px;
+  border: solid #023E7D;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-label {
+  font-family: 'Gilroy';
+  font-style: Medium;
+  font-size: 15px;
+  line-height: 35px;
+  text-transform: capitalize;
+  color: #023E7D;
+  font-weight: 700;
+}
+
+.fields-menu {
+  width: 100%;
+  background: #FFFFFF;
+  border-right: 1px solid #023E7D;
+  border-radius: 12px;
+  height: 311px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.filter-plus {
+    height: 31px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e8eeff;
+    border-radius: 7px;
+    overflow: hidden;
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.count-box{
+  padding: 0 10px;
+  color: #002E5E;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.menu-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  text-transform: capitalize;
+  color: #002E5E;
+}
+.label-sub{
+  color: #002E5E;
+}
+.menu-item.active {
+  background: #002E5E;
+  color: white;
+}
+
+.menu-item.active img {
+  filter: invert(1) brightness(6)
+}
+
+.menu-item.active .arrow-img img {
+  filter: invert(1) brightness(0)
+}
+
+.menu-content {
+  flex-grow: 1;
+  padding: 12px;
+  background: #fff;
+  font-size: 14px;
+  width: 350px;
+}
+
+.submenu-content {
+  display: none;
+}
+
+.submenu-content.active {
+  display: block;
+}
+
+.custom-dropdown-wrapper {
+  position: relative;
+  margin-top: 10px;
+}
+
+.custom-dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #d0d5dd;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding: 6px 0;
+  margin: 0;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  background: white;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  display: none;
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: #f1f5fb;
+}
+
+.btn-part {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.btn-part button {
+  /* padding: 6px 12px; */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Gilroy';
+font-weight: 500;
+font-size: 15px;
+line-height: 41px;
+vertical-align: middle;
+text-transform: capitalize;
+
+}
+
+.btn-filter {
+  background: #023E7D;
+  color: white;
+  padding: 0 25px;
+
+}
+.btn-filter img{
+   filter: invert(1) brightness(2);
+   padding-right: 5px;
+}
+
+.btn-clear {
+  background: #FFC283;
+  color: #FFFFFF;
+  padding: 0 28px;
+}
 @media (max-width:1860px) {
   .performance-table-container {
     flex-wrap: wrap;

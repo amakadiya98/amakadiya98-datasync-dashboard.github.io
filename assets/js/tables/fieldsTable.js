@@ -36,6 +36,14 @@ $(document).ready(function () {
   $(document).on("click", function () {
     $(".fields-show").hide();
   });
+    $(document).on("click", ".filter-icon", function (e) {
+    e.stopPropagation();
+    const container = $(".types-of-fields .options-container");
+    const menu = container.find(".fields-show");
+
+    $(".fields-show").not(menu).hide();
+    menu.show();
+  });
 });
 
 // table js

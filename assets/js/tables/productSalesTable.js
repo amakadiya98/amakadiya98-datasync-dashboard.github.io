@@ -125,7 +125,7 @@ function populateTable(tableBodyId, data) {
 
 $(document).ready(function () {
     // Populate tables
-    populateTable("table1-body", table1Data);
+    populateTable("table1-body", table1Data,);
     populateTable("table2-body", table2Data);
 
     // Function to init DataTable with refresh button
@@ -134,6 +134,7 @@ $(document).ready(function () {
             pageLength: 20,
             lengthMenu: [10, 20, 30, 50],
             dom: 't<"bottom-bar"<"custom-controls"lpi>>',
+             ordering: false,
             language: {
                 lengthMenu: "_MENU_",
                 info: "_START_ - _END_ of _TOTAL_ entries",
@@ -149,6 +150,7 @@ $(document).ready(function () {
                 attachRefreshButton(tableId);
             }
         });
+        
     }
 
     // Attach refresh button next to info
@@ -175,7 +177,6 @@ $(document).ready(function () {
             table2.search(value).draw();
         }
     });
-
     // Tab switching
     $('.productSalestab-button').click(function () {
         $('.productSalestab-button').removeClass('active');
@@ -186,26 +187,131 @@ $(document).ready(function () {
         $('#' + $(this).data('table')).DataTable().columns.adjust().draw();
     });
 
-    // Custom sorting arrows
-    $('#table1 thead th .sort-up').click(function () {
-        var colIndex = $(this).closest('th').index();
-        table1.order([colIndex, 'asc']).draw();
-    });
-    $('#table2 thead th .sort-up').click(function () {
-        var colIndex = $(this).closest('th').index();
-        table2.order([colIndex, 'asc']).draw();
-    });
-    $('#table1 thead th .sort-down').click(function () {
-        var colIndex = $(this).closest('th').index();
-        table1.order([colIndex, 'desc']).draw();
-    });
-    $('#table2 thead th .sort-down').click(function () {
-        var colIndex = $(this).closest('th').index();
-        table2.order([colIndex, 'desc']).draw();
-    });
-
     // Filter button alert
     $('.filter-btn').click(function () {
         alert('Open filter for ' + $(this).closest('th').text());
     });
+
+
+    // custom-dropdownn
+// ------------------- FILTER TOGGLE -------------------
+document.querySelectorAll('.filter-toggle').forEach(toggle => {
+  toggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+
+    // Close filter-icon dropdowns when filter-toggle opens
+    document.querySelectorAll('.options-container').forEach(c => {
+      c.style.display = 'none';
+    });
+
+    const th = this.closest('th');
+    const dropdown = th.querySelector('.custom-dropdownn');
+    const headCell = th.querySelector('.head-cell');
+
+    const isOpen = dropdown.style.display === 'block';
+
+    document.querySelectorAll('.custom-dropdownn').forEach(d => {
+      d.style.display = 'none';
+    });
+    document.querySelectorAll('.head-cell').forEach(h => {
+      h.classList.remove('active-dropdown');
+    });
+
+    if (!isOpen) {
+      dropdown.style.display = 'block';
+      headCell.classList.add('active-dropdown');
+    }
+  });
+});
+
+document.addEventListener('click', function () {
+  document.querySelectorAll('.custom-dropdownn').forEach(dropdown => {
+    dropdown.style.display = 'none';
+  });
+  document.querySelectorAll('.head-cell').forEach(headCell => {
+    headCell.classList.remove('active-dropdown');
+  });
+});
+
+document.querySelectorAll('.custom-dropdownn span').forEach(item => {
+  item.addEventListener('click', function () {
+    const allSpans = item.closest('.custom-dropdownn').querySelectorAll('span');
+    allSpans.forEach(i => i.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// ------------------- FILTER ICON -------------------
+$(document).ready(function () {
+  $(document).on("click", ".filter-icon", function (e) {
+    e.stopPropagation();
+
+    // Close filter-toggle dropdowns when filter-icon opens
+    document.querySelectorAll('.custom-dropdownn').forEach(d => {
+      d.style.display = 'none';
+    });
+    document.querySelectorAll('.head-cell').forEach(h => {
+      h.classList.remove('active-dropdown');
+    });
+
+    const container = $(".types-of-fields .options-container");
+    $(".options-container").not(container).hide();
+    container.toggle();
+  });
+
+  $(document).on("click", ".menu-item", function () {
+    const container = $(this).closest(".options-container");
+
+    container.find(".menu-item").removeClass("active");
+    $(this).addClass("active");
+
+    container.find(".submenu-content").removeClass("active");
+    container.find($(this).data("target")).addClass("active");
+  });
+
+  $(document).on("click", function () {
+    $(".options-container").hide();
+  });
+
+  $(document).on("click", ".options-container, .filter-icon", function (e) {
+    e.stopPropagation();
+  });
+
+  $(document).on("click", ".custom-dropdown", function () {
+    $(this).siblings(".dropdown-menu").toggle();
+  });
+
+  $(document).on("click", ".dropdown-menu li", function () {
+    const label = $(this).text();
+    $(this).closest(".custom-dropdown-wrapper").find(".dropdown-label").text(label);
+    $(".dropdown-menu").hide();
+  });
+});
+
+// ------------------- FILTER PLUS -------------------
+const filterBoxes = document.querySelectorAll(".filter-plus");
+
+filterBoxes.forEach(filterBox => {
+  const countBox = filterBox.querySelector(".count-box");
+  const upBtn = filterBox.querySelector(".up-btn");
+  const downBtn = filterBox.querySelector(".down-btn");
+
+  function getCurrentValue() {
+    return parseFloat(countBox.innerText) || 0;
+  }
+
+  upBtn.addEventListener("click", function () {
+    let current = getCurrentValue();
+    countBox.innerText = (current + 1).toFixed(2);
+  });
+
+  downBtn.addEventListener("click", function () {
+    let current = getCurrentValue();
+    if (current > 0) {
+      countBox.innerText = (current - 1).toFixed(2);
+    }
+  });
+});
+
+
 });

@@ -97,4 +97,14 @@ $(document).ready(function () {
         orderTable.order([colIndex, 'desc']).draw();
     });
 
+     new Sortable(availableFields, {
+        group: 'chips',
+        animation: 150
+    });
+
+    new Sortable(selectedFields, {
+        group: 'chips',
+        animation: 150
+    });
+
 });
